@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Prescription - Lifecare</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#c72929",
+              "secondary": "#1F8A9E",
+              "background-light": "#FAFAFA",
+              "background-dark": "#201212",
+              "surface": "#EDEDED",
+              "text-main": "#333333",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "bangla": ["Hind Siliguri", "sans-serif"],
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        /* Print Styles */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #prescription-container, #prescription-container * {
+                visibility: visible;
+            }
+            #prescription-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                border: none;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+        
+        /* Custom scrollbar for better look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ccc; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #aaa; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased min-h-screen flex flex-col">
+<!-- Top Navigation (No Print) -->
+<nav class="no-print relative flex w-full flex-col bg-white border-b border-[#f4f1f1]">
+<div class="px-4 md:px-10 py-3 flex items-center justify-between">
+<div class="flex items-center gap-4 text-[#171212]">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">local_hospital</span>
+</div>
+<h2 class="text-[#171212] text-lg font-bold leading-tight tracking-[-0.015em]">Lifecare Digital Clinic</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<div class="flex items-center gap-6">
+<a class="text-[#171212] text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#171212] text-sm font-medium hover:text-primary transition-colors" href="#">Appointments</a>
+<a class="text-primary text-sm font-bold" href="#">Prescriptions</a>
+<a class="text-[#171212] text-sm font-medium hover:text-primary transition-colors" href="#">Records</a>
+</div>
+<button class="flex h-9 items-center justify-center rounded-full w-9 bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">person</span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</div>
+</nav>
+<main class="flex-grow w-full max-w-[1200px] mx-auto p-4 md:p-8 flex flex-col gap-6">
+<!-- Header & Toolbar (No Print) -->
+<header class="no-print flex flex-col md:flex-row justify-between items-start md:items-end gap-4 pb-4 border-b border-surface">
+<div class="flex flex-col gap-2">
+<h1 class="text-text-main text-3xl font-bold tracking-tight">Prescription View</h1>
+<p class="text-[#856666] text-sm">Issued on Oct 24, 2023 • ID: #RX-2023-8942</p>
+</div>
+<div class="flex gap-3 w-full md:w-auto">
+<button class="flex-1 md:flex-none h-10 px-4 bg-surface text-text-main rounded-lg text-sm font-bold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Download PDF</span>
+</button>
+<button class="flex-1 md:flex-none h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold hover:bg-red-700 transition-colors flex items-center justify-center gap-2 shadow-sm" onclick="window.print()">
+<span class="material-symbols-outlined text-[20px]">print</span>
+<span>Print</span>
+</button>
+</div>
+</header>
+<!-- Prescription Paper Container -->
+<div class="flex justify-center w-full my-4">
+<!-- A4 Proportioned Card -->
+<div class="bg-white w-full max-w-[800px] min-h-[1000px] shadow-lg rounded-none md:rounded-sm flex flex-col overflow-hidden relative print:shadow-none print:w-full print:max-w-none" id="prescription-container">
+<!-- Watermark Background -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.03]">
+<span class="material-symbols-outlined text-[400px]">medical_services</span>
+</div>
+<!-- 1. Doctor Header -->
+<div class="flex justify-between items-start p-8 border-b-2 border-secondary/20">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 mb-2 text-secondary">
+<span class="material-symbols-outlined">health_and_safety</span>
+<span class="text-xs font-bold uppercase tracking-wider">Lifecare Clinic</span>
+</div>
+<h2 class="text-2xl font-bold text-secondary">Dr. Sadia Afrin</h2>
+<p class="text-sm text-gray-600 font-medium">MBBS, FCPS (Gynae &amp; Obs)</p>
+<p class="text-xs text-gray-500">Consultant, Dhaka Medical College Hospital</p>
+<p class="text-xs text-gray-500 font-mono mt-1">BMDC Reg: A-54321</p>
+</div>
+<div class="text-right flex flex-col items-end gap-1">
+<div class="bg-secondary/10 px-3 py-1 rounded text-secondary text-xs font-bold mb-2">
+                            General Medicine
+                         </div>
+<p class="text-xs text-gray-600"><span class="font-bold">Chamber:</span> Lifecare Center, Dhanmondi</p>
+<p class="text-xs text-gray-600"><span class="font-bold">Hours:</span> 4:00 PM - 9:00 PM</p>
+<p class="text-xs text-gray-600"><span class="font-bold">Hotline:</span> +880 1712 345678</p>
+</div>
+</div>
+<!-- 2. Patient Vitals Bar -->
+<div class="bg-[#F8F9FA] px-8 py-4 border-b border-dashed border-gray-300 flex flex-wrap gap-y-3 justify-between items-center text-sm">
+<div class="flex gap-6 flex-wrap">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase text-gray-500 font-bold tracking-wider">Patient Name</span>
+<span class="font-bold text-gray-900 text-lg">Mrs. Rahima Begum</span>
+</div>
+<div class="flex flex-col border-l border-gray-300 pl-4">
+<span class="text-[10px] uppercase text-gray-500 font-bold tracking-wider">Age</span>
+<span class="font-medium text-gray-900">32 Years</span>
+</div>
+<div class="flex flex-col border-l border-gray-300 pl-4">
+<span class="text-[10px] uppercase text-gray-500 font-bold tracking-wider">Gender</span>
+<span class="font-medium text-gray-900">Female</span>
+</div>
+<div class="flex flex-col border-l border-gray-300 pl-4">
+<span class="text-[10px] uppercase text-gray-500 font-bold tracking-wider">Weight</span>
+<span class="font-medium text-gray-900">62 kg</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] uppercase text-gray-500 font-bold tracking-wider">Date</span>
+<span class="font-medium text-gray-900">24 Oct, 2023</span>
+</div>
+</div>
+<!-- 3. Main Content Split -->
+<div class="flex flex-1 flex-col md:flex-row">
+<!-- Left Column: Clinical Findings -->
+<div class="w-full md:w-1/3 p-6 md:p-8 border-b md:border-b-0 md:border-r border-gray-200 bg-white md:bg-gray-50/30">
+<div class="flex flex-col gap-6">
+<!-- Chief Complaints -->
+<div>
+<h3 class="text-secondary text-sm font-bold uppercase tracking-wider mb-2 border-b border-gray-200 pb-1">Chief Complaints</h3>
+<ul class="list-disc list-inside text-sm text-gray-700 space-y-1 marker:text-gray-400">
+<li>High fever (102°F) for 3 days</li>
+<li>Severe body ache</li>
+<li>Nausea and vomiting tendency</li>
+<li>Abdominal pain (mild)</li>
+</ul>
+</div>
+<!-- On Examination -->
+<div>
+<h3 class="text-secondary text-sm font-bold uppercase tracking-wider mb-2 border-b border-gray-200 pb-1">O/E (On Examination)</h3>
+<div class="text-sm text-gray-700 space-y-1">
+<p><span class="font-medium text-gray-900">BP:</span> 110/70 mmHg</p>
+<p><span class="font-medium text-gray-900">Pulse:</span> 98 bpm</p>
+<p><span class="font-medium text-gray-900">Temp:</span> 101°F</p>
+<p><span class="font-medium text-gray-900">Chest:</span> Clear</p>
+</div>
+</div>
+<!-- Diagnosis -->
+<div>
+<h3 class="text-secondary text-sm font-bold uppercase tracking-wider mb-2 border-b border-gray-200 pb-1">Diagnosis</h3>
+<p class="text-sm font-bold text-gray-900">Viral Fever</p>
+<p class="text-xs text-gray-500 mt-1">Suspected Dengue (NS1 Ag Negative)</p>
+</div>
+<!-- Tests -->
+<div>
+<h3 class="text-secondary text-sm font-bold uppercase tracking-wider mb-2 border-b border-gray-200 pb-1">Investigations</h3>
+<ul class="list-decimal list-inside text-sm text-gray-700 space-y-1">
+<li>CBC with ES</li>
+<li>S. Electrolytes</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Right Column: Rx (Medications) -->
+<div class="w-full md:w-2/3 p-6 md:p-8 relative">
+<!-- Rx Symbol -->
+<div class="mb-6 flex items-center gap-2">
+<span class="text-4xl font-serif font-bold text-primary italic">Rx</span>
+</div>
+<!-- Medication List -->
+<div class="flex flex-col gap-8">
+<!-- Med 1 -->
+<div class="group">
+<div class="flex justify-between items-start">
+<div class="flex-1">
+<div class="flex items-baseline gap-2">
+<span class="text-xs font-bold text-gray-500 w-6">01.</span>
+<h4 class="text-lg font-bold text-gray-900">Tab. Napa Extra</h4>
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">500mg</span>
+</div>
+<p class="text-xs text-gray-500 ml-8 mb-2">Paracetamol + Caffeine</p>
+<!-- Visual Dosage Instructions -->
+<div class="ml-8 flex items-center gap-4 text-sm font-medium text-gray-800">
+<div class="flex items-center gap-1 bg-surface px-2 py-1 rounded">
+<span class="font-bangla">১ + ০ + ১</span>
+<span class="text-gray-400 text-xs mx-1">|</span>
+<span class="font-bangla text-gray-600 text-xs">খাবার পর</span>
+</div>
+<span class="text-xs text-gray-500">for 5 Days</span>
+</div>
+</div>
+<div class="text-right hidden sm:block">
+<div class="flex gap-1 text-gray-400">
+<span class="material-symbols-outlined text-sm text-yellow-500" title="Morning">wb_sunny</span>
+<span class="material-symbols-outlined text-sm text-gray-200">wb_twilight</span>
+<span class="material-symbols-outlined text-sm text-blue-900" title="Night">bedtime</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Med 2 -->
+<div class="group">
+<div class="flex justify-between items-start">
+<div class="flex-1">
+<div class="flex items-baseline gap-2">
+<span class="text-xs font-bold text-gray-500 w-6">02.</span>
+<h4 class="text-lg font-bold text-gray-900">Cap. Omeprazole</h4>
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">20mg</span>
+</div>
+<p class="text-xs text-gray-500 ml-8 mb-2">Anti-ulcerant</p>
+<div class="ml-8 flex items-center gap-4 text-sm font-medium text-gray-800">
+<div class="flex items-center gap-1 bg-surface px-2 py-1 rounded">
+<span class="font-bangla">১ + ০ + ০</span>
+<span class="text-gray-400 text-xs mx-1">|</span>
+<span class="font-bangla text-gray-600 text-xs">খাবার আগে</span>
+</div>
+<span class="text-xs text-gray-500">for 7 Days</span>
+</div>
+</div>
+<div class="text-right hidden sm:block">
+<div class="flex gap-1 text-gray-400">
+<span class="material-symbols-outlined text-sm text-yellow-500" title="Morning">wb_sunny</span>
+<span class="material-symbols-outlined text-sm text-gray-200">wb_twilight</span>
+<span class="material-symbols-outlined text-sm text-gray-200">bedtime</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Med 3 -->
+<div class="group">
+<div class="flex justify-between items-start">
+<div class="flex-1">
+<div class="flex items-baseline gap-2">
+<span class="text-xs font-bold text-gray-500 w-6">03.</span>
+<h4 class="text-lg font-bold text-gray-900">Syp. Amodis</h4>
+<span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">60ml</span>
+</div>
+<p class="text-xs text-gray-500 ml-8 mb-2">Metronidazole</p>
+<div class="ml-8 flex items-center gap-4 text-sm font-medium text-gray-800">
+<div class="flex items-center gap-1 bg-surface px-2 py-1 rounded">
+<span class="font-bangla">২ চামচ করে দিনে ৩ বার</span>
+<span class="text-gray-400 text-xs mx-1">|</span>
+<span class="font-bangla text-gray-600 text-xs">খাবার পর</span>
+</div>
+<span class="text-xs text-gray-500">for 5 Days</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Advice Section -->
+<div class="mt-12 p-4 bg-secondary/5 border-l-4 border-secondary rounded-r-lg">
+<h3 class="text-secondary text-sm font-bold uppercase tracking-wider mb-2">Advice / পরামর্শ</h3>
+<ul class="space-y-2 text-gray-800 font-bangla text-sm md:text-base">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">water_drop</span>
+<span>প্রচুর পরিমাণে পানি ও তরল খাবার খাবেন।</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">restaurant</span>
+<span>সহজপাচ্য ও পুষ্টিকর খাবার গ্রহণ করবেন। বাইরের খাবার পরিহার করুন।</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">bed</span>
+<span>পূর্ণ বিশ্রাম নিবেন। ভারী কাজ থেকে বিরত থাকুন।</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">warning</span>
+<span class="text-primary font-medium">জ্বর ১০৩ ডিগ্রির বেশি হলে বা শ্বাসকষ্ট হলে দ্রুত যোগাযোগ করুন।</span>
+</li>
+</ul>
+</div>
+<!-- Follow up -->
+<div class="mt-6 flex items-center gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-gray-400">calendar_month</span>
+<span>Follow up after <span class="font-bold text-gray-900">7 Days</span></span>
+</div>
+</div>
+</div>
+<!-- 4. Footer -->
+<div class="mt-auto px-8 pb-8 pt-4">
+<div class="flex justify-between items-end border-t border-gray-200 pt-6">
+<div class="max-w-[300px]">
+<p class="text-[10px] text-gray-400 leading-tight">
+                                This is a digitally generated prescription and does not require a physical signature. Verify at lifecare.com/verify/RX8942
+                            </p>
+<img alt="QR Code for verification" class="mt-2 w-16 h-16 opacity-70 mix-blend-multiply" data-alt="QR Code for prescription verification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX5w1hO9LkdfpOB9FNtzBr817ECDosBw8pHEjKevvAOvScB9j1UW01VGjaDUirWhnkERDBI4QjV-txQdYVpNAlDCa_ugsTvo9_qH6XOxFYDZxaQgeuqZWdQPFj-uPP0-pJeTXJOAjxiV5vkj-hrysAimo444MKCX-nEMM6lp1NXKKwMpPJ_jU3oS603CrqcojWwWh_1KKP94my2HQlKUtXoJwNeKPav2sUv960hu67Idz3ri1B9LJMQv8wobxGyWyfdwWgv2V0vD0"/>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="h-12 w-32 flex items-end justify-center">
+<!-- Simulated Signature -->
+<p class="font-script text-2xl text-primary font-bold opacity-80" style="font-family: 'Brush Script MT', cursive;">Dr. Sadia</p>
+</div>
+<div class="h-px w-40 bg-gray-800"></div>
+<p class="text-xs font-bold text-gray-800 uppercase tracking-widest">Signature</p>
+</div>
+</div>
+<!-- Branding Footer -->
+<div class="mt-6 flex justify-center items-center gap-2 opacity-40">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Powered by Lifecare Digital</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

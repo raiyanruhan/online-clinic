@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Appointment Booking - Sheba Health</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#c72929", // Red for CTAs
+              "secondary": "#1F8A9E", // Teal for headings
+              "background-light": "#FAFAFA",
+              "background-dark": "#201212",
+              "surface-light": "#EDEDED",
+              "text-primary": "#333333",
+            },
+            fontFamily: {
+              "display": ["Inter", "Hind Siliguri", "sans-serif"],
+              "body": ["Inter", "Hind Siliguri", "sans-serif"],
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "1rem",
+              "xl": "1.5rem", 
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f1f1] bg-white px-6 py-4 lg:px-40 shadow-sm">
+<div class="flex items-center gap-4 text-[#171212]">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 p-2 text-primary">
+<span class="material-symbols-outlined text-2xl">local_hospital</span>
+</div>
+<h2 class="text-text-primary text-xl font-bold leading-tight tracking-tight">Sheba Health</h2>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-wide shadow hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined mr-2 text-sm">call</span>
+<span class="truncate">Helpline: 16789</span>
+</button>
+</header>
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-8 px-4 lg:px-40">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 gap-8">
+<!-- Page Heading & Progress -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-secondary text-[32px] font-bold leading-tight">Book an Appointment</h1>
+<p class="text-[#666666] text-base font-normal leading-normal">Schedule a visit with our specialist doctors in just a few steps.</p>
+</div>
+<!-- Progress Stepper -->
+<div class="flex flex-col gap-3 rounded-xl bg-white p-5 shadow-sm border border-[#f0f0f0]">
+<div class="flex justify-between items-center text-sm font-medium text-text-primary">
+<span class="text-primary font-bold">Step 1: Doctor Selection</span>
+<span class="text-[#888]">Step 3 of 3</span>
+</div>
+<div class="rounded-full bg-[#e4dcdc] h-2.5 overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-300" style="width: 33%;"></div>
+</div>
+<div class="flex justify-between text-xs text-[#888] mt-1">
+<span>Choose Doctor</span>
+<span>Select Time</span>
+<span>Your Details</span>
+</div>
+</div>
+</div>
+<!-- Main Content Layout: Left (Selection) & Right (Summary) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Doctor & Form -->
+<div class="lg:col-span-2 flex flex-col gap-8">
+<!-- Step 1: Doctor Selection -->
+<section class="flex flex-col gap-4">
+<h2 class="text-secondary text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined">stethoscope</span>
+                                    Choose a Doctor
+                                </h2>
+<div class="grid grid-cols-1 gap-4">
+<!-- Doctor Card 1 (Selected) -->
+<div class="relative flex flex-col sm:flex-row items-stretch gap-4 rounded-xl bg-white p-4 shadow-[0_2px_8px_rgba(0,0,0,0.08)] ring-2 ring-primary transition-all cursor-pointer">
+<div class="absolute -top-3 -right-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                                            Selected
+                                        </div>
+<div class="w-full sm:w-32 h-32 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 bg-gray-200" data-alt="Portrait of Dr. Humaira Khan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiLFetUSpd-QpZsXYHBzGwTENFAzhF8zDoVJgnsUyWUW2QGEzD2vjuxm0A8TjIzycVZYARH09pqqsu7W6FwDGZGgC6Y9UHuOrImas1ALExf3xiM8BzhfMOSOM3MM9Eu7NEsKqH5AlXTfZKlQd46s-_bfJ0wB31Uhc9roB7ZLp59oy2MmM239t7jH1vts9JjfzMqqs8qEySWZlWSghgR5HEPzJcD5iLOnBB1U8ooxf5nwFNbTm5CJ0RmtLizaldCHtSEq58BbFSKvY");'></div>
+<div class="flex flex-col justify-between flex-1 gap-3">
+<div>
+<h3 class="text-text-primary text-lg font-bold">Dr. Humaira Khan</h3>
+<p class="text-[#666666] text-sm mb-2">MBBS, FCPS (Gynecology)</p>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">10+ Years Exp.</span>
+<span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Female Specialist</span>
+</div>
+</div>
+<div class="flex justify-between items-end mt-2">
+<div class="text-primary font-bold text-lg">৳ 1000</div>
+</div>
+</div>
+</div>
+<!-- Doctor Card 2 -->
+<div class="flex flex-col sm:flex-row items-stretch gap-4 rounded-xl bg-white p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-transparent hover:border-gray-200 hover:shadow-md transition-all cursor-pointer opacity-70 hover:opacity-100">
+<div class="w-full sm:w-32 h-32 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 bg-gray-200" data-alt="Portrait of Dr. Rafiqul Islam" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgZZlhH69Tbk0jPo3rAQ1S4l8npRLwCrMWGSpmwSzIG1xG-MZasorHtLpIQtopkGJnekcp2MS6E4nCaGvoEYK5fj0vGH1ENZX40wSwe4NGXMVbJmnt0fF3PkwZC3xb1RNfEmde52VTe5YmDZkocUEFqCRkEjsUf7BaQfZe0S0q8nkibmU7NYP-bWwuNNDqNsGe17jaezwtDUb68uJ9679_n-elG3n0OkY-fYTqnnhN8hTyWtPXY7q3AdLg7rgnwGOmsHTpG7pz5vA");'></div>
+<div class="flex flex-col justify-between flex-1 gap-3">
+<div>
+<h3 class="text-text-primary text-lg font-bold">Dr. Rafiqul Islam</h3>
+<p class="text-[#666666] text-sm mb-2">MBBS, MD (General Medicine)</p>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">8 Years Exp.</span>
+</div>
+</div>
+<div class="flex justify-between items-end mt-2">
+<div class="text-text-primary font-bold text-lg">৳ 800</div>
+<button class="text-sm font-medium text-secondary hover:underline">Select</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 2: Date & Time -->
+<section class="flex flex-col gap-4">
+<h2 class="text-secondary text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined">calendar_month</span>
+                                    Select Schedule
+                                </h2>
+<div class="rounded-xl bg-white p-6 shadow-sm border border-[#f0f0f0]">
+<div class="flex flex-col md:flex-row gap-8">
+<!-- Simplified Calendar Visual -->
+<div class="flex-1">
+<h4 class="text-sm font-bold text-text-primary mb-3">October 2023</h4>
+<div class="grid grid-cols-7 gap-1 text-center text-sm mb-2 text-[#888]">
+<div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-sm">
+<div class="p-2 text-[#ccc]">29</div>
+<div class="p-2 text-[#ccc]">30</div>
+<div class="p-2 rounded-lg hover:bg-gray-100 cursor-pointer">1</div>
+<div class="p-2 rounded-lg hover:bg-gray-100 cursor-pointer">2</div>
+<div class="p-2 rounded-lg bg-primary text-white font-bold shadow-md cursor-pointer">3</div>
+<div class="p-2 rounded-lg hover:bg-gray-100 cursor-pointer">4</div>
+<div class="p-2 rounded-lg hover:bg-gray-100 cursor-pointer">5</div>
+<!-- More days... simplified for preview -->
+</div>
+</div>
+<!-- Time Slots -->
+<div class="flex-1 border-t md:border-t-0 md:border-l border-dashed border-gray-200 pt-6 md:pt-0 md:pl-8">
+<h4 class="text-sm font-bold text-text-primary mb-3">Available Slots</h4>
+<div class="grid grid-cols-2 gap-3">
+<button class="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-text-primary hover:border-secondary hover:text-secondary transition-colors">10:00 AM</button>
+<button class="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-text-primary hover:border-secondary hover:text-secondary transition-colors">10:30 AM</button>
+<button class="rounded-lg bg-secondary text-white shadow-md px-3 py-2 text-sm font-bold transition-colors ring-2 ring-offset-1 ring-secondary">11:00 AM</button>
+<button class="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-text-primary hover:border-secondary hover:text-secondary transition-colors">11:30 AM</button>
+<button class="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-text-primary bg-gray-50 opacity-50 cursor-not-allowed">04:00 PM</button>
+<button class="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-text-primary bg-gray-50 opacity-50 cursor-not-allowed">04:30 PM</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 3: Patient Details -->
+<section class="flex flex-col gap-4">
+<h2 class="text-secondary text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined">person</span>
+                                    Patient Details
+                                </h2>
+<div class="rounded-xl bg-white p-6 shadow-sm border border-[#f0f0f0] flex flex-col gap-5">
+<!-- For whom toggle -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-text-primary">Who is this appointment for?</label>
+<div class="flex gap-4">
+<label class="flex items-center gap-2 cursor-pointer rounded-lg border border-primary bg-primary/5 px-4 py-2">
+<input checked="" class="text-primary focus:ring-primary h-4 w-4" name="patient_type" type="radio"/>
+<span class="font-medium text-primary text-sm">Myself</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer rounded-lg border border-gray-200 px-4 py-2 hover:bg-gray-50">
+<input class="text-primary focus:ring-primary h-4 w-4" name="patient_type" type="radio"/>
+<span class="font-medium text-[#666] text-sm">Family Member</span>
+</label>
+</div>
+</div>
+<!-- Phone Number -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-text-primary">Phone Number <span class="text-red-500">*</span></label>
+<div class="flex rounded-lg shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-primary overflow-hidden">
+<span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm bg-gray-50 px-3 border-r border-gray-200">+880</span>
+<input class="block flex-1 border-0 bg-transparent py-3 pl-3 text-text-primary placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" id="phone" name="phone" placeholder="1712 345 678" type="tel"/>
+</div>
+</div>
+<!-- Symptoms -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-text-primary">Describe your symptoms (Optional)</label>
+<textarea class="block w-full rounded-lg border-0 py-2.5 text-text-primary shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 resize-none" placeholder="E.g., High fever since last night, headache..." rows="3"></textarea>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sticky Summary -->
+<div class="lg:col-span-1">
+<div class="sticky top-24 rounded-xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.08)] overflow-hidden border border-[#f0f0f0]">
+<div class="bg-secondary p-4 text-white">
+<h3 class="font-bold text-lg">Booking Summary</h3>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<div class="flex flex-col gap-3 pb-4 border-b border-gray-100">
+<div class="flex items-start gap-3">
+<div class="h-12 w-12 rounded-full bg-center bg-cover border border-gray-200" data-alt="Doctor thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuChZLgj9noLnQdTcaOLiZkX5qGvVVD994mKZxYtnN9RiJIgurCyP97GaaXruGJzglFDFtFO5k1eysc1Fwu9k4lZdsYUDMPBHmlY8YMAgNvvsg8qoSo5xmILJFG4TztlrhnYaDPuCGi8InQpaaOBHXliLtkzUsT_W53j-RhGAb_ZFxLEX8ulRklmbwE2lzGOoGrFzxZPtpDnc5fEXAj-VJ2ya_AsvAoJ55UcFCi_GL1u2fAKN4SnO5kaix9bIojtZOmfK2SX6JrV5qI");'></div>
+<div>
+<p class="font-bold text-text-primary text-sm">Dr. Humaira Khan</p>
+<p class="text-xs text-[#666]">Gynecology</p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-sm text-[#444]">
+<span class="material-symbols-outlined text-[18px] text-secondary">calendar_today</span>
+<span>Oct 3, 2023</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-[#444]">
+<span class="material-symbols-outlined text-[18px] text-secondary">schedule</span>
+<span>11:00 AM</span>
+</div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-[#666]">Consultation Fee</span>
+<span class="font-bold text-text-primary">৳ 1000</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-[#666]">Service Charge</span>
+<span class="font-bold text-text-primary">৳ 50</span>
+</div>
+<div class="border-t border-dashed border-gray-300 pt-3 mt-1 flex justify-between items-center">
+<span class="font-bold text-lg text-text-primary">Total</span>
+<span class="font-bold text-xl text-primary">৳ 1050</span>
+</div>
+<button class="mt-2 w-full flex cursor-pointer items-center justify-center rounded-xl h-12 bg-primary text-white text-base font-bold shadow-lg hover:bg-[#a32222] transition-colors focus:ring-4 focus:ring-primary/30">
+                                        Confirm Appointment
+                                    </button>
+<p class="text-xs text-center text-[#888] px-2">
+                                        By clicking confirm, you agree to our <a class="underline hover:text-secondary" href="#">Terms of Service</a>.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-auto border-t border-[#f4f1f1] bg-white py-8">
+<div class="layout-content-container flex flex-col items-center justify-center gap-4 px-4 text-center">
+<div class="flex items-center gap-2 text-[#666] text-sm">
+<span class="material-symbols-outlined text-green-600">verified_user</span>
+<span>100% Verified Doctors</span>
+<span class="mx-2 text-gray-300">|</span>
+<span class="material-symbols-outlined text-green-600">lock</span>
+<span>Secure Booking</span>
+</div>
+<p class="text-[#888] text-xs">© 2023 Sheba Health. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

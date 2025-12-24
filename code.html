@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TinyTales - Gentle &amp; Premium Baby Clothing</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4FB6A1",
+                        "primary-dark": "#3D9482",
+                        "accent-pink": "#FF8FA3",
+                        "accent-yellow": "#FFD166",
+                        "background-light": "#FFF8F1", 
+                        "background-hero": "#F6E7D6",
+                        "background-dark": "#151d1c",
+                        "surface": "#FFFFFF",
+                        "heading": "#2F3A4A",
+                        "text-body": "#4A5568",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "logo": ["Fredoka", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem", 
+                        "lg": "0.75rem", 
+                        "xl": "1rem", 
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 10px 40px -10px rgba(47, 58, 74, 0.08)",
+                        "card": "0 4px 20px -4px rgba(47, 58, 74, 0.04)",
+                        "button": "0 8px 20px -4px rgba(79, 182, 161, 0.3)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
+        }
+        .font-logo {
+            font-family: "Fredoka", sans-serif;
+        }.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-heading min-h-screen flex flex-col overflow-x-hidden selection:bg-primary selection:text-white">
+<nav class="sticky top-0 z-50 w-full bg-surface/90 backdrop-blur-md border-b border-[#F0E0D0] transition-all">
+<div class="px-4 md:px-10 py-4 flex items-center justify-between max-w-[1280px] mx-auto">
+<div class="flex items-center gap-2 text-heading cursor-pointer">
+<div class="flex items-baseline font-logo text-2xl sm:text-3xl tracking-tight select-none">
+<span class="text-[#4FB6A1]">T</span>
+<span class="text-[#FFD166]">i</span>
+<span class="text-[#FF8FA3]">n</span>
+<span class="text-[#4FB6A1]">y</span>
+<span class="text-[#2F3A4A]">Tales</span>
+</div>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-heading text-sm font-semibold hover:text-primary transition-colors" href="#">Baby (0-24m)</a>
+<a class="text-heading text-sm font-semibold hover:text-primary transition-colors" href="#">Toddler (2-5y)</a>
+<a class="text-heading text-sm font-semibold hover:text-primary transition-colors" href="#">Kids (5y+)</a>
+<a class="text-heading text-sm font-semibold hover:text-primary transition-colors" href="#">Accessories</a>
+<a class="text-accent-pink text-sm font-bold hover:text-red-600 transition-colors" href="#">Sale</a>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center size-10 rounded-full bg-gray-50 hover:bg-primary/10 text-heading hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-gray-50 hover:bg-primary/10 text-heading hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-gray-50 hover:bg-primary/10 text-heading hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute top-2.5 right-2.5 size-2 bg-accent-pink rounded-full border border-white"></span>
+</button>
+<button class="lg:hidden flex items-center justify-center size-10 rounded-full bg-gray-50 text-heading">
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 sm:gap-20 pb-20">
+<section class="mt-8 rounded-3xl bg-background-hero overflow-hidden shadow-sm relative">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-[#fdf5ed]/30 rounded-l-full pointer-events-none z-0 hidden lg:block"></div>
+<div class="absolute bottom-10 left-10 size-24 rounded-full bg-white/40 blur-2xl z-0"></div>
+<div class="absolute top-10 right-1/2 size-64 rounded-full bg-accent-yellow/10 blur-3xl z-0"></div>
+<div class="flex flex-col-reverse lg:flex-row items-center relative z-10">
+<div class="flex-1 p-8 sm:p-12 lg:p-16 lg:pr-8 flex flex-col gap-6 text-center lg:text-left items-center lg:items-start">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 backdrop-blur-sm text-heading text-xs font-bold tracking-wide uppercase shadow-sm border border-white/50">
+<span class="size-2 rounded-full bg-accent-pink"></span> New Collection
+                </div>
+<h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-heading leading-[1.1] tracking-tight">
+                    Softest Hugs for <br/>
+<span class="relative inline-block text-primary">
+                        Your Little Ones
+<svg class="absolute w-full h-3 -bottom-1 left-0 text-accent-yellow/60" fill="none" viewBox="0 0 200 9" xmlns="http://www.w3.org/2000/svg"><path d="M2.00025 6.99997C25.7501 2.99999 83.2503 1.99999 198.001 4.99999" stroke="currentColor" stroke-width="3"></path></svg>
+</span>
+</h2>
+<p class="text-heading/80 text-lg max-w-lg font-medium leading-relaxed">
+                    Organic, gentle-on-skin essentials designed for play, sleep, and everything in between. Wrap them in comfort they deserve.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
+<button class="h-14 px-8 bg-primary hover:bg-primary-dark text-white text-base font-bold rounded-full transition-all shadow-button hover:shadow-lg hover:-translate-y-0.5 w-full sm:w-auto flex items-center justify-center gap-2">
+                        Shop New Arrivals
+                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<button class="h-14 px-8 bg-white border border-white text-heading hover:bg-[#FAF3EA] hover:border-[#EAD8C5] text-base font-bold rounded-full transition-all w-full sm:w-auto shadow-sm">
+                        View Lookbook
+                    </button>
+</div>
+<div class="mt-6 flex items-center gap-4 text-sm font-medium text-heading/60">
+<div class="flex -space-x-2">
+<div class="size-8 rounded-full bg-gray-200 border-2 border-background-hero overflow-hidden"><img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI7cYuwmGayaEfdw4CNCAU3prc1288rjowE-MvsYB_L6pDWbOK_8gH4rCtrvSK_znU5MPqK7gdug0awf3YwJqdrl6TD67xbpqxMMpemJV2ZHOwTJrHDZu-Yxiu505aIyOyxr1Krb83r0lJg8fxpGUcTfEmXGBABR4ipa0Vw716ISwnKM2IhELl-Ofg6j725Jl3cMvzbNwj1PMBW5MDy2iQkSfVqkQgjTam9x5llx8ib0SEbpZqIKEt7uqOqzagkIV0blOtLCOSm7Yv"/></div>
+<div class="size-8 rounded-full bg-gray-200 border-2 border-background-hero overflow-hidden"><img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT5UAgwUOYbIoxkDGvB3BhbYS5vwUBitVfB5VJ9a3SHfqGiUMr1iKVCMcZxqfIZ95LXPfrKp8aBp4EvSvIXYJlbIrL_wd6axHdJYQ626CH1AsUPA8PTkMfM3sc0IcM28MSRKMeQdaOc55hNN19Aas4CfWo52ZoJEY0IoDN3aO9d6q2HWEYzhnlHDbTZAk-NR1pHqihgOgT9GdnnF_jfEEAY2BTZ7eqEpAYqTLpf1HnOhgmibgrodHiBI-cV78qHqxB5_8oxidKMhH2"/></div>
+<div class="size-8 rounded-full bg-gray-200 border-2 border-background-hero overflow-hidden"><img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqSiEjjRgzZR29gJQRqqzlrtyQ-KV6MrjYYqUle3nWBhmoA7p0_YxSBb62jSU28oQJLAamFLQyUK81TIInu3wXIGyeNhRu_aYoLXdY077ou1Z5i9HELptZYqBcqvjjaOKbvr0FYLnzkePuhbrloCJXkJzTbro3-E4rET_7N9n7nlAkVI_6hMVr5pYKECRHGEv9KxAHRVUp7Mx6fim-4NbAW6enxFOJayeFsrnskcpRs2L0YLDt7egkxi0huJd8y8eFamB-hbIu6zYg"/></div>
+</div>
+<span>Trusted by 10k+ parents</span>
+</div>
+</div>
+<div class="flex-1 w-full lg:h-full lg:min-h-[600px] relative flex items-center justify-center p-6 lg:p-0">
+<div class="relative w-full max-w-md lg:max-w-none aspect-[4/3] lg:aspect-auto lg:h-full">
+<div class="w-full h-full lg:absolute lg:top-0 lg:right-0 lg:w-[110%] lg:h-full overflow-hidden lg:rounded-l-[3rem] rounded-2xl shadow-xl lg:shadow-none">
+<img alt="Happy toddler playing with wooden toys in soft natural light" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-1000" data-alt="Happy toddler playing with wooden toys in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyVq1_KVqACtDxmECgXvfuzNq6XWZliEZrrhrP-SVQoxM47jN4gche8zFMSfjJ-lkOBbCkYMrXooMJqVtaObPz1bbCfG0yLhxIEchdGz3fF7FGzyKsjhJmPRc_xQrpuVg-E3F0335-fmMsjmRMgFp8wtq6Wo3FU-4LqK3ZdKCjn9K4AoDgCHQTWetY_39_GHhZLuDnTQrk6F1Dm82mTShjnUhXZDNM_9ofC3Jcc2_aQQ1eRKaIWy9NXpghcJttJVOH-u43nbYigMTr"/>
+</div>
+<div class="absolute -bottom-6 -left-4 lg:bottom-12 lg:left-12 bg-white/90 backdrop-blur p-4 rounded-xl shadow-soft max-w-[180px] hidden sm:block animate-fade-in-up">
+<div class="flex items-center gap-3 mb-2">
+<div class="size-10 rounded-full bg-[#EAD8C5] flex items-center justify-center text-heading">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<div>
+<p class="text-xs font-bold text-heading">100% Organic</p>
+<p class="text-[10px] text-heading/60">Certified Cotton</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full">
+<div class="flex justify-between items-end mb-8 px-2">
+<h3 class="text-2xl sm:text-3xl font-bold text-heading">Shop by Category</h3>
+<a class="text-primary font-bold text-sm hover:underline flex items-center gap-1 group" href="#">
+                View All <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="flex overflow-x-auto no-scrollbar gap-6 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth">
+<a class="group flex flex-col items-center gap-4 min-w-[100px] sm:min-w-[140px] cursor-pointer" href="#">
+<div class="size-24 sm:size-36 rounded-full overflow-hidden border-4 border-white shadow-md group-hover:border-primary/30 group-hover:shadow-lg transition-all bg-gray-50">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Newborn baby sleeping peacefully in white wrap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGYHf9fbIFFey0RTo35M7I6o2hxGjZ1JLCfrrFiMb4RUJeTUNPvq4j5mEkIPgO46BJFegGIZvnlLWZcS661qXuKP25rLxv5rci_XV85b7I5A3fY1A4NJTNNMD3dFORF-tCcyD5-4z9e7R5dKTuB_aK9A1nXMdJtgnUPpUxXftbiGm_LfEwDOfAH8qiuI3KKn0xGUErdThd7NTtlcpDXB6eMukZKU87pXkz6B-BQAjCavq07SWvTzt-pYgpxHoTmWng4D1SVgd_zCJu"/>
+</div>
+<span class="text-heading font-bold text-sm sm:text-base group-hover:text-primary transition-colors">Newborn</span>
+</a>
+<a class="group flex flex-col items-center gap-4 min-w-[100px] sm:min-w-[140px] cursor-pointer" href="#">
+<div class="size-24 sm:size-36 rounded-full overflow-hidden border-4 border-white shadow-md group-hover:border-primary/30 group-hover:shadow-lg transition-all bg-gray-50">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Girl playing in a field with sun hat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj9ANVBhrEVJ5B0Gga_Ne5GM6lWdtGpkROew5HA3S_bFKV7sPXBtk0AuFyw3debDu9HZPJVgKXl1uz4vkdl9yFSunh0KIkojisqK_2X56SVxQB_IyzcnOUDxXjzVTGifDiunBNL24c33wBeJFWZmYyw0sQo7TrsvXpBeDlC3mI19CePJ1i9qwBSbg9DU1PJwB4K7RUOQJQig0jDNKV8CYhBw-1LX1T3ofT61HHE1JD_zmEwN3XLwrRkWNrv5nNeyK9Q7BpeMNJ5q5A"/>
+</div>
+<span class="text-heading font-bold text-sm sm:text-base group-hover:text-primary transition-colors">Playtime</span>
+</a>
+<a class="group flex flex-col items-center gap-4 min-w-[100px] sm:min-w-[140px] cursor-pointer" href="#">
+<div class="size-24 sm:size-36 rounded-full overflow-hidden border-4 border-white shadow-md group-hover:border-primary/30 group-hover:shadow-lg transition-all bg-gray-50">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Soft pajama set folded on a bed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlRthnbO-g5FI3HF-HBgWOSJzeUiKSmIbNbxD-eaO387yn2S6dYPC6q24tP51zWQedYHLLhea794sJCKlEhtnZp9hEucq0FSiV2OFPTFvcUDwnQH9giPg2bYl95BocNJXz_rmsn3sUBhOSx2R-jvh627cm0523q6XM5jUAPBXCB_v84xz3D8G2M2TQSS9wxLtOh5gOh1icAAVJfcMyw_KDAq-NvFN5PeZjN8aiqLIk4ZllGeZKKNxBzeycmbtyh1WYOdA93usqikA1"/>
+</div>
+<span class="text-heading font-bold text-sm sm:text-base group-hover:text-primary transition-colors">Sleepwear</span>
+</a>
+<a class="group flex flex-col items-center gap-4 min-w-[100px] sm:min-w-[140px] cursor-pointer" href="#">
+<div class="size-24 sm:size-36 rounded-full overflow-hidden border-4 border-white shadow-md group-hover:border-primary/30 group-hover:shadow-lg transition-all bg-gray-50">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Cute baby shoes and socks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiNfNACqSyEOfgX3RE2cQMkWK3JXUVIURR5dJYO8WyGbSyY9MieMuJMYElhgI476i-CCx8y-7C07tKxeVjBSxcwCtweKkwA8sxyRA5-b-QAvwoSwen1xChje_FgCIupXNag1lYwlvavqtSNllH8DiMX12bUOgeVkeH2ukKhFIrGDQOxtLtOiX5JAx1ldAHxCO1hCqjgVx6dZRs3rep_N6MmhFhlXq-yLIlLmVotgvf1qGVv3abz5VGordBGbWcAstnV4cLFFJQzusU"/>
+</div>
+<span class="text-heading font-bold text-sm sm:text-base group-hover:text-primary transition-colors">Footwear</span>
+</a>
+<a class="group flex flex-col items-center gap-4 min-w-[100px] sm:min-w-[140px] cursor-pointer" href="#">
+<div class="size-24 sm:size-36 rounded-full overflow-hidden border-4 border-white shadow-md group-hover:border-primary/30 group-hover:shadow-lg transition-all bg-gray-50">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Wooden toy blocks and plush animals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqgibEnCa6kBUJxBMJmIsV4OJ5223_AnWuB10L36zGktYvizBhsOUaCequlMSUc1A0ognaF2AuayNbfA5L-V3vHJSXU5AEO6T-_LnpTqLVTxl8QuLLrrtbr09eUE4o-xjgsq_hHQDUK6KLix2nn0g2juGdPiJ5SjJq-YVGOZWlE_wVV1g2y_iJYrMjDqXVMhPaAKsMoyAG_0oGE6q8arpv7QBfOxX7eNYiEeE3W3BaBTJayjxc4gWKxkcwbl_sv7kZ7kQ9FSPflFPs"/>
+</div>
+<span class="text-heading font-bold text-sm sm:text-base group-hover:text-primary transition-colors">Toys</span>
+</a>
+<a class="group flex flex-col items-center gap-4 min-w-[100px] sm:min-w-[140px] cursor-pointer" href="#">
+<div class="size-24 sm:size-36 rounded-full overflow-hidden border-4 border-white shadow-md group-hover:border-primary/30 group-hover:shadow-lg transition-all bg-gray-50">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Baby accessories and bibs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtMT5MSjJgwR1ad1VyJVUW-4-wXXRvXw--wm0oP1S8WVsviagywV45lhPeRVBCAX9hIudjMzqlO4K8CkW74ZHksLN9n0c82mxoVl5CbNRwCRSh-j-f9pXo6wN0SmBT3taamB2DKn48gNoJJrqOPzv0hgy2RWcTu5qrNdNsOTLh0H38SRp7KCZoToC4yPP5VCOhXF1rDd7cxBkF20fqi10D6u23YeGqegkPmGcqMQRS2xOHWxEJsKhnQvd4HHqnGpYYS5_usDm5L2QS"/>
+</div>
+<span class="text-heading font-bold text-sm sm:text-base group-hover:text-primary transition-colors">Essentials</span>
+</a>
+</div>
+</section>
+<section>
+<div class="text-center mb-10">
+<h3 class="text-3xl font-bold text-heading">Trending Now</h3>
+<p class="text-heading/60 mt-2 text-lg">Parents' favorite picks this week</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="group flex flex-col gap-3 bg-white p-3 rounded-2xl shadow-card hover:shadow-soft hover:-translate-y-1 transition-all duration-300 border border-gray-100">
+<div class="aspect-[3/4] rounded-xl overflow-hidden relative bg-gray-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Beige knit cardigan for baby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwuUIpOgtPpiaSvyxrbah-5XfxY9MG5WKfNP2qe14Bi7hRZKDRi69m2utiiU2LJNsUQ6JDwpI_FPHDUxIYrpohmnA8dfH4-FEWd0OUbVBMi0gRNqTJ_tGAbN15sF_21CETtiLfY1K0q_K3swQnIV_ymuIvIVC4m0tfzMdcHRupMntEhSNJ0KO9h8hza26fT4j5hEn_ymjg2kyzcSQwfowweoLwZS2hLrYhWnFJInfkzFVZypgXlUPnv1r_GOKqXpWxNcvb7o1P913r"/>
+<button class="absolute bottom-3 right-3 size-10 bg-white rounded-full flex items-center justify-center text-heading hover:bg-primary hover:text-white shadow-md transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300 z-10">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="px-2 pb-2">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-heading text-lg group-hover:text-primary transition-colors line-clamp-1">Cloud Knit Cardigan</h4>
+</div>
+<p class="text-heading/60 text-sm mb-3">100% Organic Cotton</p>
+<div class="flex items-center justify-between">
+<span class="font-bold text-heading text-lg">$45.00</span>
+<div class="flex gap-1.5">
+<div class="size-3.5 rounded-full bg-[#D6C0B3] border border-gray-200 cursor-pointer hover:ring-2 ring-primary ring-offset-1"></div>
+<div class="size-3.5 rounded-full bg-[#8FA3A8] border border-gray-200 cursor-pointer hover:ring-2 ring-primary ring-offset-1"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="group flex flex-col gap-3 bg-white p-3 rounded-2xl shadow-card hover:shadow-soft hover:-translate-y-1 transition-all duration-300 border border-gray-100">
+<div class="aspect-[3/4] rounded-xl overflow-hidden relative bg-gray-100">
+<span class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm z-10">Bestseller</span>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="White organic cotton romper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUDwURgs4XxPWqoKw9BwaABKdf1yGVtJOUXz-tQtyHJqomrFYnDilxwOZXpLpdLlR3o1YOwBNYnzC_2Ho8SoYNg0oMOX4o9PVwkyTN2RIXjpPDypDQbDW6jwi13Y3qt7otx7mYM6DFS50QdWHz3JhUX3W9jEEgVdC6zsB5Kn1alY0wAJet-zaTGzMc5nlvcPBm2g7FJZsNl9MQKeF_NoMS3PH25E62Kr_UvefrbyBMtPZliULSY3WpGYPnCcVE_8eZVV1Lv304L_NM"/>
+<button class="absolute bottom-3 right-3 size-10 bg-white rounded-full flex items-center justify-center text-heading hover:bg-primary hover:text-white shadow-md transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300 z-10">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="px-2 pb-2">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-heading text-lg group-hover:text-primary transition-colors line-clamp-1">Everyday Romper</h4>
+</div>
+<p class="text-heading/60 text-sm mb-3">Soft &amp; Breathable</p>
+<div class="flex items-center justify-between">
+<span class="font-bold text-heading text-lg">$32.00</span>
+<div class="flex gap-1.5">
+<div class="size-3.5 rounded-full bg-white border border-gray-200 cursor-pointer hover:ring-2 ring-primary ring-offset-1"></div>
+<div class="size-3.5 rounded-full bg-[#EAD8C5] border border-gray-200 cursor-pointer hover:ring-2 ring-primary ring-offset-1"></div>
+<div class="size-3.5 rounded-full bg-[#ADC4CE] border border-gray-200 cursor-pointer hover:ring-2 ring-primary ring-offset-1"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="group flex flex-col gap-3 bg-white p-3 rounded-2xl shadow-card hover:shadow-soft hover:-translate-y-1 transition-all duration-300 border border-gray-100">
+<div class="aspect-[3/4] rounded-xl overflow-hidden relative bg-gray-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Plush bunny toy sitting on a shelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCsELTvWlaEA7S-0ACqdSlvvp9xEAxTlP8aY0qlh326Ts8hDyAHSwLwZYCqgtxpOtrqJlRFlnw20jLiYXFE1I5qjUToxCnDIsQBi3fccro2xVMFEtn-pXCsC3dpM3FMpYptFpCdBPaH3dUbBGctnrL3wWRGyKa3WvpWb3h27uSwkwmszzVJ2LDa9oJP2wid1VVCzJV7F3KpJ9EOnOGJUPfCtuacuCr56eDuc4cIkDPXDPL5sETemzqfxx2bZFzO_IVs1y8LGLsxthc"/>
+<button class="absolute bottom-3 right-3 size-10 bg-white rounded-full flex items-center justify-center text-heading hover:bg-primary hover:text-white shadow-md transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300 z-10">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="px-2 pb-2">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-heading text-lg group-hover:text-primary transition-colors line-clamp-1">Snuggle Bunny</h4>
+</div>
+<p class="text-heading/60 text-sm mb-3">Safe for Newborns</p>
+<div class="flex items-center justify-between">
+<span class="font-bold text-heading text-lg">$24.00</span>
+</div>
+</div>
+</div>
+<div class="group flex flex-col gap-3 bg-white p-3 rounded-2xl shadow-card hover:shadow-soft hover:-translate-y-1 transition-all duration-300 border border-gray-100">
+<div class="aspect-[3/4] rounded-xl overflow-hidden relative bg-gray-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Stack of folded baby clothes in pastel colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAIBhfv6-9d_aGx8v8XDbA_w9aAyeF0174AlKkwh2cK0oBz_rclB12us1Yx0VJKHuIbW16uV4gsgbxrEREVhVmYsAmKm-tGSlEeWFQW2rI5uye5ymKBTEd_KluLL8WKUy5Wyom1bjRRuPI4P_hQeG73497-haGv3JS58ydvupjtAGbwrkP6pmhNVxeuDxC36kJjKTDyX_qGTtB1-sVxMv5Usjy8rrm-WM_No9D4b1cEH-YN2d1TCtxQJTJF81zfg2h2puk_cu9sOZ4"/>
+<button class="absolute bottom-3 right-3 size-10 bg-white rounded-full flex items-center justify-center text-heading hover:bg-primary hover:text-white shadow-md transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300 z-10">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="px-2 pb-2">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-heading text-lg group-hover:text-primary transition-colors line-clamp-1">Starter Set (5-Pack)</h4>
+</div>
+<p class="text-heading/60 text-sm mb-3">Everything you need</p>
+<div class="flex items-center justify-between">
+<span class="font-bold text-heading text-lg">$65.00</span>
+<div class="flex gap-1.5">
+<div class="size-3.5 rounded-full bg-[#E8D3C8] border border-gray-200 cursor-pointer hover:ring-2 ring-primary ring-offset-1"></div>
+<div class="size-3.5 rounded-full bg-[#B2C8C6] border border-gray-200 cursor-pointer hover:ring-2 ring-primary ring-offset-1"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 flex justify-center">
+<button class="h-12 px-10 bg-white border-2 border-heading/10 text-heading hover:border-primary hover:text-primary hover:bg-primary/5 text-sm font-bold rounded-full transition-all">
+                View All Products
+            </button>
+</div>
+</section>
+<section class="bg-[#FAF3EA] rounded-3xl overflow-hidden shadow-sm">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/2 relative min-h-[350px]">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Parent holding baby hand close up detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRGfSVFiS9GdtOiNn_huCfGi-mZHxM9TXxPfvcSx49ip73dgmrV3FA3-LVdFK0tbs_aOXPMmJJL5ADRiQNbxJNdqilJv8M5pjekNY2wVNE2zxB5Znk2sNF1iPMtzJIKTUCYjIj6-VHKddIL11d4L8FKglgXcgDAeZ_hGIndwcBvZAkNCNstZ0gpZ0qr_GbJpcact63hdfjgwH-U-IJftvO0feOjBVH16OYqTURWfeP0-2DQKwOqp_V611FbI4ZEH7w-z57wnIvbPJS"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent md:hidden"></div>
+</div>
+<div class="md:w-1/2 p-8 lg:p-16 flex flex-col justify-center items-start gap-6">
+<span class="text-primary font-bold text-sm tracking-widest uppercase bg-white px-3 py-1 rounded-full shadow-sm">Our Promise</span>
+<h3 class="text-3xl lg:text-4xl font-bold text-heading leading-tight">Made with love,<br/>designed for sensitivity.</h3>
+<p class="text-heading/70 leading-relaxed text-lg">
+                    At TinyTales, we believe in materials that are as kind to the planet as they are to your baby's skin. Our organic cotton is GOTS certified, free from harsh chemicals, and built for endless adventures and peaceful slumbers.
+                </p>
+<a class="text-heading font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors flex items-center gap-2" href="#">
+                    Read Our Story <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<section class="relative bg-white rounded-3xl p-8 sm:p-16 overflow-hidden text-center shadow-card border border-gray-100">
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-40 pointer-events-none">
+<div class="absolute top-[-20%] left-[-10%] size-80 bg-[#F6E7D6] rounded-full blur-3xl"></div>
+<div class="absolute bottom-[-20%] right-[-10%] size-80 bg-primary/10 rounded-full blur-3xl"></div>
+</div>
+<div class="relative z-10 max-w-xl mx-auto flex flex-col items-center gap-6">
+<div class="size-16 bg-[#F6E7D6] rounded-2xl rotate-3 flex items-center justify-center text-primary mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[32px] -rotate-3">mail</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-bold text-heading">Join the Family</h2>
+<p class="text-heading/70 text-lg">Sign up for our newsletter and get <span class="text-heading font-bold underline decoration-accent-pink decoration-2 underline-offset-2">10% off</span> your first order, plus early access to new collections.</p>
+<form class="flex flex-col sm:flex-row gap-3 w-full mt-4">
+<input class="flex-1 h-14 px-6 rounded-full border border-gray-200 bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 text-heading placeholder:text-gray-400 outline-none transition-all shadow-sm" placeholder="Your email address" type="email"/>
+<button class="h-14 px-8 bg-heading text-white font-bold rounded-full hover:bg-primary transition-colors shadow-lg hover:shadow-xl" type="button">
+                    Sign Up
+                </button>
+</form>
+<p class="text-xs text-heading/40 mt-2">We respect your privacy. Unsubscribe at any time.</p>
+</div>
+</section>
+</main>
+<footer class="bg-heading text-white pt-16 pb-8">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<div class="flex items-baseline font-logo text-2xl tracking-tight select-none">
+<span class="text-[#4FB6A1]">T</span>
+<span class="text-[#FFD166]">i</span>
+<span class="text-[#FF8FA3]">n</span>
+<span class="text-[#4FB6A1]">y</span>
+<span class="text-white">Tales</span>
+</div>
+</div>
+<p class="text-white/60 text-sm leading-relaxed max-w-xs">
+                    Premium organic clothing for babies and toddlers. Designed with love, made for comfort, and built for memories.
+                </p>
+<div class="flex gap-4 mt-2">
+<a class="size-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-lg">thumb_up</span></a>
+<a class="size-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-lg">photo_camera</span></a>
+<a class="size-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-lg">smart_display</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6 text-white">Shop</h4>
+<ul class="flex flex-col gap-3 text-sm text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Baby Boy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Baby Girl</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Toddler</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Accessories</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6 text-white">Help &amp; Info</h4>
+<ul class="flex flex-col gap-3 text-sm text-white/60">
+<li><a class="hover:text-primary transition-colors" href="#">Track Order</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Size Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Care Instructions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6 text-white">Contact</h4>
+<ul class="flex flex-col gap-4 text-sm text-white/60">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] mt-0.5 text-primary">location_on</span>
+<span>123 Sunshine Blvd,<br/>Los Angeles, CA 90012</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary">call</span>
+<span>+1 (555) 123-4567</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary">mail</span>
+<span>hello@tinytales.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-white/40 text-sm">© 2024 TinyTales. All rights reserved.</p>
+<div class="flex gap-6 text-xs text-white/40 font-medium">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roudromoyee Online Clinic - Online Telemedicine</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- AOS Animation CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c72929",
+                        "secondary": "#1F8A9E",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#201212",
+                        "surface-light": "#FFFFFF",
+                        "text-main": "#333333",
+                        "text-sub": "#555555",
+                        "border-color": "#E5E7EB"
+                    },
+                    fontFamily: {
+                        "display": ["Hind Siliguri", "Inter", "sans-serif"],
+                        "body": ["Hind Siliguri", "Inter", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll from animations */
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c72929;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a31f1f;
+        }
+    </style>
+</head>
+<body class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root text-text-main dark:text-white transition-colors duration-300">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-border-color bg-white/90 backdrop-blur-md dark:bg-background-dark/90 transition-all duration-300" id="navbar">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-3">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-3 text-primary cursor-pointer" onclick="window.scrollTo(0,0)">
+<div class="size-10 flex items-center justify-center rounded-xl bg-primary/10 text-primary hover:rotate-12 transition-transform duration-300">
+<span class="material-symbols-outlined icon-filled text-2xl">local_hospital</span>
+</div>
+<h2 class="text-[#171212] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Roudromoyee Online Clinic</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+<div class="flex items-center gap-8">
+<a class="text-text-main dark:text-gray-200 text-base font-medium hover:text-primary transition-colors relative group" href="#">
+    হোম
+    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+</a>
+<a class="text-text-main dark:text-gray-200 text-base font-medium hover:text-primary transition-colors relative group" href="#services">
+    সেবাসমূহ
+    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+</a>
+<a class="text-text-main dark:text-gray-200 text-base font-medium hover:text-primary transition-colors relative group" href="#doctors">
+    ডাক্তারগণ
+    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+</a>
+<a class="text-text-main dark:text-gray-200 text-base font-medium hover:text-primary transition-colors relative group" href="#contact">
+    যোগাযোগ
+    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+</a>
+</div>
+<div class="flex gap-3">
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary hover:bg-red-700 hover:scale-105 active:scale-95 transition-all text-white text-sm font-bold shadow-sm shadow-primary/20">
+<span class="truncate">লগ ইন</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-text-main dark:text-white text-sm font-bold transition-all hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined mr-2 text-lg">language</span>
+<span class="truncate">বাংলা</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="lg:hidden">
+<button class="p-2 text-text-main dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mobile Menu Drawer -->
+<div class="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm hidden transition-opacity duration-300 opacity-0" id="mobile-menu-overlay"></div>
+<div class="fixed top-0 right-0 z-[70] h-full w-[280px] bg-white dark:bg-background-dark shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-6" id="mobile-menu-drawer">
+    <div class="flex justify-between items-center mb-8">
+        <h3 class="text-xl font-bold text-primary">মেনু</h3>
+        <button class="p-2 text-gray-500 hover:text-primary rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" id="close-mobile-menu">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <div class="flex flex-col gap-6">
+        <a class="text-lg font-medium hover:text-primary transition-colors" href="#">হোম</a>
+        <a class="text-lg font-medium hover:text-primary transition-colors" href="#services">সেবাসমূহ</a>
+        <a class="text-lg font-medium hover:text-primary transition-colors" href="#doctors">ডাক্তারগণ</a>
+        <a class="text-lg font-medium hover:text-primary transition-colors" href="#contact">যোগাযোগ</a>
+    </div>
+    <div class="mt-auto flex flex-col gap-4">
+        <button class="w-full flex items-center justify-center rounded-full h-12 bg-primary text-white font-bold shadow-lg">লগ ইন</button>
+        <button class="w-full flex items-center justify-center rounded-full h-12 bg-gray-100 dark:bg-gray-800 font-bold">বাংলা / English</button>
+    </div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative bg-white dark:bg-background-dark overflow-hidden">
+<div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl" data-aos="fade-left" data-aos-duration="2000"></div>
+<div class="absolute top-40 -left-20 w-72 h-72 bg-secondary/5 rounded-full blur-3xl" data-aos="fade-right" data-aos-duration="2000"></div>
+
+<div class="layout-container flex h-full grow flex-col relative z-10">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-8 md:py-16">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="@container">
+<div class="flex flex-col-reverse gap-8 px-4 @[864px]:flex-row @[864px]:items-center">
+<div class="flex flex-col gap-6 flex-1 @[864px]:pr-8 text-center @[864px]:text-left" data-aos="fade-up" data-aos-duration="1000">
+<div class="flex flex-col gap-3">
+<div class="inline-flex items-center gap-2 self-center @[864px]:self-start bg-secondary/10 px-4 py-1.5 rounded-full border border-secondary/20 hover:bg-secondary/20 transition-colors cursor-default">
+<span class="material-symbols-outlined text-secondary text-sm">verified</span>
+<span class="text-secondary text-sm font-semibold">বিশ্বস্ত টেলিমেডিসিন সেবা</span>
+</div>
+<h1 class="text-text-main dark:text-white text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
+                                            আপনার স্বাস্থ্য, <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">আমাদের দায়িত্ব</span>
+</h1>
+<h2 class="text-text-sub dark:text-gray-300 text-lg md:text-xl font-normal leading-relaxed mt-2 max-w-lg mx-auto @[864px]:mx-0">
+                                            ঘরে বসেই অভিজ্ঞ ডাক্তারের পরামর্শ নিন। কোনো সিরিয়াল ধরার ঝামেলা ছাড়াই, আপনার এবং আপনার পরিবারের সুস্বাস্থ্য নিশ্চিত করুন।
+                                        </h2>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center @[864px]:justify-start mt-2">
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-primary hover:bg-red-700 hover:-translate-y-1 transition-all text-white text-base font-bold shadow-lg shadow-primary/30 active:scale-95 group">
+<span class="truncate group-hover:mr-2 transition-all">অনলাইন কনসাল্টেশন নিন</span>
+<span class="material-symbols-outlined ml-2 text-xl group-hover:scale-110 transition-transform">video_call</span>
+</button>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-white border-2 border-gray-100 hover:border-gray-300 hover:bg-gray-50 dark:bg-transparent dark:border-gray-700 dark:hover:bg-gray-800/50 text-text-main dark:text-white text-base font-bold transition-all hover:-translate-y-1 active:scale-95">
+<span class="truncate">অ্যাপ ডাউনলোড করুন</span>
+<span class="material-symbols-outlined ml-2 text-xl">download</span>
+</button>
+</div>
+<div class="flex items-center gap-6 mt-4 justify-center @[864px]:justify-start text-sm text-text-sub dark:text-gray-400">
+<div class="flex items-center gap-2 group cursor-default">
+<span class="material-symbols-outlined text-green-600 icon-filled group-hover:scale-110 transition-transform">check_circle</span>
+<span class="group-hover:text-green-600 transition-colors">৫০+ বিশেষজ্ঞ ডাক্তার</span>
+</div>
+<div class="flex items-center gap-2 group cursor-default">
+<span class="material-symbols-outlined text-green-600 icon-filled group-hover:scale-110 transition-transform">check_circle</span>
+<span class="group-hover:text-green-600 transition-colors">৫০০০+ রোগী সেবা</span>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+<div class="w-full aspect-[4/3] rounded-3xl bg-gray-100 dark:bg-gray-800 overflow-hidden relative shadow-2xl shadow-gray-200 dark:shadow-black/50 hover:shadow-primary/20 transition-shadow duration-500" data-alt="Illustration of a friendly female doctor consulting a patient online, warm colors">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxDhmGg6QwdS0syb2JcM5n48rNPJgip0lJoGYdAv1XPYY3KKdUX1sM7VxxPPWab0mPlD8GKcHXmxq6iIDBUSBO7SbekOpcSo951Sr1Sbli47IzRWAQnyjmSxRTgoJNE-ZqO4tpkOj89ZYGpjM2wHCqGiKjciOh2W_jVLOWL_u4FPb5bMq7GonBoKbXS47OK6KAp7FeDxZRNvcARvwxXnCCfIZb3Ey-K_pr38-IaW0EGmi3M8cafCzY55C9_AHmk1pmHOKIJW0XCC4");'></div>
+<!-- Decorative floating elements -->
+<div class="absolute bottom-8 left-8 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+<div class="bg-yellow-50 p-2.5 rounded-full text-yellow-500">
+<span class="material-symbols-outlined icon-filled">star</span>
+</div>
+<div>
+<p class="text-xs text-gray-500 font-medium uppercase tracking-wide">Patient Rating</p>
+<div class="flex items-center gap-1">
+    <p class="text-lg font-bold text-gray-800 dark:text-white">4.9</p>
+    <span class="text-xs text-gray-400">/ 5.0</span>
+</div>
+</div>
+</div>
+<div class="absolute top-8 right-8 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl flex items-center gap-4 animate-float">
+    <div class="bg-green-50 p-2.5 rounded-full text-green-500">
+    <span class="material-symbols-outlined icon-filled">call</span>
+    </div>
+    <div>
+    <p class="text-xs text-gray-500 font-medium uppercase tracking-wide">Active Doctors</p>
+    <div class="flex items-center gap-1">
+        <p class="text-lg font-bold text-gray-800 dark:text-white">Online</p>
+        <span class="flex h-3 w-3 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </span>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Indicators -->
+<section class="border-y border-border-color bg-gray-50 dark:bg-gray-900/50 py-10" data-aos="fade-up" data-aos-offset="100">
+<div class="layout-container">
+<div class="px-4 md:px-10 lg:px-40 flex justify-center">
+<div class="layout-content-container max-w-[960px] w-full flex flex-wrap justify-center md:justify-between gap-8 md:gap-12 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<!-- Logos placeholder -->
+<div class="flex items-center gap-3 font-bold text-lg md:text-xl text-gray-500 hover:text-primary transition-colors cursor-default group">
+    <span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">local_hospital</span> BMDC Verified
+</div>
+<div class="flex items-center gap-3 font-bold text-lg md:text-xl text-gray-500 hover:text-secondary transition-colors cursor-default group">
+    <span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">security</span> SSL Secured
+</div>
+<div class="flex items-center gap-3 font-bold text-lg md:text-xl text-gray-500 hover:text-blue-600 transition-colors cursor-default group">
+    <span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">workspace_premium</span> ISO Certified
+</div>
+<div class="flex items-center gap-3 font-bold text-lg md:text-xl text-gray-500 hover:text-green-600 transition-colors cursor-default group">
+    <span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">support_agent</span> 24/7 Support
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-16 md:py-24 bg-background-light dark:bg-background-dark relative" id="services">
+<div class="layout-container flex flex-col items-center">
+<div class="px-4 md:px-10 lg:px-40 w-full flex justify-center">
+<div class="layout-content-container flex flex-col max-w-[960px] w-full gap-12">
+<div class="flex flex-col items-center text-center gap-4" data-aos="fade-up">
+<span class="text-primary font-bold tracking-widest uppercase text-xs bg-primary/10 px-3 py-1 rounded-full">আমাদের সেবাসমূহ</span>
+<h2 class="text-text-main dark:text-white text-3xl md:text-5xl font-bold leading-tight">বিশেষায়িত স্বাস্থ্যসেবা</h2>
+<p class="text-text-sub dark:text-gray-400 max-w-2xl text-lg">আপনার এবং আপনার পরিবারের জন্য আমাদের রয়েছে অভিজ্ঞ ডাক্তারদের নিয়ে গঠিত বিশেষায়িত বিভাগ।</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<!-- Service 1 -->
+<div class="group bg-white dark:bg-surface-dark p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 border border-transparent hover:border-primary/20 flex flex-col items-center text-center gap-6 cursor-pointer hover:-translate-y-2" data-aos="fade-up" data-aos-delay="0">
+<div class="size-20 rounded-full bg-pink-50 dark:bg-pink-900/30 flex items-center justify-center text-pink-600 dark:text-pink-300 group-hover:scale-110 group-hover:bg-pink-100 transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">pregnant_woman</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white mb-2 group-hover:text-primary transition-colors">গাইনোকোলজি</h3>
+<p class="text-sm text-text-sub dark:text-gray-400">মহিলাদের স্বাস্থ্য ও প্রসূতি সেবা</p>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group bg-white dark:bg-surface-dark p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 border border-transparent hover:border-primary/20 flex flex-col items-center text-center gap-6 cursor-pointer hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+<div class="size-20 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-300 group-hover:scale-110 group-hover:bg-blue-100 transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">stethoscope</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white mb-2 group-hover:text-primary transition-colors">জেনারেল মেডিসিন</h3>
+<p class="text-sm text-text-sub dark:text-gray-400">সাধারণ রোগ ও পরামর্শ</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group bg-white dark:bg-surface-dark p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 border border-transparent hover:border-primary/20 flex flex-col items-center text-center gap-6 cursor-pointer hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+<div class="size-20 rounded-full bg-orange-50 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-300 group-hover:scale-110 group-hover:bg-orange-100 transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">child_care</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white mb-2 group-hover:text-primary transition-colors">পেডিয়াট্রিক্স</h3>
+<p class="text-sm text-text-sub dark:text-gray-400">শিশুদের স্বাস্থ্য ও যত্ন</p>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="group bg-white dark:bg-surface-dark p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 border border-transparent hover:border-primary/20 flex flex-col items-center text-center gap-6 cursor-pointer hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+<div class="size-20 rounded-full bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center text-teal-600 dark:text-teal-300 group-hover:scale-110 group-hover:bg-teal-100 transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">dermatology</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white mb-2 group-hover:text-primary transition-colors">ডার্মাটোলজি</h3>
+<p class="text-sm text-text-sub dark:text-gray-400">চর্ম ও যৌন রোগ</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-6">
+<button class="flex items-center justify-center gap-2 text-primary font-bold hover:gap-4 transition-all group px-4 py-2 hover:bg-primary/5 rounded-full">
+                                সকল সেবা দেখুন <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works Section -->
+<section class="py-16 md:py-24 bg-white dark:bg-surface-dark/20 relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
+<div class="layout-container flex flex-col items-center relative z-10">
+<div class="px-4 md:px-10 lg:px-40 w-full flex justify-center">
+<div class="layout-content-container flex flex-col max-w-[960px] w-full gap-12">
+<div class="flex flex-col md:flex-row gap-10 items-start md:items-center justify-between" data-aos="fade-left">
+<div class="flex flex-col gap-4 max-w-lg">
+<span class="text-primary font-bold tracking-widest uppercase text-xs">সহজ প্রক্রিয়া</span>
+<h2 class="text-secondary dark:text-teal-400 text-3xl md:text-5xl font-bold leading-tight">
+                                  কিভাবে কাজ করে?
+                                </h2>
+<p class="text-text-main dark:text-gray-300 text-base font-normal leading-normal">মাত্র ৩টি সহজ ধাপে ঘরে বসেই অভিজ্ঞ ডাক্তারের পরামর্শ নিন। কোনো প্রযুক্তিগত জ্ঞান ছাড়াই খুব সহজে ব্যবহারযোগ্য।</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="relative flex flex-col gap-6 rounded-3xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-surface-dark p-8 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="0">
+<div class="absolute -top-5 -right-5 size-14 rounded-full bg-secondary text-white flex items-center justify-center text-xl font-bold shadow-lg shadow-secondary/30 group-hover:scale-110 transition-transform">১</div>
+<div class="text-primary bg-primary/5 w-fit p-4 rounded-2xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl">calendar_month</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-text-main dark:text-white text-xl font-bold leading-tight">অ্যাপয়েন্টমেন্ট বুক করুন</h3>
+<p class="text-text-sub dark:text-gray-400 text-sm leading-relaxed">আপনার সমস্যার ধরণ অনুযায়ী পছন্দের ডাক্তার এবং সুবিধাজনক সময় নির্বাচন করুন।</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col gap-6 rounded-3xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-surface-dark p-8 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="150">
+<div class="absolute -top-5 -right-5 size-14 rounded-full bg-secondary text-white flex items-center justify-center text-xl font-bold shadow-lg shadow-secondary/30 group-hover:scale-110 transition-transform">২</div>
+<div class="text-primary bg-primary/5 w-fit p-4 rounded-2xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl">payments</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-text-main dark:text-white text-xl font-bold leading-tight">পেমেন্ট সম্পন্ন করুন</h3>
+<p class="text-text-sub dark:text-gray-400 text-sm leading-relaxed">বিকাশ, নগদ বা রকেটের মাধ্যমে খুব সহজেই পেমেন্ট সম্পন্ন করে বুকিং নিশ্চিত করুন।</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col gap-6 rounded-3xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-surface-dark p-8 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+<div class="absolute -top-5 -right-5 size-14 rounded-full bg-secondary text-white flex items-center justify-center text-xl font-bold shadow-lg shadow-secondary/30 group-hover:scale-110 transition-transform">৩</div>
+<div class="text-primary bg-primary/5 w-fit p-4 rounded-2xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl">video_camera_front</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-text-main dark:text-white text-xl font-bold leading-tight">ভিডিও কলে কথা বলুন</h3>
+<p class="text-text-sub dark:text-gray-400 text-sm leading-relaxed">নির্দিষ্ট সময়ে অ্যাপের মাধ্যমে ডাক্তারের সাথে ভিডিও কলে যুক্ত হয়ে পরামর্শ নিন।</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Doctors Preview Section -->
+<section class="py-16 md:py-24 bg-background-light dark:bg-background-dark" id="doctors">
+<div class="layout-container flex flex-col items-center">
+<div class="px-4 md:px-10 lg:px-40 w-full flex justify-center">
+<div class="layout-content-container flex flex-col max-w-[960px] w-full gap-12">
+<div class="flex items-end justify-between" data-aos="fade-right">
+<div class="flex flex-col gap-4">
+<span class="text-primary font-bold tracking-widest uppercase text-xs">আমাদের বিশেষজ্ঞ ডাক্তারগণ</span>
+<h2 class="text-text-main dark:text-white text-3xl md:text-5xl font-bold leading-tight">সেরা ডাক্তারদের খুঁজুন</h2>
+</div>
+<a class="hidden md:flex items-center gap-1 text-secondary font-bold hover:underline hover:gap-2 transition-all" href="doctors.html">
+                                সকল ডাক্তার দেখুন <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+<!-- Doctor Card 1 -->
+<div class="bg-white dark:bg-surface-dark rounded-3xl p-5 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-4 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="0">
+<div class="flex items-start gap-4">
+<div class="size-24 rounded-2xl bg-gray-200 bg-cover bg-center shrink-0 group-hover:scale-105 transition-transform duration-500 shadow-md" data-alt="Portrait of Dr. Farhana, Female doctor smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxDhmGg6QwdS0syb2JcM5n48rNPJgip0lJoGYdAv1XPYY3KKdUX1sM7VxxPPWab0mPlD8GKcHXmxq6iIDBUSBO7SbekOpcSo951Sr1Sbli47IzRWAQnyjmSxRTgoJNE-ZqO4tpkOj89ZYGpjM2wHCqGiKjciOh2W_jVLOWL_u4FPb5bMq7GonBoKbXS47OK6KAp7FeDxZRNvcARvwxXnCCfIZb3Ey-K_pr38-IaW0EGmi3M8cafCzY55C9_AHmk1pmHOKIJW0XCC4");'></div>
+<div class="flex flex-col">
+<h3 class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">ডাঃ ফারহানা আহমেদ</h3>
+<p class="text-sm text-secondary font-medium">গাইনোকোলজি বিশেষজ্ঞ</p>
+<p class="text-xs text-text-sub dark:text-gray-400 mt-1">MBBS, FCPS (Gynae)</p>
+<div class="flex items-center gap-1 mt-2 bg-yellow-50 dark:bg-yellow-900/20 px-2 py-0.5 rounded-md w-fit">
+<span class="material-symbols-outlined text-yellow-400 text-sm icon-filled">star</span>
+<span class="text-xs font-bold text-text-main dark:text-white">4.9</span>
+<span class="text-xs text-text-sub dark:text-gray-400 ml-1">(120)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-gray-100 dark:border-gray-700">
+<div class="flex flex-col">
+<span class="text-xs text-text-sub dark:text-gray-400">কনসাল্টেশন ফি</span>
+<span class="text-lg font-bold text-primary">৳ ৫০০</span>
+</div>
+<button class="bg-primary/10 hover:bg-primary hover:text-white text-primary text-sm font-bold py-2.5 px-6 rounded-xl transition-colors shadow-sm">
+                                        বুক করুন
+                                    </button>
+</div>
+</div>
+<!-- Doctor Card 2 -->
+<div class="bg-white dark:bg-surface-dark rounded-3xl p-5 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-4 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+<div class="flex items-start gap-4">
+<div class="size-24 rounded-2xl bg-gray-200 bg-cover bg-center shrink-0 group-hover:scale-105 transition-transform duration-500 shadow-md" data-alt="Portrait of Dr. Rafiq, Male doctor smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkJykY5wpEcOJ8mjglODSMzCjX1ykvDW34xLcqwaD8ydOMKUYVAyRQWQQQmjvRuW-XA1EGYvC3uMUotY5fWT3UsE7SzyYwV9FB353yWdxNwgJ8bintfjLfqk58pvxVYLdjMXgYrb9Xz6glS-XW51-uH8XQFov8TyvNWAL9WEBxOhBvrN2yTybTnvQOVwbOOueFlLBwqN58i2frzX8wEgPircao59MKeZ7H--4zIT_iSck6oFjwcp3JrqK8lQCdlwdEx8INXeNs0BY");'></div>
+<div class="flex flex-col">
+<h3 class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">ডাঃ রফিক ইসলাম</h3>
+<p class="text-sm text-secondary font-medium">জেনারেল ফিজিশিয়ান</p>
+<p class="text-xs text-text-sub dark:text-gray-400 mt-1">MBBS, MD (Medicine)</p>
+<div class="flex items-center gap-1 mt-2 bg-yellow-50 dark:bg-yellow-900/20 px-2 py-0.5 rounded-md w-fit">
+<span class="material-symbols-outlined text-yellow-400 text-sm icon-filled">star</span>
+<span class="text-xs font-bold text-text-main dark:text-white">4.8</span>
+<span class="text-xs text-text-sub dark:text-gray-400 ml-1">(85)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-gray-100 dark:border-gray-700">
+<div class="flex flex-col">
+<span class="text-xs text-text-sub dark:text-gray-400">কনসাল্টেশন ফি</span>
+<span class="text-lg font-bold text-primary">৳ ৩০০</span>
+</div>
+<button class="bg-primary/10 hover:bg-primary hover:text-white text-primary text-sm font-bold py-2.5 px-6 rounded-xl transition-colors shadow-sm">
+                                        বুক করুন
+                                    </button>
+</div>
+</div>
+<!-- Doctor Card 3 -->
+<div class="bg-white dark:bg-surface-dark rounded-3xl p-5 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-4 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+<div class="flex items-start gap-4">
+<div class="size-24 rounded-2xl bg-gray-200 bg-cover bg-center shrink-0 group-hover:scale-105 transition-transform duration-500 shadow-md" data-alt="Portrait of Dr. Naila, Female pediatrician" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnER4a7tWBK9RVjn4-9u3SqR7U1SeTHffyHdxFj7KvK5mm8ZlUnDUcM8pLIu9d5I0Nfx9JOUBhtMXxHx2LSWwMk1fubPwhHx_CTR0fHJOmT_Qyx_lWv9qhsZ_G1uEoY9NBeGpRvToswQd6vQwgxHechQdVw5dAL80m0W0jbJMvovOqWa3V9qKpTsUovMymeeRGFNg4wrffntjfhiPEDD6d03xTATglIujPpKCjKmBPI0Kz70aX1tBKFnIhYZVvTVBikTUfBwRowOE");'></div>
+<div class="flex flex-col">
+<h3 class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">ডাঃ নায়লা খান</h3>
+<p class="text-sm text-secondary font-medium">শিশু বিশেষজ্ঞ</p>
+<p class="text-xs text-text-sub dark:text-gray-400 mt-1">MBBS, DCH</p>
+<div class="flex items-center gap-1 mt-2 bg-yellow-50 dark:bg-yellow-900/20 px-2 py-0.5 rounded-md w-fit">
+<span class="material-symbols-outlined text-yellow-400 text-sm icon-filled">star</span>
+<span class="text-xs font-bold text-text-main dark:text-white">5.0</span>
+<span class="text-xs text-text-sub dark:text-gray-400 ml-1">(200)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-gray-100 dark:border-gray-700">
+<div class="flex flex-col">
+<span class="text-xs text-text-sub dark:text-gray-400">কনসাল্টেশন ফি</span>
+<span class="text-lg font-bold text-primary">৳ ৪০০</span>
+</div>
+<button class="bg-primary/10 hover:bg-primary hover:text-white text-primary text-sm font-bold py-2.5 px-6 rounded-xl transition-colors shadow-sm">
+                                        বুক করুন
+                                    </button>
+</div>
+</div>
+</div>
+<a class="md:hidden flex justify-center items-center gap-1 text-secondary font-bold hover:underline mt-8" href="doctors.html">
+                            সকল ডাক্তার দেখুন <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-background-light dark:bg-background-dark">
+<div class="layout-container">
+<div class="px-4 md:px-10 lg:px-40 flex justify-center">
+<div class="layout-content-container max-w-[960px] w-full flex flex-col md:flex-row items-center gap-8 bg-gradient-to-br from-primary to-orange-600 rounded-[2.5rem] p-10 md:p-16 shadow-2xl shadow-primary/30 relative overflow-hidden group" data-aos="zoom-in">
+<!-- Decorative Circles -->
+<div class="absolute -top-24 -left-24 w-80 h-80 bg-white/10 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700"></div>
+<div class="absolute -bottom-24 -right-24 w-80 h-80 bg-black/10 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700"></div>
+
+<div class="flex flex-col gap-6 text-center md:text-left z-10 flex-1">
+<h2 class="text-white text-3xl md:text-4xl font-bold leading-tight">জরুরী ডাক্তার প্রয়োজন?</h2>
+<p class="text-white/90 text-lg md:text-xl font-medium">আমাদের হটলাইন নাম্বারে কল করুন অথবা হোয়াটসঅ্যাপে মেসেজ দিন। আমরা আছি আপনার পাশে।</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 z-10 w-full md:w-auto">
+<button class="bg-white text-primary hover:bg-gray-100 font-bold py-4 px-8 rounded-full flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full md:w-auto">
+<span class="material-symbols-outlined icon-filled">call</span> ১৬২৬৩
+                            </button>
+<button class="bg-green-500 text-white hover:bg-green-600 font-bold py-4 px-8 rounded-full flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all w-full md:w-auto">
+<span class="material-symbols-outlined">chat</span> WhatsApp
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-border-color pt-20 pb-10" id="contact">
+<div class="layout-container">
+<div class="px-4 md:px-10 lg:px-40 flex justify-center">
+<div class="layout-content-container max-w-[960px] w-full flex flex-col gap-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2 flex flex-col gap-6">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined icon-filled text-4xl">local_hospital</span>
+<h2 class="text-[#171212] dark:text-white text-2xl font-bold">Roudromoyee Online Clinic</h2>
+</div>
+<p class="text-text-sub dark:text-gray-400 max-w-sm leading-relaxed">সবার জন্য সহজলভ্য এবং মানসম্মত স্বাস্থ্যসেবা নিশ্চিত করাই আমাদের লক্ষ্য। বিশ্বাস এবং আস্থার সাথে আছি আপনার পাশে।</p>
+<div class="flex gap-4 mt-2">
+<a class="size-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1" href="#">
+<span class="text-sm font-bold">Fb</span>
+</a>
+<a class="size-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1" href="#">
+<span class="text-sm font-bold">In</span>
+</a>
+<a class="size-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1" href="#">
+<span class="text-sm font-bold">Yt</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-text-main dark:text-white font-bold text-lg">গুরুত্বপূর্ণ লিঙ্ক</h3>
+<div class="flex flex-col gap-3 text-text-sub dark:text-gray-400">
+<a class="hover:text-primary transition-colors hover:translate-x-1 inline-block" href="#">আমাদের সম্পর্কে</a>
+<a class="hover:text-primary transition-colors hover:translate-x-1 inline-block" href="doctors.html">ডাক্তারদের তালিকা</a>
+<a class="hover:text-primary transition-colors hover:translate-x-1 inline-block" href="blog.html">ব্লগ</a>
+<a class="hover:text-primary transition-colors hover:translate-x-1 inline-block" href="#">প্রাইভেসি পলিসি</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-text-main dark:text-white font-bold text-lg">যোগাযোগ</h3>
+<div class="flex flex-col gap-4 text-text-sub dark:text-gray-400">
+<div class="flex items-start gap-3 group">
+<div class="mt-1 bg-primary/10 p-2 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+    <span class="material-symbols-outlined text-lg">location_on</span>
+</div>
+<span>বাড়ি ৩৪, রোড ১০, ধানমন্ডি,<br/>ঢাকা-১২০৯</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="bg-primary/10 p-2 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+    <span class="material-symbols-outlined text-lg">call</span>
+</div>
+<span>+৮৮০ ১৭১১ ০০০০০০</span>
+</div>
+<div class="flex items-center gap-3 group">
+<div class="bg-primary/10 p-2 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+    <span class="material-symbols-outlined text-lg">mail</span>
+</div>
+<span>info@healthcarebd.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-100 dark:border-gray-800 pt-10 text-center">
+<p class="text-sm text-gray-400">© 2024 Roudromoyee Online Clinic. All rights reserved. <br/>Medical Disclaimer: This website provides general information only and is not a substitute for professional medical advice.</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Sticky Floating Action Button -->
+<a aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-xl hover:scale-110 transition-transform flex items-center justify-center group" href="#">
+<span class="material-symbols-outlined text-3xl">chat</span>
+<span class="absolute right-full mr-4 bg-white dark:bg-gray-800 text-text-main dark:text-white text-xs font-bold px-3 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            চ্যাট করুন
+        </span>
+</a>
+
+<!-- AOS Initializer & Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        once: true,
+        bgoffset: 0
+    });
+
+    // Mobile Menu Logic
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-mobile-menu');
+    const overlay = document.getElementById('mobile-menu-overlay');
+    const drawer = document.getElementById('mobile-menu-drawer');
+
+    function toggleMenu() {
+        if (drawer.classList.contains('translate-x-full')) {
+            // Open
+            drawer.classList.remove('translate-x-full');
+            overlay.classList.remove('hidden');
+            setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+        } else {
+            // Close
+            drawer.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => overlay.classList.add('hidden'), 300);
+        }
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+</script>
+</body></html>

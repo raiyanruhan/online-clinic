@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Doctor Details - Healthcare App</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#cd2323",
+                        "teal-heading": "#1F8A9E",
+                        "text-main": "#333333",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#201212",
+                        "surface": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "bengali": ["Hind Siliguri", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-bengali text-text-main">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full bg-white dark:bg-[#1a1a1a] border-b border-[#f4f0f0] shadow-sm">
+<div class="layout-container flex h-16 items-center justify-between px-4 md:px-10 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-4 text-text-main">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">local_hospital</span>
+</div>
+<h2 class="text-text-main text-xl font-bold leading-tight tracking-[-0.015em] font-bengali">হেলথকেয়ার বিডি</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-text-main text-base font-medium hover:text-primary transition-colors" href="#">হোম</a>
+<a class="text-primary text-base font-medium" href="#">ডাক্তার খুঁজুন</a>
+<a class="text-text-main text-base font-medium hover:text-primary transition-colors" href="#">ব্লগ</a>
+<a class="text-text-main text-base font-medium hover:text-primary transition-colors" href="#">আমাদের সম্পর্কে</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block text-text-main text-sm font-medium hover:text-primary" href="#">লগ ইন</a>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-6 bg-primary text-white text-sm font-bold shadow-md hover:bg-red-700 transition-colors">
+<span class="truncate">সাইন আপ</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 w-full max-w-7xl mx-auto px-4 md:px-10 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Doctor Details (Profile, Bio, Credentials, Reviews) -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Profile Header Card -->
+<div class="bg-white dark:bg-[#2a2a2a] rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-6">
+<div class="shrink-0 flex flex-col items-center md:items-start gap-4">
+<div class="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden shadow-md">
+<div class="w-full h-full bg-cover bg-center" data-alt="Portrait of Dr. Nusrat Jahan smiling warmly in a white coat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-MVRHF2uiM2XhkYw8nRrvzbYk0YwBpDIABa6ke4nRpYEVwFHDRg_AFruaD-wzwUOYbjBjI1HvqOC-F8P45VccHMJXBGnGORilXYBc81z6mN8c9tUKNMhcurL_OqskZlS1ipG4qtb0j23XusXYdzdWhKJCuS55kz0yLrZ6muT0-SjTB3SCdueF_IaQ4K-E3i6zGWYowKQvSk-BlI0l8RwGDQ2f6fw3WrUNy4XItvQHhWyX9y7EcUu685jnj30rrIMG0-P-VAJMPGA");'></div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-bold border border-green-200">
+<span class="material-symbols-outlined text-sm icon-filled">verified</span>
+<span>BMDC ভেরিফাইড</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 text-center md:text-left">
+<div class="flex justify-between items-start w-full">
+<div>
+<h1 class="text-teal-heading text-2xl md:text-3xl font-bold leading-tight mb-2">ডা. নুসরাত জাহান</h1>
+<p class="text-text-main/80 text-base md:text-lg mb-1">এমবিবিএস, এফসিপিএস (গাইনি)</p>
+<p class="text-text-main/60 text-sm md:text-base font-medium mb-3">গাইনোকোলজিস্ট এবং অবস্টেট্রিশিয়ান</p>
+</div>
+<button aria-label="Share" class="hidden md:flex items-center justify-center p-2 rounded-full hover:bg-gray-100 text-gray-500 transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+<div class="flex flex-wrap justify-center md:justify-start gap-3 mt-2">
+<div class="px-3 py-2 bg-gray-50 rounded-lg border border-gray-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-teal-heading">medical_services</span>
+<span class="text-sm font-bold text-gray-700 font-display">১০+ বছর অভিজ্ঞতা</span>
+</div>
+<div class="px-3 py-2 bg-gray-50 rounded-lg border border-gray-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-teal-heading text-lg icon-filled">star</span>
+<span class="text-sm font-bold text-gray-700 font-display">৪.৮ (১২০+ রিভিউ)</span>
+</div>
+<div class="px-3 py-2 bg-gray-50 rounded-lg border border-gray-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-teal-heading text-lg">language</span>
+<span class="text-sm font-bold text-gray-700">বাংলা, English</span>
+</div>
+</div>
+<div class="mt-4 md:hidden w-full">
+<button class="w-full flex items-center justify-center gap-2 rounded-xl h-10 bg-gray-100 text-text-main text-sm font-bold">
+<span class="material-symbols-outlined text-lg">share</span>
+                                শেয়ার করুন
+                            </button>
+</div>
+</div>
+</div>
+<!-- About Section -->
+<div class="bg-white dark:bg-[#2a2a2a] rounded-2xl p-6 shadow-sm border border-gray-100">
+<h3 class="text-teal-heading text-xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">person</span>
+                        আমার সম্পর্কে
+                    </h3>
+<div class="text-text-main/80 text-base leading-relaxed space-y-4">
+<p>
+                            আমি ডা. নুসরাত জাহান, ঢাকা মেডিকেল কলেজ থেকে এমবিবিএস এবং পরবর্তীতে এফসিপিএস (গাইনি) সম্পন্ন করেছি। গত ১০ বছর ধরে আমি মহিলাদের প্রজনন স্বাস্থ্য, গর্ভাবস্থা এবং প্রসবকালীন সেবা নিয়ে কাজ করছি।
+                        </p>
+<p>
+                            আমার লক্ষ্য হলো প্রতিটি রোগীকে তার প্রয়োজন অনুযায়ী সঠিক এবং সহানুভূতিশীল চিকিৎসা প্রদান করা। আমি বিশ্বাস করি, রোগীর কথা মনোযোগ দিয়ে শোনা চিকিৎসার একটি গুরুত্বপূর্ণ অংশ।
+                        </p>
+</div>
+</div>
+<!-- Specialization & Education -->
+<div class="bg-white dark:bg-[#2a2a2a] rounded-2xl p-6 shadow-sm border border-gray-100">
+<h3 class="text-teal-heading text-xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">school</span>
+                        শিক্ষা এবং যোগ্যতা
+                    </h3>
+<div class="space-y-4">
+<div class="flex gap-4 items-start pb-4 border-b border-gray-50 last:border-0 last:pb-0">
+<div class="size-10 rounded-full bg-teal-50 flex items-center justify-center text-teal-heading shrink-0">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-text-main">এফসিপিএস (গাইনি ও অবস)</h4>
+<p class="text-gray-500 text-sm">বাংলাদেশ কলেজ অফ ফিজিশিয়ানস অ্যান্ড সার্জনস (BCPS)</p>
+<p class="text-gray-400 text-xs font-display mt-1">২০১৫</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="size-10 rounded-full bg-teal-50 flex items-center justify-center text-teal-heading shrink-0">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-text-main">এমবিবিএস</h4>
+<p class="text-gray-500 text-sm">ঢাকা মেডিকেল কলেজ</p>
+<p class="text-gray-400 text-xs font-display mt-1">২০০৮</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Reviews Section -->
+<div class="bg-white dark:bg-[#2a2a2a] rounded-2xl p-6 shadow-sm border border-gray-100">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-teal-heading text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined">rate_review</span>
+                            রোগীদের মতামত
+                        </h3>
+<a class="text-primary text-sm font-bold hover:underline" href="#">সব দেখুন</a>
+</div>
+<div class="grid gap-4">
+<!-- Review Card 1 -->
+<div class="bg-background-light p-4 rounded-xl">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-gray-300 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Avatar of patient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBaDjNMy36xwjTnyD6GBl-uL5_Wi04QYDusZbgCQPqJO7D3BfuIfrUO25xhZav-qFoLMd8SOa-PW2SPQxb6psji8PEsKlaVzkk7rIwBqOd-fWUUWZgbJ0eq6zwQANCr3geZd0iKsQeYMlOtuM6YGUK-RarU6Wjxoi_IQhtWjIsT_t0Rep38EcPWQmypQjud_MMpKik6bbdExAzvccJ2gDtNWD6hJVv-tV7SwiYmC4chRt5XX_zrqzPBC5__iZPBnFW2U-o5VqBA2VY");'></div>
+</div>
+<div>
+<p class="font-bold text-sm text-text-main">ফারহানা আক্তার</p>
+<p class="text-xs text-gray-500 font-display">২ দিন আগে</p>
+</div>
+</div>
+<div class="flex text-yellow-500">
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+</div>
+</div>
+<p class="text-gray-600 text-sm leading-relaxed">
+                                ম্যাডাম খুব ভালো। উনি খুব সময় নিয়ে আমার সমস্যা শুনেছেন। আমি উনার ব্যবহারে মুগ্ধ।
+                            </p>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-background-light p-4 rounded-xl">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-gray-300 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Avatar of patient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfdrXiDTlkPaD0Ymgpz0OzPIRrrECejQ78Q7xBd-QvB81QRsjfJRaJE1wzfCPc6hWkbaYllU4dNU0H63BiyLtgSZH07iU_Fh48zF6y2PXm9zsCLa0k1c83BYu8kHhfz2Aq3Z6m-D5wQWlE7yAYfL7hNgHjSvqukTbA9vKHd_ePZ-oYOtR6Dko3HgJuHXZNpGZSj1aSPloHTzwGxC5qYl4eqcs1SYvkNIMvBYCVkz-ldIJtnGOUBEsgjIWwsJgIesaudcQ1fv4LVeY");'></div>
+</div>
+<div>
+<p class="font-bold text-sm text-text-main">সুমাইয়া ইসলাম</p>
+<p class="text-xs text-gray-500 font-display">১ সপ্তাহ আগে</p>
+</div>
+</div>
+<div class="flex text-yellow-500">
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm icon-filled">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+<p class="text-gray-600 text-sm leading-relaxed">
+                                অ্যাপয়েন্টমেন্ট পেতে একটু দেরি হয়েছে, তবে চিকিৎসা সেবা খুবই ভালো। হাসপাতালের পরিবেশও সুন্দর।
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Booking Widget (Sticky Sidebar) -->
+<div class="lg:col-span-4 relative h-full">
+<div class="sticky top-24 space-y-4">
+<div class="bg-white dark:bg-[#2a2a2a] rounded-2xl shadow-lg border border-teal-100 overflow-hidden">
+<!-- Header -->
+<div class="bg-teal-heading p-4 text-white text-center">
+<h3 class="text-lg font-bold">অ্যাপয়েন্টমেন্ট নিন</h3>
+<p class="text-teal-100 text-sm">চেম্বার: পপুলার ডায়াগনস্টিক সেন্টার, ধানমন্ডি</p>
+</div>
+<div class="p-5 flex flex-col gap-6">
+<!-- Fee Info -->
+<div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg border border-gray-100">
+<span class="text-gray-600 font-medium text-sm">কনসালটেশন ফি</span>
+<span class="text-primary font-bold text-lg font-display">৳ ১০০০</span>
+</div>
+<!-- Calendar/Date Picker Simplified -->
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-text-main text-sm">তারিখ নির্বাচন করুন</h4>
+<span class="text-xs text-gray-400 font-display">October 2023</span>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<!-- Active Date -->
+<button class="flex flex-col items-center justify-center min-w-[60px] h-[70px] bg-primary text-white rounded-xl shadow-md shrink-0 border border-primary">
+<span class="text-xs font-medium">বুধ</span>
+<span class="text-xl font-bold font-display">২৫</span>
+</button>
+<!-- Inactive Date -->
+<button class="flex flex-col items-center justify-center min-w-[60px] h-[70px] bg-white text-gray-700 hover:bg-gray-50 rounded-xl border border-gray-200 shrink-0">
+<span class="text-xs font-medium">বৃহঃ</span>
+<span class="text-xl font-bold font-display">২৬</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[60px] h-[70px] bg-white text-gray-700 hover:bg-gray-50 rounded-xl border border-gray-200 shrink-0">
+<span class="text-xs font-medium">শুক্র</span>
+<span class="text-xl font-bold font-display">২৭</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[60px] h-[70px] bg-gray-50 text-gray-300 rounded-xl border border-gray-100 shrink-0 cursor-not-allowed">
+<span class="text-xs font-medium">শনি</span>
+<span class="text-xl font-bold font-display">২৮</span>
+</button>
+</div>
+</div>
+<!-- Time Slots -->
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-text-main text-sm">সময় নির্বাচন করুন</h4>
+<div class="grid grid-cols-2 gap-3">
+<button class="py-2 px-3 rounded-lg border border-gray-200 text-sm font-display text-gray-700 hover:border-primary hover:text-primary transition-all">05:00 PM</button>
+<button class="py-2 px-3 rounded-lg bg-teal-50 border border-teal-200 text-sm font-display text-teal-800 font-bold shadow-sm ring-1 ring-teal-200">05:30 PM</button>
+<button class="py-2 px-3 rounded-lg border border-gray-200 text-sm font-display text-gray-700 hover:border-primary hover:text-primary transition-all">06:00 PM</button>
+<button class="py-2 px-3 rounded-lg border border-gray-100 text-sm font-display text-gray-300 bg-gray-50 cursor-not-allowed line-through">06:30 PM</button>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-primary hover:bg-red-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span>বুক করুন</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<p class="text-center text-xs text-gray-400">বুকিং নিশ্চিত করতে আপনাকে লগ ইন করতে হবে</p>
+</div>
+</div>
+<!-- Help Card -->
+<div class="bg-blue-50 rounded-xl p-4 border border-blue-100 flex items-start gap-3">
+<span class="material-symbols-outlined text-blue-600 mt-1">support_agent</span>
+<div>
+<h4 class="font-bold text-blue-800 text-sm mb-1">সাহায্য প্রয়োজন?</h4>
+<p class="text-blue-700 text-xs">কল করুন আমাদের হটলাইনে: <span class="font-display font-bold">16263</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="bg-white border-t border-gray-100 py-10 mt-12">
+<div class="layout-container px-4 md:px-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-gray-500 text-sm font-display">© 2023 Healthcare BD. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-gray-500 hover:text-primary text-sm" href="#">গোপনীয়তা নীতি</a>
+<a class="text-gray-500 hover:text-primary text-sm" href="#">শর্তাবলী</a>
+</div>
+</div>
+</footer>
+</body></html>
