@@ -500,10 +500,13 @@ const PrescriptionEditor = () => {
                                 <div className="mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
                                     <h3 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Diagnosis:</h3>
                                     <textarea
-                                        className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none min-h-[80px] resize-y"
+                                        className={`w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none min-h-[80px] resize-y ${
+                                            appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                        }`}
                                         placeholder="Enter diagnosis..."
                                         value={diagnosis}
                                         onChange={e => setDiagnosis(e.target.value)}
+                                        readOnly={appointment.status === 'completed'}
                                     />
                                 </div>
 
@@ -511,13 +514,15 @@ const PrescriptionEditor = () => {
                                 <div className="mb-6">
                                     <div className="flex justify-between items-center mb-4">
                                         <h3 className="text-lg font-bold text-gray-800 dark:text-white">Medicines</h3>
-                                        <button
-                                            onClick={handleAddMedicine}
-                                            className="px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary font-bold rounded-lg transition-colors flex items-center gap-2 text-sm"
-                                        >
-                                            <span className="material-symbols-outlined text-lg">add</span>
-                                            Add Medicine
-                                        </button>
+                                        {appointment.status !== 'completed' && (
+                                            <button
+                                                onClick={handleAddMedicine}
+                                                className="px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary font-bold rounded-lg transition-colors flex items-center gap-2 text-sm"
+                                            >
+                                                <span className="material-symbols-outlined text-lg">add</span>
+                                                Add Medicine
+                                            </button>
+                                        )}
                                     </div>
                                     
                                     <div className="space-y-3">
@@ -598,31 +603,40 @@ const PrescriptionEditor = () => {
                                                 <div className="col-span-6 sm:col-span-2">
                                                     <input
                                                         placeholder="Dose (1+0+1)"
-                                                        className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none"
+                                                        className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
+                                                            appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                                        }`}
                                                         value={med.dose}
                                                         onChange={e => handleMedicineChange(idx, 'dose', e.target.value)}
+                                                        readOnly={appointment.status === 'completed'}
                                                     />
                                                 </div>
                                                 <div className="col-span-6 sm:col-span-2">
                                                     <input
                                                         placeholder="Duration (7 days)"
-                                                        className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none"
+                                                        className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
+                                                            appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                                        }`}
                                                         value={med.duration}
                                                         onChange={e => handleMedicineChange(idx, 'duration', e.target.value)}
+                                                        readOnly={appointment.status === 'completed'}
                                                     />
                                                 </div>
                                                 <div className="col-span-10 sm:col-span-3">
                                                     <input
                                                         placeholder="Instruction (After meal)"
-                                                        className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none"
+                                                        className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
+                                                            appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                                        }`}
                                                         value={med.instruction}
                                                         onChange={e => handleMedicineChange(idx, 'instruction', e.target.value)}
+                                                        readOnly={appointment.status === 'completed'}
                                                     />
                                                 </div>
                                                 <div className="col-span-2 sm:col-span-1 flex justify-center">
                                                     <button
                                                         onClick={() => handleRemoveMedicine(idx)}
-                                                        disabled={medicines.length === 1}
+                                                        disabled={medicines.length === 1 || appointment.status === 'completed'}
                                                         className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                                     >
                                                         <span className="material-symbols-outlined">delete</span>
@@ -637,10 +651,13 @@ const PrescriptionEditor = () => {
                                 <div className="mb-6">
                                     <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Clinical Advice / Notes:</label>
                                     <textarea
-                                        className="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white h-32 focus:ring-2 focus:ring-primary/20 outline-none resize-none"
+                                        className={`w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white h-32 focus:ring-2 focus:ring-primary/20 outline-none resize-none ${
+                                            appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                        }`}
                                         placeholder="Rest for 2 days. Drink plenty of water. Avoid heavy lifting..."
                                         value={advice}
                                         onChange={e => setAdvice(e.target.value)}
+                                        readOnly={appointment.status === 'completed'}
                                     />
                                 </div>
 
@@ -657,9 +674,12 @@ const PrescriptionEditor = () => {
                                                     setFollowUpDate('');
                                                 }
                                             }}
-                                            className="w-5 h-5 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary/20 focus:ring-2 cursor-pointer"
+                                            disabled={appointment.status === 'completed'}
+                                            className="w-5 h-5 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary/20 focus:ring-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                                         />
-                                        <label htmlFor="needsFollowUp" className="text-sm font-bold text-gray-700 dark:text-gray-300 cursor-pointer">
+                                        <label htmlFor="needsFollowUp" className={`text-sm font-bold text-gray-700 dark:text-gray-300 ${
+                                            appointment.status === 'completed' ? 'cursor-not-allowed' : 'cursor-pointer'
+                                        }`}>
                                             Follow-up Date Required
                                         </label>
                                     </div>
@@ -667,9 +687,12 @@ const PrescriptionEditor = () => {
                                         <input
                                             type="date"
                                             min={currentDate}
-                                            className="w-full sm:w-auto p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none"
+                                            className={`w-full sm:w-auto p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
+                                                appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                            }`}
                                             value={followUpDate}
                                             onChange={e => setFollowUpDate(e.target.value)}
+                                            readOnly={appointment.status === 'completed'}
                                         />
                                     )}
                                 </div>
@@ -686,8 +709,13 @@ const PrescriptionEditor = () => {
                             </button>
                             <button
                                 onClick={handleSavePrescription}
-                                disabled={isSaving}
-                                className="px-8 py-3 bg-primary hover:bg-red-700 disabled:bg-gray-400 text-white font-bold rounded-lg shadow-lg transition-all flex items-center justify-center gap-2"
+                                disabled={isSaving || appointment.status === 'completed'}
+                                className={`px-8 py-3 font-bold rounded-lg shadow-lg transition-all flex items-center justify-center gap-2 ${
+                                    appointment.status === 'completed'
+                                        ? 'bg-gray-400 cursor-not-allowed text-white'
+                                        : 'bg-primary hover:bg-red-700 disabled:bg-gray-400 text-white'
+                                }`}
+                                title={appointment.status === 'completed' ? 'Prescription is read-only after appointment completion' : ''}
                             >
                                 {isSaving ? (
                                     <>

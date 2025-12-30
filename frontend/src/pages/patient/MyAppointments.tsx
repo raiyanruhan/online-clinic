@@ -239,7 +239,7 @@ const MyAppointments = () => {
                                     {apt.status}
                                 </span>
 
-                                {apt.status === 'upcoming' && apt.meeting_link && (
+                                {apt.status === 'ready' && apt.meeting_link && (
                                     <a
                                         href={apt.meeting_link}
                                         target="_blank"
@@ -251,7 +251,7 @@ const MyAppointments = () => {
                                     </a>
                                 )}
 
-                                {apt.status === 'upcoming' && (
+                                {(apt.status === 'upcoming' || apt.status === 'ready') && (
                                     <button
                                         onClick={() => handleCancelAppointment(apt.appointment_id, apt.doctor_name, apt.date, apt.time)}
                                         disabled={cancellingId === apt.appointment_id}

@@ -26,11 +26,11 @@ const getDoctorStats = async (req, res) => {
             [doctorIdToUse]
         );
 
-        // Upcoming appointments - date >= today AND status = upcoming
+        // Upcoming appointments - date >= today AND status = upcoming or ready
         const upcomingAppointments = await pool.query(
             `SELECT COUNT(*) FROM appointments 
-             WHERE doctor_id = $1 AND date::date >= CURRENT_DATE AND status = $2`,
-            [doctorIdToUse, 'upcoming']
+             WHERE doctor_id = $1 AND date::date >= CURRENT_DATE AND status IN ($2, $3)`,
+            [doctorIdToUse, 'upcoming', 'ready']
         );
 
         // Completed Today - date = today AND status = completed
@@ -72,8 +72,8 @@ const getDoctorAppointments = async (req, res) => {
         if (filter === 'today') {
             query += ' AND a.date::date = CURRENT_DATE ORDER BY a.time ASC';
         } else if (filter === 'upcoming') {
-            query += ' AND a.date::date >= CURRENT_DATE AND a.status = $2 ORDER BY a.date ASC, a.time ASC';
-            params.push('upcoming');
+            query += ' AND a.date::date >= CURRENT_DATE AND a.status IN ($2, $3) ORDER BY a.date ASC, a.time ASC';
+            params.push('upcoming', 'ready');
         } else if (filter === 'history') {
             // History: completed OR cancelled OR past dates
             query += ' AND (a.status IN ($2, $3) OR a.date::date < CURRENT_DATE) ORDER BY a.date DESC, a.time DESC';
@@ -133,6 +133,81 @@ const updateAppointmentStatus = async (req, res) => {
         const { id } = req.params;
         const { status, meeting_link } = req.body;
 
+        // Get appointment details
+        const appointmentRes = await pool.query(
+            `SELECT a.*, d.doctor_id 
+             FROM appointments a
+             JOIN doctors d ON a.doctor_id = d.doctor_id
+             WHERE a.appointment_id = $1`,
+            [id]
+        );
+
+        if (appointmentRes.rows.length === 0) {
+            return res.status(404).json({ message: 'Appointment not found' });
+        }
+
+        const appointment = appointmentRes.rows[0];
+
+        // Verify the appointment belongs to this doctor (only assigned doctor can complete)
+        const userId = req.user.user_id;
+        const doctorRes = await pool.query('SELECT doctor_id FROM doctors WHERE user_id = $1', [userId]);
+        if (doctorRes.rows.length === 0) {
+            return res.status(403).json({ message: 'Doctor not found' });
+        }
+        const doctorId = doctorRes.rows[0].doctor_id;
+
+        if (appointment.doctor_id !== doctorId) {
+            return res.status(403).json({ 
+                message: 'You are not authorized to perform this action. Only the assigned doctor can complete this appointment.' 
+            });
+        }
+
+        // If trying to complete appointment, validate requirements
+        if (status === 'completed') {
+            // Check if appointment is already completed
+            if (appointment.status === 'completed') {
+                return res.status(400).json({ 
+                    message: 'This appointment is already completed.' 
+                });
+            }
+
+            // Check if appointment is cancelled
+            if (appointment.status === 'cancelled') {
+                return res.status(400).json({ 
+                    message: 'Cannot complete a cancelled appointment.' 
+                });
+            }
+
+            // Check if prescription exists
+            const prescriptionRes = await pool.query(
+                'SELECT prescription_id FROM prescriptions WHERE appointment_id = $1',
+                [id]
+            );
+
+            if (prescriptionRes.rows.length === 0) {
+                return res.status(400).json({ 
+                    message: 'Please write prescription before completing appointment.' 
+                });
+            }
+
+            // Check if 30 minutes have passed since appointment time
+            const dateStr = appointment.date instanceof Date 
+                ? `${appointment.date.getFullYear()}-${String(appointment.date.getMonth() + 1).padStart(2, '0')}-${String(appointment.date.getDate()).padStart(2, '0')}`
+                : appointment.date.split('T')[0];
+            const timeStr = appointment.time.toString().substring(0, 5); // Get HH:MM format
+            
+            const appointmentDateTime = new Date(`${dateStr}T${timeStr}`);
+            const now = new Date();
+            const minutesSinceAppointment = (now.getTime() - appointmentDateTime.getTime()) / (1000 * 60);
+
+            if (minutesSinceAppointment < 30) {
+                return res.status(400).json({ 
+                    message: `Appointment can only be completed 30 minutes after the appointment time. Please wait ${Math.ceil(30 - minutesSinceAppointment)} more minutes.` 
+                });
+            }
+        }
+
+        // Update appointment status
         const updated = await pool.query(
             'UPDATE appointments SET status = COALESCE($1, status), meeting_link = COALESCE($2, meeting_link) WHERE appointment_id = $3 RETURNING *',
             [status, meeting_link, id]
@@ -141,7 +216,7 @@ const updateAppointmentStatus = async (req, res) => {
         res.json(updated.rows[0]);
     } catch (err) {
         console.error(err.message);
-        res.status(500).send('Server Error');
+        res.status(500).json({ message: 'Server Error', error: err.message });
     }
 };
 
@@ -178,7 +253,26 @@ const createPrescription = async (req, res) => {
         // Prevent creating prescription for cancelled appointments
         if (appointment.status === 'cancelled') {
             return res.status(400).json({ 
-                message: 'Cannot create prescription for a cancelled appointment. Prescriptions can only be created for upcoming or completed appointments.' 
+                message: 'Cannot create prescription for a cancelled appointment.' 
+            });
+        }
+
+        // Prevent creating prescription for completed appointments (prescription already exists)
+        if (appointment.status === 'completed') {
+            return res.status(400).json({ 
+                message: 'This appointment is already completed. Prescription cannot be modified after completion.' 
+            });
+        }
+
+        // Check if prescription already exists (prevent multiple prescriptions)
+        const existingPrescription = await pool.query(
+            'SELECT prescription_id FROM prescriptions WHERE appointment_id = $1',
+            [appointmentId]
+        );
+
+        if (existingPrescription.rows.length > 0) {
+            return res.status(400).json({ 
+                message: 'A prescription already exists for this appointment. Multiple prescriptions are not allowed.' 
             });
         }
 
@@ -187,10 +281,7 @@ const createPrescription = async (req, res) => {
             [appointmentId, JSON.stringify(medicines), advice, follow_up_date || null, diagnosis || null]
         );
 
-        // Mark appointment as completed if not already (but not if it's cancelled)
-        if (appointment.status !== 'cancelled') {
-        await pool.query('UPDATE appointments SET status = $1 WHERE appointment_id = $2', ['completed', appointmentId]);
-        }
+        // Note: Do NOT auto-complete appointment here. Doctor must explicitly mark as completed after 30min
 
         res.json(newPrescription.rows[0]);
     } catch (err) {
@@ -455,10 +546,10 @@ const getAvailableSlots = async (req, res) => {
         console.log('Generated timeSlots before filtering:', timeSlots.length, 'slots');
 
         // Get already booked appointments for this date
-        // Only consider 'upcoming' appointments as booked slots (completed appointments free up the slot)
+        // Only consider 'upcoming' and 'ready' appointments as booked slots (completed appointments free up the slot)
         const bookedAppointments = await pool.query(
             `SELECT time FROM appointments 
-             WHERE doctor_id = $1 AND date = $2 AND status = 'upcoming'`,
+             WHERE doctor_id = $1 AND date = $2 AND status IN ('upcoming', 'ready')`,
             [doctorId, dateStr]
         );
 
@@ -578,10 +669,10 @@ const getAvailableDates = async (req, res) => {
         const availableDates = [];
         
         // Get all booked appointments in the date range
-        // Only consider 'upcoming' appointments as booked (completed appointments free up slots)
+        // Only consider 'upcoming' and 'ready' appointments as booked (completed appointments free up slots)
         const bookedAppointments = await pool.query(
             `SELECT date, time FROM appointments 
-             WHERE doctor_id = $1 AND date >= $2 AND date <= $3 AND status = 'upcoming'`,
+             WHERE doctor_id = $1 AND date >= $2 AND date <= $3 AND status IN ('upcoming', 'ready')`,
             [doctorId, startDateStr, endDateStr]
         );
         

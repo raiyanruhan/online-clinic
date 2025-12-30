@@ -12,6 +12,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/auth', require('./routes/authRoutes')); // OAuth routes
 app.use('/api/doctors', require('./routes/doctorRoutes'));
 app.use('/api/doctor/dashboard', require('./routes/doctorDashboardRoutes'));
 app.use('/api/patient/dashboard', require('./routes/patientDashboardRoutes'));

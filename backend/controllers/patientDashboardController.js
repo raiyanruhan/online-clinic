@@ -133,10 +133,10 @@ const bookAppointment = async (req, res) => {
             return res.status(400).json({ message: 'Invalid time format. Please use HH:MM format (24-hour)' });
         }
 
-        // Check if patient already has an active (upcoming) appointment
+        // Check if patient already has an active (upcoming or ready) appointment
         const activeAppointment = await pool.query(
             `SELECT appointment_id, date, time, status FROM appointments 
-             WHERE patient_id = $1 AND status = 'upcoming'`,
+             WHERE patient_id = $1 AND status IN ('upcoming', 'ready')`,
             [userId]
         );
 
@@ -316,7 +316,7 @@ const bookAppointment = async (req, res) => {
             `SELECT appointment_id FROM appointments 
              WHERE doctor_id = $1 
              AND date = $2 
-             AND status = 'upcoming'
+             AND status IN ('upcoming', 'ready')
              AND (
                  time::text = $3 
                  OR time::text LIKE $3 || ':%'
@@ -331,14 +331,58 @@ const bookAppointment = async (req, res) => {
             });
         }
 
-        // Create appointment
+        // Create appointment with status 'upcoming' first
         const newAppointment = await pool.query(
             `INSERT INTO appointments (doctor_id, patient_id, patient_name, patient_age, patient_gender, patient_weight, date, time, symptoms, status) 
              VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, 'upcoming') RETURNING *`,
             [doctor_id, userId, patient_name, patient_age, patient_gender, patient_weight || null, dateStr, time, symptoms]
         );
 
-        res.json(newAppointment.rows[0]);
+        const appointment = newAppointment.rows[0];
+
+        // Check if OAuth is configured before attempting to generate Meet link
+        const { isOAuthConfigured, generateMeetLink } = require('../services/googleCalendarService');
+        const oauthConfigured = await isOAuthConfigured();
+        
+        if (!oauthConfigured) {
+            // If OAuth is not configured, delete the appointment and return error
+            await pool.query('DELETE FROM appointments WHERE appointment_id = $1', [appointment.appointment_id]);
+            return res.status(503).json({ 
+                message: 'Google Calendar integration is not configured. Please contact the administrator to set up Google Calendar integration.',
+                code: 'OAUTH_NOT_CONFIGURED'
+            });
+        }
+
+        // Generate Google Meet link
+        try {
+            const { meetingLink, calendarEventId } = await generateMeetLink(appointment);
+
+            // Update appointment with meeting link and set status to 'ready'
+            const updatedAppointment = await pool.query(
+                `UPDATE appointments 
+                 SET meeting_link = $1, calendar_event_id = $2, status = 'ready', meeting_provider = 'google_meet'
+                 WHERE appointment_id = $3 
+                 RETURNING *`,
+                [meetingLink, calendarEventId, appointment.appointment_id]
+            );
+
+            res.json(updatedAppointment.rows[0]);
+        } catch (googleError) {
+            // If Google API fails, delete the appointment and return error
+            await pool.query('DELETE FROM appointments WHERE appointment_id = $1', [appointment.appointment_id]);
+            console.error('Google Calendar API error:', googleError);
+            
+            // Provide user-friendly error message
+            let errorMessage = 'Failed to create meeting link. Please try again later.';
+            if (googleError.message && googleError.message.includes('No OAuth tokens found')) {
+                errorMessage = 'Google Calendar integration is not configured. Please contact the administrator.';
+            }
+            
+            return res.status(500).json({ 
+                message: errorMessage,
+                error: process.env.NODE_ENV === 'development' ? googleError.message : undefined
+            });
+        }
     } catch (err) {
         console.error('Error in bookAppointment:', err);
         res.status(500).json({ message: 'Server Error', error: err.message });
@@ -366,24 +410,33 @@ const cancelAppointment = async (req, res) => {
 
         const appointment = appointmentRes.rows[0];
 
-        // Only allow cancelling upcoming appointments
-        if (appointment.status !== 'upcoming') {
+        // Only allow cancelling upcoming or ready appointments
+        if (appointment.status !== 'upcoming' && appointment.status !== 'ready') {
             return res.status(400).json({ 
-                message: `Cannot cancel appointment with status '${appointment.status}'. Only upcoming appointments can be cancelled.` 
+                message: `Cannot cancel appointment with status '${appointment.status}'. Only upcoming or ready appointments can be cancelled.` 
             });
         }
 
-        // Check if appointment is in the past
-        const appointmentDate = new Date(appointment.date + 'T' + appointment.time);
+        // Check if appointment time has passed
+        // Parse date and time properly
+        const dateStr = appointment.date instanceof Date 
+            ? `${appointment.date.getFullYear()}-${String(appointment.date.getMonth() + 1).padStart(2, '0')}-${String(appointment.date.getDate()).padStart(2, '0')}`
+            : appointment.date.split('T')[0];
+        const timeStr = appointment.time.toString().substring(0, 5); // Get HH:MM format
+        
+        const appointmentDateTime = new Date(`${dateStr}T${timeStr}`);
         const now = new Date();
-        if (appointmentDate < now) {
-            return res.status(400).json({ message: 'Cannot cancel past appointments' });
+        
+        if (appointmentDateTime < now) {
+            return res.status(400).json({ 
+                message: 'Cannot cancel appointment. The appointment time has already passed.' 
+            });
         }
 
-        // Update appointment status to cancelled
+        // Update appointment status to cancelled and hide meeting link
         const updated = await pool.query(
             `UPDATE appointments 
-             SET status = 'cancelled' 
+             SET status = 'cancelled', meeting_link = NULL
              WHERE appointment_id = $1 AND patient_id = $2 
              RETURNING *`,
             [id, userId]

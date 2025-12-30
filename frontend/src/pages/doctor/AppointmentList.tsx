@@ -73,8 +73,8 @@ const AppointmentList = () => {
                     comparison = nameA.localeCompare(nameB);
                     break;
                 case 'status':
-                    // Sort by status (upcoming, completed, cancelled)
-                    const statusOrder = { 'upcoming': 1, 'completed': 2, 'cancelled': 3 };
+                    // Sort by status (ready, upcoming, completed, cancelled)
+                    const statusOrder = { 'ready': 1, 'upcoming': 2, 'completed': 3, 'cancelled': 4 };
                     const statusA = statusOrder[a.status as keyof typeof statusOrder] || 0;
                     const statusB = statusOrder[b.status as keyof typeof statusOrder] || 0;
                     comparison = statusA - statusB;
@@ -180,6 +180,17 @@ const AppointmentList = () => {
                                 >
                                     View Details
                                 </button>
+                                {(apt.status === 'ready' || apt.status === 'upcoming') && apt.meeting_link && (
+                                    <a
+                                        href={apt.meeting_link}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="w-full sm:w-auto px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
+                                    >
+                                        <span className="material-symbols-outlined text-lg">videocam</span>
+                                        Join Meeting
+                                    </a>
+                                )}
                                 {apt.status === 'upcoming' && (
                                     <button
                                         onClick={() => navigate(`/doctor/prescription/${apt.appointment_id}`)}

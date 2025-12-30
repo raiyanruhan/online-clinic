@@ -48,8 +48,8 @@ const Overview = ({ setActiveTab }: { setActiveTab: (tab: any) => void }) => {
                 const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
                 
                 const filtered = data.filter((apt: any) => {
-                    // Only include upcoming appointments
-                    if (apt.status !== 'upcoming') return false;
+                    // Include upcoming and ready appointments
+                    if (apt.status !== 'upcoming' && apt.status !== 'ready') return false;
                     
                     // Filter out past appointments for today only
                     if (apt.date === todayStr) {
