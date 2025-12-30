@@ -8,10 +8,9 @@ const Footer = () => {
                     <div className="layout-content-container max-w-[960px] w-full flex flex-col gap-12">
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                             <div className="col-span-1 md:col-span-2 flex flex-col gap-4">
-                                <div className="flex items-center gap-2 text-primary">
-                                    <span className="material-symbols-outlined icon-filled text-3xl">local_hospital</span>
-                                    <h2 className="text-[#171212] dark:text-white text-xl font-bold">Roudromoyee Online Clinic</h2>
-                                </div>
+                                <Link to="/" className="flex items-center gap-2">
+                                    <img src="/logo.png" alt="Roudromoyee Online Clinic" className="h-10 w-auto" />
+                                </Link>
                                 <p className="text-text-sub dark:text-gray-400 max-w-sm">সবার জন্য সহজলভ্য এবং মানসম্মত স্বাস্থ্যসেবা নিশ্চিত করাই আমাদের লক্ষ্য। বিশ্বাস এবং আস্থার সাথে আছি আপনার পাশে।</p>
                                 <div className="flex gap-4 mt-2">
                                     <a href="#" className="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors">
@@ -53,7 +52,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="border-t border-gray-100 dark:border-gray-800 pt-8 text-center">
-                            <p className="text-xs text-gray-400">© 2024 Roudromoyee Online Clinic. All rights reserved. <br/>Medical Disclaimer: This website provides general information only and is not a substitute for professional medical advice.</p>
+                            <p className="text-xs text-gray-400">© {new Date().getFullYear()} Roudromoyee Online Clinic. All rights reserved. <br/>Medical Disclaimer: This website provides general information only and is not a substitute for professional medical advice.</p>
                         </div>
                     </div>
                 </div>

@@ -1,11 +1,12 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
         <div className="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root text-text-main dark:text-white transition-colors duration-300">
             <Header />
-            
+
             <main className="flex-1">
                 {/* Hero Section */}
                 <section className="relative bg-white dark:bg-background-dark overflow-hidden">
@@ -24,7 +25,7 @@ const Home = () => {
                                                     <span className="text-secondary text-sm font-semibold">বিশ্বস্ত টেলিমেডিসিন সেবা</span>
                                                 </div>
                                                 <h1 className="text-text-main dark:text-white text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
-                                                    আপনার স্বাস্থ্য, <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">আমাদের দায়িত্ব</span>
+                                                    আপনার স্বাস্থ্য, <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">আমাদের দায়িত্ব</span>
                                                 </h1>
                                                 <h2 className="text-text-sub dark:text-gray-300 text-lg md:text-xl font-normal leading-relaxed mt-2 max-w-lg mx-auto lg:mx-0">
                                                     ঘরে বসেই অভিজ্ঞ ডাক্তারের পরামর্শ নিন। কোনো সিরিয়াল ধরার ঝামেলা ছাড়াই, আপনার এবং আপনার পরিবারের সুস্বাস্থ্য নিশ্চিত করুন।
@@ -53,9 +54,9 @@ const Home = () => {
                                         </div>
                                         <div className="flex-1 w-full flex justify-end" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
                                             <div className="w-full max-w-[380px] h-[320px] rounded-3xl bg-gray-100 dark:bg-gray-800 overflow-hidden relative shadow-2xl shadow-gray-200 dark:shadow-black/50 hover:shadow-primary/20 transition-shadow duration-500">
-                                                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700" style={{backgroundImage: 'url("https://res.cloudinary.com/dzjrhl1vi/image/upload/v1766557263/uploads/1766557242708-ChatGPT%20Image%20Dec%2023%2C%202025%2C%2010_34_23%20PM.png.png")'}}></div>
+                                                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700" style={{ backgroundImage: 'url("https://res.cloudinary.com/dzjrhl1vi/image/upload/v1766557263/uploads/1766557242708-ChatGPT%20Image%20Dec%2023%2C%202025%2C%2010_34_23%20PM.png.png")' }}></div>
                                                 {/* Decorative floating elements */}
- 
+
                                                 <div className="absolute top-6 right-6 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm p-3 rounded-2xl shadow-xl flex items-center gap-3 animate-float">
                                                 </div>
                                             </div>
@@ -142,9 +143,9 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="flex justify-center mt-6">
-                                    <button className="flex items-center justify-center gap-2 text-primary font-bold hover:gap-4 transition-all group px-4 py-2 hover:bg-primary/5 rounded-full">
+                                    <Link to="/services" className="flex items-center justify-center gap-2 text-primary font-bold hover:gap-4 transition-all group px-4 py-2 hover:bg-primary/5 rounded-full">
                                         সকল সেবা দেখুন <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -224,7 +225,7 @@ const Home = () => {
                                     {/* Doctor Card 1 */}
                                     <div className="bg-white dark:bg-surface-dark rounded-3xl p-5 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-4 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="0">
                                         <div className="flex items-start gap-4">
-                                            <div className="size-24 rounded-2xl bg-gray-200 bg-cover bg-center shrink-0 transition-transform duration-500 shadow-md" style={{backgroundImage: 'url("https://res.cloudinary.com/dzjrhl1vi/image/upload/v1766557263/uploads/1766557242708-ChatGPT%20Image%20Dec%2023%2C%202025%2C%2010_34_23%20PM.png.png")'}}></div>
+                                            <div className="size-24 rounded-2xl bg-gray-200 bg-cover bg-center shrink-0 transition-transform duration-500 shadow-md" style={{ backgroundImage: 'url("https://res.cloudinary.com/dzjrhl1vi/image/upload/v1766557263/uploads/1766557242708-ChatGPT%20Image%20Dec%2023%2C%202025%2C%2010_34_23%20PM.png.png")' }}></div>
                                             <div className="flex flex-col">
                                                 <h3 className="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">ডাঃ ফারহানা আহমেদ</h3>
                                                 <p className="text-sm text-secondary font-medium">গাইনোকোলজি বিশেষজ্ঞ</p>
@@ -249,7 +250,7 @@ const Home = () => {
                                     {/* Doctor Card 2 */}
                                     <div className="bg-white dark:bg-surface-dark rounded-3xl p-5 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-4 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
                                         <div className="flex items-start gap-4">
-                                            <div className="size-24 rounded-2xl bg-gray-200 bg-cover bg-center shrink-0 group-hover:scale-105 transition-transform duration-500 shadow-md" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkJykY5wpEcOJ8mjglODSMzCjX1ykvDW34xLcqwaD8ydOMKUYVAyRQWQQQmjvRuW-XA1EGYvC3uMUotY5fWT3UsE7SzyYwV9FB353yWdxNwgJ8bintfjLfqk58pvxVYLdjMXgYrb9Xz6glS-XW51-uH8XQFov8TyvNWAL9WEBxOhBvrN2yTybTnvQOVwbOOueFlLBwqN58i2frzX8wEgPircao59MKeZ7H--4zIT_iSck6oFjwcp3JrqK8lQCdlwdEx8INXeNs0BY")'}}></div>
+                                            <div className="size-24 rounded-2xl bg-gray-200 bg-cover bg-center shrink-0 group-hover:scale-105 transition-transform duration-500 shadow-md" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkJykY5wpEcOJ8mjglODSMzCjX1ykvDW34xLcqwaD8ydOMKUYVAyRQWQQQmjvRuW-XA1EGYvC3uMUotY5fWT3UsE7SzyYwV9FB353yWdxNwgJ8bintfjLfqk58pvxVYLdjMXgYrb9Xz6glS-XW51-uH8XQFov8TyvNWAL9WEBxOhBvrN2yTybTnvQOVwbOOueFlLBwqN58i2frzX8wEgPircao59MKeZ7H--4zIT_iSck6oFjwcp3JrqK8lQCdlwdEx8INXeNs0BY")' }}></div>
                                             <div className="flex flex-col">
                                                 <h3 className="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">ডাঃ রফিক ইসলাম</h3>
                                                 <p className="text-sm text-secondary font-medium">জেনারেল ফিজিশিয়ান</p>
@@ -274,7 +275,7 @@ const Home = () => {
                                     {/* Doctor Card 3 */}
                                     <div className="bg-white dark:bg-surface-dark rounded-3xl p-5 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-4 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
                                         <div className="flex items-start gap-4">
-                                            <div className="size-24 rounded-2xl bg-gray-200 bg-cover bg-center shrink-0 group-hover:scale-105 transition-transform duration-500 shadow-md" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnER4a7tWBK9RVjn4-9u3SqR7U1SeTHffyHdxFj7KvK5mm8ZlUnDUcM8pLIu9d5I0Nfx9JOUBhtMXxHx2LSWwMk1fubPwhHx_CTR0fHJOmT_Qyx_lWv9qhsZ_G1uEoY9NBeGpRvToswQd6vQwgxHechQdVw5dAL80m0W0jbJMvovOqWa3V9qKpTsUovMymeeRGFNg4wrffntjfhiPEDD6d03xTATglIujPpKCjKmBPI0Kz70aX1tBKFnIhYZVvTVBikTUfBwRowOE")'}}></div>
+                                            <div className="size-24 rounded-2xl bg-gray-200 bg-cover bg-center shrink-0 group-hover:scale-105 transition-transform duration-500 shadow-md" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnER4a7tWBK9RVjn4-9u3SqR7U1SeTHffyHdxFj7KvK5mm8ZlUnDUcM8pLIu9d5I0Nfx9JOUBhtMXxHx2LSWwMk1fubPwhHx_CTR0fHJOmT_Qyx_lWv9qhsZ_G1uEoY9NBeGpRvToswQd6vQwgxHechQdVw5dAL80m0W0jbJMvovOqWa3V9qKpTsUovMymeeRGFNg4wrffntjfhiPEDD6d03xTATglIujPpKCjKmBPI0Kz70aX1tBKFnIhYZVvTVBikTUfBwRowOE")' }}></div>
                                             <div className="flex flex-col">
                                                 <h3 className="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">ডাঃ নায়লা খান</h3>
                                                 <p className="text-sm text-secondary font-medium">শিশু বিশেষজ্ঞ</p>
@@ -339,7 +340,7 @@ const Home = () => {
                     চ্যাট করুন
                 </span>
             </a>
-            
+
             <Footer />
         </div>
     );

@@ -1,0 +1,32 @@
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+const app = express();
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Routes
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/doctors', require('./routes/doctorRoutes'));
+app.use('/api/doctor/dashboard', require('./routes/doctorDashboardRoutes'));
+app.use('/api/patient/dashboard', require('./routes/patientDashboardRoutes'));
+app.use('/api/blogs', require('./routes/blogRoutes'));
+app.use('/api/medicines', require('./routes/medicineRoutes'));
+
+// Debug: Log all registered routes (only in development)
+if (process.env.NODE_ENV !== 'production') {
+    console.log('\n=== Registered Routes ===');
+    console.log('GET  /api/doctors/:doctorId/available-dates');
+    console.log('GET  /api/doctors/:doctorId/available-slots');
+    console.log('PUT  /api/patient/dashboard/appointments/:id/cancel');
+    console.log('========================\n');
+}
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

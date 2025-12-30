@@ -1,6 +1,8 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+import { Link } from 'react-router-dom';
+
 const Services = () => {
     return (
         <div className="flex min-h-screen flex-col bg-background-light dark:bg-background-dark text-text-main dark:text-white font-body transition-colors duration-300">
@@ -33,9 +35,9 @@ const Services = () => {
                                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                                     <span className="material-symbols-outlined text-gray-400">search</span>
                                 </div>
-                                <input 
-                                    className="block w-full rounded-lg border-0 bg-white py-2.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6 dark:bg-[#2a2a2a] dark:text-white dark:ring-gray-700" 
-                                    placeholder="সেবা খুঁজুন (যেমন: শিশুরোগ, ডায়াবেটিস)..." 
+                                <input
+                                    className="block w-full rounded-lg border-0 bg-white py-2.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6 dark:bg-[#2a2a2a] dark:text-white dark:ring-gray-700"
+                                    placeholder="সেবা খুঁজুন (যেমন: শিশুরোগ, ডায়াবেটিস)..."
                                     type="text"
                                 />
                             </div>
@@ -65,9 +67,9 @@ const Services = () => {
                                     </p>
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <a className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" href="#">
+                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=গাইনোকোলজি">
                                         আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             {/* Service Card 2: Pediatrics */}
@@ -82,9 +84,9 @@ const Services = () => {
                                     </p>
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <a className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" href="#">
+                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=শিশুরোগ">
                                         আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             {/* Service Card 3: General Medicine */}
@@ -99,9 +101,9 @@ const Services = () => {
                                     </p>
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <a className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" href="#">
+                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=জেনারেল মেডিসিন">
                                         আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             {/* Service Card 4: Mental Health */}
@@ -116,9 +118,9 @@ const Services = () => {
                                     </p>
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <a className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" href="#">
+                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=মানসিক স্বাস্থ্য">
                                         আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             {/* Service Card 5: Nutrition */}
@@ -133,9 +135,9 @@ const Services = () => {
                                     </p>
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <a className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" href="#">
+                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=পুষ্টি ও ডায়েট">
                                         আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             {/* Service Card 6: Dermatology */}
@@ -150,9 +152,9 @@ const Services = () => {
                                     </p>
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <a className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" href="#">
+                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=চর্মরোগ">
                                         আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             {/* Service Card 7: Diabetes Care */}
@@ -167,9 +169,9 @@ const Services = () => {
                                     </p>
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <a className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" href="#">
+                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=ডায়াবেটিস কেয়ার">
                                         আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             {/* Service Card 8: Telemedicine */}
@@ -184,9 +186,9 @@ const Services = () => {
                                     </p>
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <a className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" href="#">
+                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors">
                                         আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +221,7 @@ const Services = () => {
 
                 {/* CTA Section */}
                 <section className="relative isolate overflow-hidden bg-[#FAFAFA] dark:bg-[#201212] py-16 sm:py-24">
-                    <div className="absolute inset-0 -z-10 opacity-20 dark:opacity-10" style={{backgroundImage: 'radial-gradient(#c72929 1px, transparent 1px)', backgroundSize: '32px 32px'}}></div>
+                    <div className="absolute inset-0 -z-10 opacity-20 dark:opacity-10" style={{ backgroundImage: 'radial-gradient(#c72929 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
                     <div className="layout-container px-4 md:px-10 lg:px-40">
                         <div className="mx-auto max-w-2xl text-center">
                             <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">

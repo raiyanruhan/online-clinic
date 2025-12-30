@@ -13,7 +13,7 @@ const Contact = () => {
     return (
         <div className="flex flex-col min-h-screen font-display bg-[#FAFAFA] dark:bg-[#1a1a1a] text-[#333333] dark:text-[#e5e5e5] transition-colors duration-300">
             <Header />
-            
+
             <main className="flex-grow flex flex-col lg:flex-row w-full max-w-[1600px] mx-auto overflow-hidden">
                 <div className="w-full lg:w-1/2 p-6 lg:p-16 flex flex-col justify-center">
                     <div className="mb-12">
@@ -105,17 +105,7 @@ const Contact = () => {
                     <div className="relative z-10 w-full max-w-lg aspect-square">
                         <svg className="w-full h-full drop-shadow-lg" fill="none" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="250" cy="250" fill="#EDEDED" opacity="0.5" r="220"></circle>
-                            <path d="M180 280 C150 280, 140 250, 160 220 
-                 L190 180 C200 165, 215 160, 230 170 
-                 L250 185 C260 192, 260 205, 250 215 
-                 C270 235, 290 255, 310 275 
-                 C320 265, 335 265, 345 275 
-                 L365 295 C375 305, 370 325, 355 335 
-                 L310 365 C280 385, 250 380, 220 350
-                 Z" fill="white" stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"></path>
-                            <path d="M220 350 C200 380, 180 390, 150 380 
-                 C120 370, 110 340, 130 310
-                 C140 295, 160 290, 180 295" fill="none" stroke="#1F8A9E" strokeLinecap="round" strokeWidth="2"></path>
+                            <path d="M 180 280 C 150 280 140 250 160 220 L 190 180 C 200 165 215 160 230 170 L 250 185 C 260 192 260 205 226 228 C 237 278 255 296 309 317 C 320 265 335 265 350 279 L 365 295 C 375 305 370 325 355 335 L 310 365 C 280 400 248 376 239 345 Z" fill="white" stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"></path>
                             <circle cx="250" cy="250" fill="none" r="180" stroke="#1F8A9E" strokeDasharray="4 6" strokeWidth="1.5"></circle>
                             <path d="M350 150 Q400 150 400 200 Q400 230 380 240 L370 260 L350 240 Q300 240 300 200 Q300 150 350 150 Z" fill="white" opacity="0.9" stroke="#333" strokeWidth="2"></path>
                             <circle cx="335" cy="195" fill="#1F8A9E" r="4"></circle>
@@ -123,7 +113,7 @@ const Contact = () => {
                             <circle cx="365" cy="195" fill="#1F8A9E" r="4"></circle>
                             <circle cx="400" cy="150" fill="#C62828" r="12"></circle>
                             <text fill="white" fontFamily="sans-serif" fontSize="14" fontWeight="bold" x="400" y="155">!</text>
-                            <path d="M120 400 Q150 450 220 450 Q280 450 300 400" fill="none" stroke="#1F8A9E" strokeLinecap="round" strokeWidth="3"></path>
+
                         </svg>
                         <p className="text-center mt-6 text-sm text-gray-500 font-medium tracking-wide">আপনার সুস্থতাই আমাদের অঙ্গীকার</p>
                     </div>
@@ -136,7 +126,7 @@ const Contact = () => {
                     </div>
                 </div>
             </main>
-            
+
             <Footer />
         </div>
     );

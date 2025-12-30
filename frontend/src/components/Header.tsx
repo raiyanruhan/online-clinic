@@ -1,10 +1,31 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [user, setUser] = useState<any>(null);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const userStr = localStorage.getItem('user');
+        if (userStr) {
+            setUser(JSON.parse(userStr));
+        }
+    }, [navigate]); // Check on navigation changes
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        setUser(null);
+        navigate('/login');
+    };
+
+    const getDashboardLink = () => {
+        if (user?.role === 'admin') return '/admin-dashboard';
+        return '/dashboard';
+    };
 
     return (
         <header className="sticky top-0 z-50 w-full border-b border-border-color bg-white/95 backdrop-blur-sm dark:bg-background-dark/95 transition-all duration-300">
@@ -12,7 +33,7 @@ const Header = () => {
                 <div className="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-3">
                     <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
                         <div className="flex items-center justify-between whitespace-nowrap">
-                            <Link to="/" className="flex items-center gap-3 text-primary cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+                            <Link to="/" className="flex items-center gap-3 text-primary cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
                                 <img src="/logo.png" alt="Roudromoyee Online Clinic" className="h-12 w-auto object-contain" />
 
                             </Link>
@@ -41,15 +62,26 @@ const Header = () => {
                                     </Link>
                                 </div>
                                 <div className="flex gap-3">
-                                    <Link to="/login" className="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary hover:bg-red-700 hover:scale-105 active:scale-95 transition-all text-white text-sm font-bold shadow-sm shadow-primary/20">
-                                        <span className="truncate">লগ ইন</span>
-                                    </Link>
+                                    {user ? (
+                                        <>
+                                            <Link to={getDashboardLink()} className="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary hover:bg-red-700 active:scale-95 transition-all text-white text-sm font-bold shadow-sm shadow-primary/20">
+                                                <span className="truncate">ড্যাশবোর্ড</span>
+                                            </Link>
+                                            <button onClick={handleLogout} className="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-bold transition-all">
+                                                লগ আউট
+                                            </button>
+                                        </>
+                                    ) : (
+                                        <Link to="/login" className="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary hover:bg-red-700 active:scale-95 transition-all text-white text-sm font-bold shadow-sm shadow-primary/20">
+                                            <span className="truncate">লগ ইন</span>
+                                        </Link>
+                                    )}
                                 </div>
                             </div>
 
                             {/* Mobile Menu Icon */}
                             <div className="lg:hidden">
-                                <button 
+                                <button
                                     onClick={toggleMenu}
                                     className="p-2 text-text-main dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
                                 >
@@ -80,8 +112,14 @@ const Header = () => {
                     <Link to="/contact" className="text-lg font-medium hover:text-primary transition-colors">যোগাযোগ</Link>
                 </div>
                 <div className="mt-auto flex flex-col gap-4">
-                    <button className="w-full flex items-center justify-center rounded-full h-12 bg-primary text-white font-bold shadow-lg">লগ ইন</button>
-                    <button className="w-full flex items-center justify-center rounded-full h-12 bg-gray-100 dark:bg-gray-800 font-bold">বাংলা</button>
+                    {user ? (
+                        <>
+                            <Link to={getDashboardLink()} className="w-full flex items-center justify-center rounded-full h-12 bg-primary text-white font-bold shadow-lg">ড্যাশবোর্ড</Link>
+                            <button onClick={handleLogout} className="w-full flex items-center justify-center rounded-full h-12 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-white font-bold">লগ আউট</button>
+                        </>
+                    ) : (
+                        <button onClick={() => navigate('/login')} className="w-full flex items-center justify-center rounded-full h-12 bg-primary text-white font-bold shadow-lg">লগ ইন</button>
+                    )}
                 </div>
             </div>
         </header>
