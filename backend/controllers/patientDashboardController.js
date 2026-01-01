@@ -5,20 +5,34 @@ const getPatientStats = async (req, res) => {
     try {
         const userId = req.user.user_id;
 
-        // Next Upcoming Appointment - use date >= CURRENT_DATE
+        // Next Upcoming Appointment - show only appointments with meeting_link (Join button)
+        // Must have meeting_link, be upcoming/ready, and date >= today
+        // Show appointments that are today or in the future, as long as they have a meeting link
         const nextAppointment = await pool.query(`
             SELECT a.*, d.name as doctor_name, d.specialty, d.image_url as doctor_image
             FROM appointments a
             JOIN doctors d ON a.doctor_id = d.doctor_id
-            WHERE a.patient_id = $1 AND a.status = 'upcoming' AND a.date::date >= CURRENT_DATE
+            WHERE a.patient_id = $1 
+                AND a.status IN ('upcoming', 'ready') 
+                AND a.date::date >= CURRENT_DATE
+                AND a.meeting_link IS NOT NULL 
+                AND TRIM(a.meeting_link) != ''
             ORDER BY a.date ASC, a.time ASC
             LIMIT 1
         `, [userId]);
+        
+        // Debug: Log the result
+        if (process.env.NODE_ENV !== 'production') {
+            console.log(`[Patient Stats] User ${userId}: Found ${nextAppointment.rows.length} appointment(s) with meeting link`);
+            if (nextAppointment.rows.length > 0) {
+                console.log(`[Patient Stats] Next appointment: ID ${nextAppointment.rows[0].appointment_id}, Date: ${nextAppointment.rows[0].date}, Status: ${nextAppointment.rows[0].status}`);
+            }
+        }
 
-        // Total Counts - use CURRENT_DATE for accurate comparison
+        // Total Counts - use CURRENT_DATE for accurate comparison, include both 'upcoming' and 'ready' statuses
         const counts = await pool.query(`
             SELECT 
-                COUNT(*) FILTER (WHERE status = 'upcoming' AND date::date >= CURRENT_DATE) as upcoming,
+                COUNT(*) FILTER (WHERE status IN ('upcoming', 'ready') AND date::date >= CURRENT_DATE) as upcoming,
                 COUNT(*) FILTER (WHERE status = 'completed') as completed
             FROM appointments
             WHERE patient_id = $1
@@ -58,9 +72,9 @@ const getMyAppointments = async (req, res) => {
         const params = [userId];
 
         if (filter === 'upcoming') {
-            // Upcoming: date >= CURRENT_DATE AND status = 'upcoming'
-            query += ` AND a.date::date >= CURRENT_DATE AND a.status = $2 ORDER BY a.date ASC, a.time ASC`;
-            params.push('upcoming');
+            // Upcoming: date >= CURRENT_DATE AND status IN ('upcoming', 'ready')
+            query += ` AND a.date::date >= CURRENT_DATE AND a.status IN ($2, $3) ORDER BY a.date ASC, a.time ASC`;
+            params.push('upcoming', 'ready');
         } else if (filter === 'history') {
             // History: completed OR cancelled OR past dates
             query += ` AND (a.status IN ($2, $3) OR a.date::date < CURRENT_DATE) ORDER BY a.date DESC, a.time DESC`;
@@ -120,6 +134,32 @@ const getAppointmentDetails = async (req, res) => {
 const bookAppointment = async (req, res) => {
     try {
         const userId = req.user.user_id;
+        
+        // Check user role - prevent doctors and admins from booking appointments
+        const userRole = req.user.role;
+        if (userRole === 'doctor' || userRole === 'admin') {
+            return res.status(403).json({ 
+                message: userRole === 'doctor' 
+                    ? 'Doctors cannot book appointments. Please use your doctor dashboard.' 
+                    : 'Admins cannot book appointments.' 
+            });
+        }
+        
+        // If role is not in token, check database
+        if (!userRole) {
+            const userCheck = await pool.query('SELECT role FROM users WHERE user_id = $1', [userId]);
+            if (userCheck.rows.length > 0) {
+                const role = userCheck.rows[0].role;
+                if (role === 'doctor' || role === 'admin') {
+                    return res.status(403).json({ 
+                        message: role === 'doctor' 
+                            ? 'Doctors cannot book appointments. Please use your doctor dashboard.' 
+                            : 'Admins cannot book appointments.' 
+                    });
+                }
+            }
+        }
+        
         const { doctor_id, date, time, symptoms, patient_name, patient_age, patient_gender, patient_weight, phone } = req.body;
 
         // Validate required fields

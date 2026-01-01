@@ -23,6 +23,8 @@ const PrescriptionEditor = () => {
     const [followUpDate, setFollowUpDate] = useState('');
     const [needsFollowUp, setNeedsFollowUp] = useState(false);
     const [diagnosis, setDiagnosis] = useState('');
+    const [onExamination, setOnExamination] = useState('');
+    const [investigation, setInvestigation] = useState('');
     
     // Medicine suggestions state
     const [medicineSuggestions, setMedicineSuggestions] = useState<{ [key: number]: any[] }>({});
@@ -75,6 +77,8 @@ const PrescriptionEditor = () => {
                     setFollowUpDate(followUp);
                     setNeedsFollowUp(!!followUp);
                     setDiagnosis(data.prescription.diagnosis || '');
+                    setOnExamination(data.prescription.on_examination || '');
+                    setInvestigation(data.prescription.investigation || '');
                 }
             } else {
                 showAlert({ message: 'Appointment not found', type: 'error' });
@@ -280,7 +284,9 @@ const PrescriptionEditor = () => {
                     medicines: medicines.filter(m => m.name.trim()),
                     advice,
                     follow_up_date: needsFollowUp ? (followUpDate || null) : null,
-                    diagnosis: diagnosis || null
+                    diagnosis: diagnosis || null,
+                    on_examination: onExamination || null,
+                    investigation: investigation || null
                 })
             });
 
@@ -354,25 +360,25 @@ const PrescriptionEditor = () => {
         <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col">
             <Header />
             
-            <main className="flex-1 py-8 px-4 sm:px-6 lg:px-8">
+            <main className="flex-1 py-4 sm:py-6 lg:py-8 px-3 sm:px-4 md:px-6 lg:px-8">
                 <div className="max-w-5xl mx-auto">
                     {/* Back Button */}
                     <button
                         onClick={() => navigate('/dashboard')}
-                        className="mb-6 flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                        className="mb-4 sm:mb-6 flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
                     >
-                        <span className="material-symbols-outlined">arrow_back</span>
+                        <span className="material-symbols-outlined text-lg sm:text-xl">arrow_back</span>
                         <span>Back to Dashboard</span>
                     </button>
 
                     {/* Prescription Pad */}
                     <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700">
                         {/* Prescription Header - Doctor Details Section */}
-                        <div className="bg-white dark:bg-gray-800 p-6 sm:p-8 border-b-2 border-gray-200 dark:border-gray-700">
-                            <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
+                        <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 md:p-8 border-b-2 border-gray-200 dark:border-gray-700">
+                            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-start md:items-center">
                                 {/* Doctor Image/Icon */}
-                                <div className="shrink-0">
-                                    <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden shadow-md bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                                <div className="shrink-0 mx-auto md:mx-0">
+                                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-xl sm:rounded-2xl overflow-hidden shadow-md bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
                                         {doctor?.image_url ? (
                                             <img 
                                                 src={doctor.image_url} 
@@ -380,51 +386,51 @@ const PrescriptionEditor = () => {
                                                 className="w-full h-full object-cover"
                                             />
                                         ) : (
-                                            <span className="material-symbols-outlined text-4xl md:text-5xl text-gray-400">person</span>
+                                            <span className="material-symbols-outlined text-3xl sm:text-4xl md:text-5xl text-gray-400">person</span>
                                         )}
                                     </div>
                                 </div>
                                 
                                 {/* Doctor Info */}
-                                <div className="flex-1">
-                                    <h1 className="text-secondary text-xl md:text-2xl font-bold leading-tight mb-2 flex items-center gap-2">
+                                <div className="flex-1 w-full text-center md:text-left">
+                                    <h1 className="text-secondary text-lg sm:text-xl md:text-2xl font-bold leading-tight mb-2 flex items-center justify-center md:justify-start gap-1.5 sm:gap-2">
                                         {doctor?.name || appointment?.doctor_name || 'Dr. Name'}
-                                        <span className="material-symbols-outlined text-green-500 icon-filled text-lg md:text-xl" title="ভেরিফাইড">verified</span>
+                                        <span className="material-symbols-outlined text-green-500 icon-filled text-base sm:text-lg md:text-xl" title="ভেরিফাইড">verified</span>
                                     </h1>
                                     
                                     {(doctor?.qualification || appointment?.doctor_qualification) && (
-                                        <p className="text-text-main/80 dark:text-gray-300 text-base md:text-lg mb-1">
+                                        <p className="text-text-main/80 dark:text-gray-300 text-sm sm:text-base md:text-lg mb-1">
                                             {doctor?.qualification || appointment?.doctor_qualification}
                                         </p>
                                     )}
                                     
                                     {(doctor?.specialty || appointment?.doctor_specialty) && (
-                                        <p className="text-text-main/60 dark:text-gray-400 text-sm md:text-base font-medium mb-3">
+                                        <p className="text-text-main/60 dark:text-gray-400 text-xs sm:text-sm md:text-base font-medium mb-3">
                                             {doctor?.specialty || appointment?.doctor_specialty}
                                         </p>
                                     )}
                                     
-                                    <div className="flex flex-wrap gap-3 mt-2">
+                                    <div className="flex flex-wrap gap-2 sm:gap-3 mt-2 justify-center md:justify-start">
                                         {(doctor?.experience || appointment?.doctor_experience) && (
-                                            <div className="px-3 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center gap-2">
-                                                <span className="material-symbols-outlined text-secondary text-sm">medical_services</span>
-                                                <span className="text-sm font-bold text-gray-700 dark:text-gray-300">
+                                            <div className="px-2 sm:px-3 py-1.5 sm:py-2 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center gap-1.5 sm:gap-2">
+                                                <span className="material-symbols-outlined text-secondary text-xs sm:text-sm">medical_services</span>
+                                                <span className="text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300">
                                                     {doctor?.experience || appointment?.doctor_experience}
                                                 </span>
                                             </div>
                                         )}
                                         {(doctor?.institute || appointment?.doctor_institute) && (
-                                            <div className="px-3 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center gap-2">
-                                                <span className="material-symbols-outlined text-secondary text-sm">apartment</span>
-                                                <span className="text-sm font-bold text-gray-700 dark:text-gray-300">
+                                            <div className="px-2 sm:px-3 py-1.5 sm:py-2 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center gap-1.5 sm:gap-2">
+                                                <span className="material-symbols-outlined text-secondary text-xs sm:text-sm">apartment</span>
+                                                <span className="text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 break-words max-w-[200px] sm:max-w-none">
                                                     {doctor?.institute || appointment?.doctor_institute}
                                                 </span>
                                             </div>
                                         )}
                                         {(doctor?.designation || appointment?.doctor_designation) && (
-                                            <div className="px-3 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center gap-2">
-                                                <span className="material-symbols-outlined text-secondary text-sm">badge</span>
-                                                <span className="text-sm font-bold text-gray-700 dark:text-gray-300">
+                                            <div className="px-2 sm:px-3 py-1.5 sm:py-2 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700 flex items-center gap-1.5 sm:gap-2">
+                                                <span className="material-symbols-outlined text-secondary text-xs sm:text-sm">badge</span>
+                                                <span className="text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 break-words max-w-[200px] sm:max-w-none">
                                                     {doctor?.designation || appointment?.doctor_designation}
                                                 </span>
                                             </div>
@@ -435,35 +441,35 @@ const PrescriptionEditor = () => {
                         </div>
 
                         {/* Patient Info Section - Below Header */}
-                        <div className="p-6 sm:p-8 border-b-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                        <div className="p-4 sm:p-6 md:p-8 border-b-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
                                 <div>
-                                    <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Name:</label>
-                                    <div className="text-gray-800 dark:text-white font-medium text-lg border-b-2 border-gray-400 dark:border-gray-500 pb-2 min-h-[2rem]">
+                                    <label className="block text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Name:</label>
+                                    <div className="text-gray-800 dark:text-white font-medium text-sm sm:text-base md:text-lg border-b-2 border-gray-400 dark:border-gray-500 pb-1.5 sm:pb-2 min-h-[1.5rem] sm:min-h-[2rem] break-words">
                                         {appointment.patient_name || 'N/A'}
                                     </div>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Age:</label>
-                                    <div className="text-gray-800 dark:text-white font-medium text-lg border-b-2 border-gray-400 dark:border-gray-500 pb-2 min-h-[2rem]">
+                                    <label className="block text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Age:</label>
+                                    <div className="text-gray-800 dark:text-white font-medium text-sm sm:text-base md:text-lg border-b-2 border-gray-400 dark:border-gray-500 pb-1.5 sm:pb-2 min-h-[1.5rem] sm:min-h-[2rem]">
                                         {appointment.patient_age || 'N/A'}
                                     </div>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Sex:</label>
-                                    <div className="text-gray-800 dark:text-white font-medium text-lg border-b-2 border-gray-400 dark:border-gray-500 pb-2 min-h-[2rem]">
+                                    <label className="block text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Sex:</label>
+                                    <div className="text-gray-800 dark:text-white font-medium text-sm sm:text-base md:text-lg border-b-2 border-gray-400 dark:border-gray-500 pb-1.5 sm:pb-2 min-h-[1.5rem] sm:min-h-[2rem]">
                                         {appointment.patient_gender || 'N/A'}
                                     </div>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Wt:</label>
-                                    <div className="text-gray-800 dark:text-white font-medium text-lg border-b-2 border-gray-400 dark:border-gray-500 pb-2 min-h-[2rem]">
+                                    <label className="block text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Wt:</label>
+                                    <div className="text-gray-800 dark:text-white font-medium text-sm sm:text-base md:text-lg border-b-2 border-gray-400 dark:border-gray-500 pb-1.5 sm:pb-2 min-h-[1.5rem] sm:min-h-[2rem]">
                                         {appointment.patient_weight ? `${appointment.patient_weight} kg` : 'N/A'}
                                     </div>
                                 </div>
-                                <div>
-                                    <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Date:</label>
-                                    <div className="text-gray-800 dark:text-white font-medium text-lg border-b-2 border-gray-400 dark:border-gray-500 pb-2 min-h-[2rem]">
+                                <div className="col-span-2 sm:col-span-1">
+                                    <label className="block text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Date:</label>
+                                    <div className="text-gray-800 dark:text-white font-medium text-sm sm:text-base md:text-lg border-b-2 border-gray-400 dark:border-gray-500 pb-1.5 sm:pb-2 min-h-[1.5rem] sm:min-h-[2rem]">
                                         {formatBDDate(appointment.date)}
                                     </div>
                                 </div>
@@ -471,14 +477,14 @@ const PrescriptionEditor = () => {
                         </div>
 
                         {/* Prescription Body with Watermark */}
-                        <div className="relative p-6 sm:p-8 min-h-[600px] bg-white dark:bg-gray-800">
+                        <div className="relative p-4 sm:p-6 md:p-8 min-h-[400px] sm:min-h-[600px] bg-white dark:bg-gray-800">
                             {/* Watermark Background - Large Mother and Baby Icon */}
                             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none overflow-hidden">
-                                <div className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2">
-                                    <span className="material-symbols-outlined text-[250px] sm:text-[350px] text-[#8B1538] dark:text-pink-300">pregnant_woman</span>
+                                <div className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2">
+                                    <span className="material-symbols-outlined text-[150px] sm:text-[250px] md:text-[350px] text-[#8B1538] dark:text-pink-300">pregnant_woman</span>
                                 </div>
                                 {/* Decorative wavy lines at bottom right */}
-                                <div className="absolute bottom-8 right-8 opacity-10">
+                                <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 opacity-10 hidden sm:block">
                                     <svg width="100" height="40" viewBox="0 0 100 40" fill="none">
                                         <path d="M0 20 Q25 10, 50 20 T100 20" stroke="#8B1538" strokeWidth="2" fill="none"/>
                                         <path d="M0 25 Q25 15, 50 25 T100 25" stroke="#8B1538" strokeWidth="1.5" fill="none"/>
@@ -488,170 +494,288 @@ const PrescriptionEditor = () => {
 
                             {/* Content */}
                             <div className="relative z-10">
-                                {/* Symptoms Section */}
+                                {/* Chief Complaints Section */}
                                 {appointment.symptoms && (
-                                    <div className="mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
-                                        <h3 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Chief Complaints:</h3>
-                                        <p className="text-gray-800 dark:text-gray-200">{appointment.symptoms}</p>
+                                    <div className="mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-gray-200 dark:border-gray-700">
+                                        <h3 className="text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Chief Complaints:</h3>
+                                        <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200 break-words">{appointment.symptoms}</p>
                                     </div>
                                 )}
 
-                                {/* Diagnosis Section */}
-                                <div className="mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
-                                    <h3 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Diagnosis:</h3>
+                                {/* On Examination Section */}
+                                <div className="mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-gray-200 dark:border-gray-700">
+                                    <h3 className="text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">On Examination:</h3>
                                     <textarea
-                                        className={`w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none min-h-[80px] resize-y ${
+                                        className={`w-full p-2.5 sm:p-3 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none min-h-[80px] sm:min-h-[100px] resize-y ${
                                             appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
                                         }`}
-                                        placeholder="Enter diagnosis..."
-                                        value={diagnosis}
-                                        onChange={e => setDiagnosis(e.target.value)}
+                                        placeholder="Enter examination findings..."
+                                        value={onExamination}
+                                        onChange={e => setOnExamination(e.target.value)}
                                         readOnly={appointment.status === 'completed'}
                                     />
                                 </div>
 
                                 {/* Medicines Section */}
-                                <div className="mb-6">
-                                    <div className="flex justify-between items-center mb-4">
-                                        <h3 className="text-lg font-bold text-gray-800 dark:text-white">Medicines</h3>
+                                <div className="mb-4 sm:mb-6">
+                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4 mb-3 sm:mb-4">
+                                        <h3 className="text-base sm:text-lg font-bold text-gray-800 dark:text-white">Medicines</h3>
                                         {appointment.status !== 'completed' && (
                                             <button
                                                 onClick={handleAddMedicine}
-                                                className="px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary font-bold rounded-lg transition-colors flex items-center gap-2 text-sm"
+                                                className="w-full sm:w-auto px-3 sm:px-4 py-2 text-xs sm:text-sm bg-primary/10 hover:bg-primary/20 text-primary font-bold rounded-lg transition-colors flex items-center justify-center gap-1.5 sm:gap-2"
                                             >
-                                                <span className="material-symbols-outlined text-lg">add</span>
+                                                <span className="material-symbols-outlined text-base sm:text-lg">add</span>
                                                 Add Medicine
                                             </button>
                                         )}
                                     </div>
                                     
-                                    <div className="space-y-3">
+                                    <div className="space-y-2 sm:space-y-3">
                                         {medicines.map((med, idx) => (
-                                            <div key={idx} className="grid grid-cols-12 gap-3 items-center bg-gray-50 dark:bg-gray-900/50 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-                                                <div className="col-span-12 sm:col-span-4 relative">
-                                                    <input
-                                                        placeholder="Medicine Name"
-                                                        className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none"
-                                                        value={med.name}
-                                                        onChange={e => handleMedicineChange(idx, 'name', e.target.value)}
-                                                        onKeyDown={e => handleMedicineKeyDown(idx, e)}
-                                                        onFocus={() => {
-                                                            if (med.name.length >= 2 && medicineSuggestions[idx]?.length > 0) {
-                                                                setShowSuggestions(prev => ({ ...prev, [idx]: true }));
-                                                            }
-                                                        }}
-                                                        onBlur={() => {
-                                                            // Delay hiding suggestions to allow click
-                                                            setTimeout(() => {
-                                                                setShowSuggestions(prev => ({ ...prev, [idx]: false }));
-                                                            }, 200);
-                                                        }}
-                                                    />
-                                                    {showSuggestions[idx] && medicineSuggestions[idx]?.length > 0 && (
-                                                        <div className="absolute z-50 w-full mt-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg max-h-60 overflow-y-auto">
-                                                            {medicineSuggestions[idx].map((suggestion, sugIdx) => {
-                                                                const isSelected = selectedSuggestionIndex[idx] === sugIdx;
-                                                                return (
-                                                                    <div
-                                                                        key={sugIdx}
-                                                                        id={`suggestion-${idx}-${sugIdx}`}
-                                                                        onMouseDown={(e) => {
-                                                                            e.preventDefault(); // Prevent blur event
-                                                                            selectMedicine(idx, suggestion);
-                                                                        }}
-                                                                        onMouseEnter={() => {
-                                                                            setSelectedSuggestionIndex(prev => ({ ...prev, [idx]: sugIdx }));
-                                                                        }}
-                                                                        className={`p-3 cursor-pointer border-b border-gray-200 dark:border-gray-700 last:border-b-0 ${
-                                                                            isSelected 
-                                                                                ? 'bg-primary/20 dark:bg-primary/30' 
-                                                                                : 'hover:bg-gray-100 dark:hover:bg-gray-700'
-                                                                        }`}
-                                                                    >
-                                                                        <div className="font-semibold text-gray-800 dark:text-white text-sm">
-                                                                            {suggestion.brandName}
-                                                                            {suggestion.source === 'generic' && (
-                                                                                <span className="ml-2 text-xs text-primary font-normal">(Generic)</span>
+                                            <div key={idx} className="bg-gray-50 dark:bg-gray-900/50 p-3 sm:p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+                                                {/* Mobile Layout - Stacked */}
+                                                <div className="block sm:hidden space-y-2">
+                                                    <div className="relative">
+                                                        <input
+                                                            placeholder="Medicine Name"
+                                                            className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none"
+                                                            value={med.name}
+                                                            onChange={e => handleMedicineChange(idx, 'name', e.target.value)}
+                                                            onKeyDown={e => handleMedicineKeyDown(idx, e)}
+                                                            onFocus={() => {
+                                                                if (med.name.length >= 2 && medicineSuggestions[idx]?.length > 0) {
+                                                                    setShowSuggestions(prev => ({ ...prev, [idx]: true }));
+                                                                }
+                                                            }}
+                                                            onBlur={() => {
+                                                                setTimeout(() => {
+                                                                    setShowSuggestions(prev => ({ ...prev, [idx]: false }));
+                                                                }, 200);
+                                                            }}
+                                                        />
+                                                        {showSuggestions[idx] && medicineSuggestions[idx]?.length > 0 && (
+                                                            <div className="absolute z-50 w-full mt-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                                                {medicineSuggestions[idx].map((suggestion, sugIdx) => {
+                                                                    const isSelected = selectedSuggestionIndex[idx] === sugIdx;
+                                                                    return (
+                                                                        <div
+                                                                            key={sugIdx}
+                                                                            id={`suggestion-${idx}-${sugIdx}`}
+                                                                            onMouseDown={(e) => {
+                                                                                e.preventDefault();
+                                                                                selectMedicine(idx, suggestion);
+                                                                            }}
+                                                                            onMouseEnter={() => {
+                                                                                setSelectedSuggestionIndex(prev => ({ ...prev, [idx]: sugIdx }));
+                                                                            }}
+                                                                            className={`p-2 sm:p-3 cursor-pointer border-b border-gray-200 dark:border-gray-700 last:border-b-0 ${
+                                                                                isSelected 
+                                                                                    ? 'bg-primary/20 dark:bg-primary/30' 
+                                                                                    : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+                                                                            }`}
+                                                                        >
+                                                                            <div className="font-semibold text-gray-800 dark:text-white text-xs sm:text-sm">
+                                                                                {suggestion.brandName}
+                                                                                {suggestion.source === 'generic' && (
+                                                                                    <span className="ml-2 text-xs text-primary font-normal">(Generic)</span>
+                                                                                )}
+                                                                            </div>
+                                                                            {suggestion.generic && suggestion.generic !== suggestion.brandName && (
+                                                                                <div className="text-xs text-gray-600 dark:text-gray-400 mt-1 break-words">
+                                                                                    {suggestion.generic}
+                                                                                </div>
+                                                                            )}
+                                                                            {suggestion.strength && (
+                                                                                <div className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                                                                                    {suggestion.strength} {suggestion.dosageForm}
+                                                                                </div>
                                                                             )}
                                                                         </div>
-                                                                        {suggestion.generic && suggestion.generic !== suggestion.brandName && (
-                                                                            <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-                                                                                {suggestion.generic}
-                                                                            </div>
-                                                                        )}
-                                                                        {suggestion.strength && (
-                                                                            <div className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
-                                                                                {suggestion.strength} {suggestion.dosageForm}
-                                                                            </div>
-                                                                        )}
-                                                                        {suggestion.drugClass && (
-                                                                            <div className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
-                                                                                {suggestion.drugClass}
-                                                                            </div>
-                                                                        )}
-                                                                        {suggestion.indication && (
-                                                                            <div className="text-xs text-gray-500 dark:text-gray-500 mt-0.5 italic">
-                                                                                {suggestion.indication}
-                                                                            </div>
-                                                                        )}
-                                                                    </div>
-                                                                );
-                                                            })}
-                                                        </div>
-                                                    )}
-                                                </div>
-                                                <div className="col-span-6 sm:col-span-2">
+                                                                    );
+                                                                })}
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                    <div className="grid grid-cols-2 gap-2">
+                                                        <input
+                                                            placeholder="Dose"
+                                                            className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-xs sm:text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
+                                                                appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                                            }`}
+                                                            value={med.dose}
+                                                            onChange={e => handleMedicineChange(idx, 'dose', e.target.value)}
+                                                            readOnly={appointment.status === 'completed'}
+                                                        />
+                                                        <input
+                                                            placeholder="Duration"
+                                                            className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-xs sm:text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
+                                                                appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                                            }`}
+                                                            value={med.duration}
+                                                            onChange={e => handleMedicineChange(idx, 'duration', e.target.value)}
+                                                            readOnly={appointment.status === 'completed'}
+                                                        />
+                                                    </div>
                                                     <input
-                                                        placeholder="Dose (1+0+1)"
-                                                        className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
-                                                            appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
-                                                        }`}
-                                                        value={med.dose}
-                                                        onChange={e => handleMedicineChange(idx, 'dose', e.target.value)}
-                                                        readOnly={appointment.status === 'completed'}
-                                                    />
-                                                </div>
-                                                <div className="col-span-6 sm:col-span-2">
-                                                    <input
-                                                        placeholder="Duration (7 days)"
-                                                        className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
-                                                            appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
-                                                        }`}
-                                                        value={med.duration}
-                                                        onChange={e => handleMedicineChange(idx, 'duration', e.target.value)}
-                                                        readOnly={appointment.status === 'completed'}
-                                                    />
-                                                </div>
-                                                <div className="col-span-10 sm:col-span-3">
-                                                    <input
-                                                        placeholder="Instruction (After meal)"
-                                                        className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
+                                                        placeholder="Instruction"
+                                                        className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-xs sm:text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
                                                             appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
                                                         }`}
                                                         value={med.instruction}
                                                         onChange={e => handleMedicineChange(idx, 'instruction', e.target.value)}
                                                         readOnly={appointment.status === 'completed'}
                                                     />
+                                                    <div className="flex justify-end">
+                                                        <button
+                                                            onClick={() => handleRemoveMedicine(idx)}
+                                                            disabled={medicines.length === 1 || appointment.status === 'completed'}
+                                                            className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                                        >
+                                                            <span className="material-symbols-outlined text-base">delete</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                                <div className="col-span-2 sm:col-span-1 flex justify-center">
-                                                    <button
-                                                        onClick={() => handleRemoveMedicine(idx)}
-                                                        disabled={medicines.length === 1 || appointment.status === 'completed'}
-                                                        className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                                                    >
-                                                        <span className="material-symbols-outlined">delete</span>
-                                                    </button>
+                                                {/* Desktop Layout - Grid */}
+                                                <div className="hidden sm:grid sm:grid-cols-12 gap-2 sm:gap-3 items-center">
+                                                    <div className="col-span-12 sm:col-span-4 relative">
+                                                        <input
+                                                            placeholder="Medicine Name"
+                                                            className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none"
+                                                            value={med.name}
+                                                            onChange={e => handleMedicineChange(idx, 'name', e.target.value)}
+                                                            onKeyDown={e => handleMedicineKeyDown(idx, e)}
+                                                            onFocus={() => {
+                                                                if (med.name.length >= 2 && medicineSuggestions[idx]?.length > 0) {
+                                                                    setShowSuggestions(prev => ({ ...prev, [idx]: true }));
+                                                                }
+                                                            }}
+                                                            onBlur={() => {
+                                                                setTimeout(() => {
+                                                                    setShowSuggestions(prev => ({ ...prev, [idx]: false }));
+                                                                }, 200);
+                                                            }}
+                                                        />
+                                                        {showSuggestions[idx] && medicineSuggestions[idx]?.length > 0 && (
+                                                            <div className="absolute z-50 w-full mt-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                                                {medicineSuggestions[idx].map((suggestion, sugIdx) => {
+                                                                    const isSelected = selectedSuggestionIndex[idx] === sugIdx;
+                                                                    return (
+                                                                        <div
+                                                                            key={sugIdx}
+                                                                            id={`suggestion-${idx}-${sugIdx}`}
+                                                                            onMouseDown={(e) => {
+                                                                                e.preventDefault();
+                                                                                selectMedicine(idx, suggestion);
+                                                                            }}
+                                                                            onMouseEnter={() => {
+                                                                                setSelectedSuggestionIndex(prev => ({ ...prev, [idx]: sugIdx }));
+                                                                            }}
+                                                                            className={`p-3 cursor-pointer border-b border-gray-200 dark:border-gray-700 last:border-b-0 ${
+                                                                                isSelected 
+                                                                                    ? 'bg-primary/20 dark:bg-primary/30' 
+                                                                                    : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+                                                                            }`}
+                                                                        >
+                                                                            <div className="font-semibold text-gray-800 dark:text-white text-sm">
+                                                                                {suggestion.brandName}
+                                                                                {suggestion.source === 'generic' && (
+                                                                                    <span className="ml-2 text-xs text-primary font-normal">(Generic)</span>
+                                                                                )}
+                                                                            </div>
+                                                                            {suggestion.generic && suggestion.generic !== suggestion.brandName && (
+                                                                                <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                                                                                    {suggestion.generic}
+                                                                                </div>
+                                                                            )}
+                                                                            {suggestion.strength && (
+                                                                                <div className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                                                                                    {suggestion.strength} {suggestion.dosageForm}
+                                                                                </div>
+                                                                            )}
+                                                                            {suggestion.drugClass && (
+                                                                                <div className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                                                                                    {suggestion.drugClass}
+                                                                                </div>
+                                                                            )}
+                                                                            {suggestion.indication && (
+                                                                                <div className="text-xs text-gray-500 dark:text-gray-500 mt-0.5 italic">
+                                                                                    {suggestion.indication}
+                                                                                </div>
+                                                                            )}
+                                                                        </div>
+                                                                    );
+                                                                })}
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                    <div className="col-span-6 sm:col-span-2">
+                                                        <input
+                                                            placeholder="Dose (1+0+1)"
+                                                            className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
+                                                                appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                                            }`}
+                                                            value={med.dose}
+                                                            onChange={e => handleMedicineChange(idx, 'dose', e.target.value)}
+                                                            readOnly={appointment.status === 'completed'}
+                                                        />
+                                                    </div>
+                                                    <div className="col-span-6 sm:col-span-2">
+                                                        <input
+                                                            placeholder="Duration (7 days)"
+                                                            className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
+                                                                appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                                            }`}
+                                                            value={med.duration}
+                                                            onChange={e => handleMedicineChange(idx, 'duration', e.target.value)}
+                                                            readOnly={appointment.status === 'completed'}
+                                                        />
+                                                    </div>
+                                                    <div className="col-span-10 sm:col-span-3">
+                                                        <input
+                                                            placeholder="Instruction (After meal)"
+                                                            className={`w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
+                                                                appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                                            }`}
+                                                            value={med.instruction}
+                                                            onChange={e => handleMedicineChange(idx, 'instruction', e.target.value)}
+                                                            readOnly={appointment.status === 'completed'}
+                                                        />
+                                                    </div>
+                                                    <div className="col-span-2 sm:col-span-1 flex justify-center">
+                                                        <button
+                                                            onClick={() => handleRemoveMedicine(idx)}
+                                                            disabled={medicines.length === 1 || appointment.status === 'completed'}
+                                                            className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                                        >
+                                                            <span className="material-symbols-outlined text-base">delete</span>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
 
-                                {/* Advice Section */}
-                                <div className="mb-6">
-                                    <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Clinical Advice / Notes:</label>
+                                {/* Investigation Section */}
+                                <div className="mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-gray-200 dark:border-gray-700">
+                                    <h3 className="text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Investigation:</h3>
                                     <textarea
-                                        className={`w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white h-32 focus:ring-2 focus:ring-primary/20 outline-none resize-none ${
+                                        className={`w-full p-2.5 sm:p-3 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none min-h-[80px] sm:min-h-[100px] resize-y ${
+                                            appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
+                                        }`}
+                                        placeholder="Enter investigations required..."
+                                        value={investigation}
+                                        onChange={e => setInvestigation(e.target.value)}
+                                        readOnly={appointment.status === 'completed'}
+                                    />
+                                </div>
+
+                                {/* Advice Section */}
+                                <div className="mb-4 sm:mb-6">
+                                    <label className="block text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Advice:</label>
+                                    <textarea
+                                        className={`w-full p-3 sm:p-4 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white min-h-[100px] sm:h-32 focus:ring-2 focus:ring-primary/20 outline-none resize-y ${
                                             appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
                                         }`}
                                         placeholder="Rest for 2 days. Drink plenty of water. Avoid heavy lifting..."
@@ -662,8 +786,8 @@ const PrescriptionEditor = () => {
                                 </div>
 
                                 {/* Follow-up Date */}
-                                <div className="mb-6">
-                                    <div className="flex items-center gap-3 mb-2">
+                                <div className="mb-4 sm:mb-6">
+                                    <div className="flex items-center gap-2 sm:gap-3 mb-2">
                                         <input
                                             type="checkbox"
                                             id="needsFollowUp"
@@ -675,9 +799,9 @@ const PrescriptionEditor = () => {
                                                 }
                                             }}
                                             disabled={appointment.status === 'completed'}
-                                            className="w-5 h-5 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary/20 focus:ring-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                                            className="w-4 h-4 sm:w-5 sm:h-5 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary/20 focus:ring-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                                         />
-                                        <label htmlFor="needsFollowUp" className={`text-sm font-bold text-gray-700 dark:text-gray-300 ${
+                                        <label htmlFor="needsFollowUp" className={`text-xs sm:text-sm font-bold text-gray-700 dark:text-gray-300 ${
                                             appointment.status === 'completed' ? 'cursor-not-allowed' : 'cursor-pointer'
                                         }`}>
                                             Follow-up Date Required
@@ -687,7 +811,7 @@ const PrescriptionEditor = () => {
                                         <input
                                             type="date"
                                             min={currentDate}
-                                            className={`w-full sm:w-auto p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
+                                            className={`w-full sm:w-auto p-2.5 sm:p-3 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 outline-none ${
                                                 appointment.status === 'completed' ? 'bg-gray-100 dark:bg-gray-900 cursor-not-allowed' : ''
                                             }`}
                                             value={followUpDate}
@@ -700,17 +824,17 @@ const PrescriptionEditor = () => {
                         </div>
 
                         {/* Action Buttons */}
-                        <div className="p-6 sm:p-8 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50 flex flex-col sm:flex-row gap-4 justify-end">
+                        <div className="p-4 sm:p-6 md:p-8 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-end">
                             <button
                                 onClick={() => navigate('/dashboard')}
-                                className="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-bold rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                                className="w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-bold rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                             >
                                 Cancel
                             </button>
                             <button
                                 onClick={handleSavePrescription}
                                 disabled={isSaving || appointment.status === 'completed'}
-                                className={`px-8 py-3 font-bold rounded-lg shadow-lg transition-all flex items-center justify-center gap-2 ${
+                                className={`w-full sm:w-auto px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base font-bold rounded-lg shadow-lg transition-all flex items-center justify-center gap-1.5 sm:gap-2 ${
                                     appointment.status === 'completed'
                                         ? 'bg-gray-400 cursor-not-allowed text-white'
                                         : 'bg-primary hover:bg-red-700 disabled:bg-gray-400 text-white'
@@ -719,13 +843,13 @@ const PrescriptionEditor = () => {
                             >
                                 {isSaving ? (
                                     <>
-                                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                                        Saving...
+                                        <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white"></div>
+                                        <span>Saving...</span>
                                     </>
                                 ) : (
                                     <>
-                                        <span className="material-symbols-outlined">save</span>
-                                        Save & Send Prescription
+                                        <span className="material-symbols-outlined text-base sm:text-lg">save</span>
+                                        <span>Save & Send Prescription</span>
                                     </>
                                 )}
                             </button>

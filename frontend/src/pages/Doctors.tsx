@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 
 // const SPECIALTIES = [
 //     'General Medicine', 'Gynecology & Obs.', 'Pediatrics', 'Dermatology',
@@ -24,15 +24,24 @@ const Doctors = () => {
     const [feeRange, setFeeRange] = useState<[number, number]>([0, 5000]);
 
     const [searchParams] = useSearchParams();
+    const navigate = useNavigate();
 
+    // Initialize filters from URL params only once on mount or when URL changes externally
     useEffect(() => {
         const specialtyParam = searchParams.get('specialty');
-        if (specialtyParam) {
+        const categoryParam = searchParams.get('category');
+        
+        // Only update state if URL params exist and are different from current state
+        if (specialtyParam && !selectedSpecialties.includes(specialtyParam)) {
             setSelectedSpecialties([specialtyParam]);
+        } else if (!specialtyParam && selectedSpecialties.length > 0 && !categoryParam) {
+            // If no specialty param and no category param, reset specialties
+            setSelectedSpecialties([]);
         }
-        // Category param is handled directly in filteredDoctors
+        
         fetchDoctors();
-    }, [searchParams]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [searchParams.toString()]); // Only depend on the string representation to avoid infinite loops
 
     const fetchDoctors = async () => {
         try {
@@ -107,15 +116,18 @@ const Doctors = () => {
         setSelectedSpecialties([]);
         setSelectedExperience([]);
         setFeeRange([0, 5000]);
+        // Clear URL params
+        navigate('/doctors', { replace: true });
     };
 
-    const activeFiltersCount = selectedSpecialties.length + selectedExperience.length + (searchQuery ? 1 : 0);
+    const categoryParam = searchParams.get('category');
+    const activeFiltersCount = selectedSpecialties.length + selectedExperience.length + (searchQuery ? 1 : 0) + (categoryParam ? 1 : 0);
 
     return (
         <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-text-main dark:text-gray-100">
             <Header />
 
-            <main className="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+            <main className="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8" style={{ overflow: 'visible' }}>
                 {/* Page Header */}
                 <div className="mb-8">
                     <h1 className="text-secondary dark:text-teal-400 text-3xl md:text-4xl font-bold font-bangla mb-2">আমাদের বিশেষজ্ঞ ডাক্তারগণ</h1>
@@ -124,10 +136,10 @@ const Doctors = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-col lg:flex-row gap-8 relative">
+                <div className="flex flex-col lg:flex-row gap-8">
                     {/* Sidebar Filters (Sticky on Desktop) */}
-                    <aside className="w-full lg:w-72 flex-shrink-0">
-                        <div className="lg:sticky lg:top-24 bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-5 border border-[#e4dcdc] dark:border-gray-700 space-y-5">
+                    <aside className="w-full lg:w-72 flex-shrink-0" style={{ alignSelf: 'flex-start' }}>
+                        <div className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-5 border border-[#e4dcdc] dark:border-gray-700 space-y-5">
                             <div className="flex items-center justify-between">
                                 <h3 className="font-bold text-lg text-[#171212] dark:text-white flex items-center gap-2">
                                     <span className="material-symbols-outlined text-gray-500">filter_list</span>
@@ -215,9 +227,26 @@ const Doctors = () => {
                     <section className="flex-1">
                         {/* Sorting & Count Header */}
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-[#e4dcdc] dark:border-gray-700">
-                            <p className="text-[#333333] dark:text-gray-300 text-sm font-medium">
-                                Showing <span className="font-bold text-primary">{filteredDoctors.length}</span> of {doctors.length} doctors
-                            </p>
+                            <div className="flex flex-col gap-2">
+                                <p className="text-[#333333] dark:text-gray-300 text-sm font-medium">
+                                    Showing <span className="font-bold text-primary">{filteredDoctors.length}</span> of {doctors.length} doctors
+                                </p>
+                                {categoryParam && (
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs text-gray-500 dark:text-gray-400">Active Category:</span>
+                                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary/10 text-secondary dark:bg-teal-400/20 dark:text-teal-400 text-sm font-medium">
+                                            {categoryParam}
+                                            <button
+                                                onClick={() => navigate('/doctors', { replace: true })}
+                                                className="ml-1 hover:text-red-600 transition-colors"
+                                                title="Remove category filter"
+                                            >
+                                                <span className="material-symbols-outlined text-base">close</span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                )}
+                            </div>
                             {activeFiltersCount > 0 && (
                                 <button onClick={resetFilters} className="text-sm text-gray-500 hover:text-primary flex items-center gap-1">
                                     <span className="material-symbols-outlined text-base">close</span>
@@ -278,7 +307,7 @@ const Doctors = () => {
                                                 <p className="text-xs text-gray-500 dark:text-gray-400">Consultation Fee</p>
                                                 <p className="text-lg font-bold text-gray-900 dark:text-white font-bangla">৳{doctor.fee}</p>
                                             </div>
-                                            <button className="flex-1 bg-primary hover:bg-red-700 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-all shadow-md shadow-red-100 dark:shadow-none">
+                                            <button className="flex-1 bg-primary hover:bg-red-700 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-all shadow-md shadow-red-100 dark:shadow-none">
                                                 Consult Now
                                             </button>
                                         </div>

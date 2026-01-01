@@ -5,10 +5,22 @@
 @layer base {
   html {
     overflow-y: scroll;
+    overflow-x: hidden;
   }
   body {
     @apply font-body text-text-main bg-background-light dark:bg-background-dark dark:text-white;
-    /* overflow-x-hidden removed to fix sticky positioning */
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    padding-top: 72px; /* Account for fixed header */
+  }
+  
+  /* Ensure bottom navigation stays fixed on mobile */
+  @media (max-width: 768px) {
+    body {
+      padding-bottom: 0;
+    }
   }
 }
 

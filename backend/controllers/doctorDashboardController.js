@@ -224,7 +224,7 @@ const updateAppointmentStatus = async (req, res) => {
 const createPrescription = async (req, res) => {
     try {
         const { appointmentId } = req.params;
-        const { medicines, advice, follow_up_date, diagnosis } = req.body;
+        const { medicines, advice, follow_up_date, diagnosis, on_examination, investigation } = req.body;
 
         // First, verify the appointment exists and get its status
         const appointmentRes = await pool.query(
@@ -277,11 +277,32 @@ const createPrescription = async (req, res) => {
         }
 
         const newPrescription = await pool.query(
-            'INSERT INTO prescriptions (appointment_id, medicines, advice, follow_up_date, diagnosis) VALUES ($1, $2, $3, $4, $5) RETURNING *',
-            [appointmentId, JSON.stringify(medicines), advice, follow_up_date || null, diagnosis || null]
+            'INSERT INTO prescriptions (appointment_id, medicines, advice, follow_up_date, diagnosis, on_examination, investigation) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
+            [appointmentId, JSON.stringify(medicines), advice, follow_up_date || null, diagnosis || null, on_examination || null, investigation || null]
         );
 
-        // Note: Do NOT auto-complete appointment here. Doctor must explicitly mark as completed after 30min
+        // Auto-complete appointment when prescription is created
+        // This bypasses the 30-minute rule - if doctor sends prescription, appointment ends immediately
+        // Update if status is not already 'completed' or 'cancelled'
+        if (appointment.status !== 'completed' && appointment.status !== 'cancelled') {
+            try {
+                const updateResult = await pool.query(
+                    'UPDATE appointments SET status = $1 WHERE appointment_id = $2 RETURNING appointment_id, status',
+                    ['completed', appointmentId]
+                );
+                
+                if (updateResult.rows.length === 0) {
+                    console.error(`[createPrescription] Failed to update appointment ${appointmentId} status to completed`);
+                } else {
+                    console.log(`[createPrescription] Appointment ${appointmentId} marked as completed after prescription creation (was: ${appointment.status}, now: ${updateResult.rows[0].status})`);
+                }
+            } catch (updateError) {
+                console.error(`[createPrescription] Error updating appointment status:`, updateError);
+                // Don't fail the prescription creation if status update fails, but log the error
+            }
+        } else {
+            console.log(`[createPrescription] Appointment ${appointmentId} status not updated (current status: ${appointment.status})`);
+        }
 
         res.json(newPrescription.rows[0]);
     } catch (err) {

@@ -424,55 +424,55 @@ const WriteBlog = () => {
     return (
         <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-text-main dark:text-gray-100">
             <Header />
-            <main className="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+            <main className="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 pb-20 md:pb-8">
                 {loading ? (
-                    <div className="flex items-center justify-center py-20">
-                        <span className="material-symbols-outlined text-5xl text-primary animate-spin">progress_activity</span>
+                    <div className="flex items-center justify-center py-12 sm:py-20">
+                        <span className="material-symbols-outlined text-4xl sm:text-5xl text-primary animate-spin">progress_activity</span>
                     </div>
                 ) : (
                     <>
-                        <div className="mb-6 flex items-center justify-between flex-wrap gap-4">
-                            <h1 className="text-3xl font-bold text-gray-800 dark:text-white">
+                        <div className="mb-4 sm:mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+                            <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white">
                                 {blogId ? 'Edit Blog' : 'Write Blog'}
                             </h1>
-                            <div className="flex gap-3 flex-wrap">
+                            <div className="flex gap-2 sm:gap-3 w-full sm:w-auto">
                                 <button
                                     onClick={() => navigate('/dashboard')}
-                                    className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                                    className="flex-1 sm:flex-initial px-4 py-2 text-sm sm:text-base bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                                 >
                                     Cancel
                                 </button>
                                 <button
                                     onClick={handleSave}
                                     disabled={saving}
-                                    className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-red-700 disabled:opacity-50 transition-colors font-bold"
+                                    className="flex-1 sm:flex-initial px-4 sm:px-6 py-2 text-sm sm:text-base bg-primary text-white rounded-lg hover:bg-red-700 disabled:opacity-50 transition-colors font-bold"
                                 >
                                     {saving ? (blogId ? 'Updating...' : 'Saving...') : (blogId ? 'Update' : 'Publish')}
                                 </button>
                             </div>
                         </div>
 
-                        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 space-y-6">
+                        <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 space-y-4 sm:space-y-6">
                             {/* Title */}
                             <div>
-                                <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Title</label>
+                                <label className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-gray-700 dark:text-gray-300">Title</label>
                                 <input
                                     type="text"
                                     value={title}
                                     onChange={(e) => setTitle(e.target.value)}
-                                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                                     placeholder="Enter blog title..."
                                 />
                             </div>
 
                             {/* Category and Featured Image */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                                 <div>
-                                    <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Category</label>
+                                    <label className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-gray-700 dark:text-gray-300">Category</label>
                                     <select
                                         value={category}
                                         onChange={(e) => setCategory(e.target.value)}
-                                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                                     >
                                         <option value="">Select category</option>
                                         {categories.map(cat => (
@@ -481,12 +481,12 @@ const WriteBlog = () => {
                                     </select>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Featured Image URL</label>
+                                    <label className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-gray-700 dark:text-gray-300">Featured Image URL</label>
                                     <input
                                         type="url"
                                         value={featuredImageUrl}
                                         onChange={(e) => setFeaturedImageUrl(e.target.value)}
-                                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                                         placeholder="https://..."
                                     />
                                 </div>
@@ -494,21 +494,21 @@ const WriteBlog = () => {
 
                             {/* Excerpt */}
                             <div>
-                                <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Excerpt (Short description)</label>
+                                <label className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-gray-700 dark:text-gray-300">Excerpt (Short description)</label>
                                 <textarea
                                     value={excerpt}
                                     onChange={(e) => setExcerpt(e.target.value)}
                                     rows={3}
-                                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none resize-none"
+                                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none resize-none"
                                     placeholder="Brief description of the blog..."
                                 />
                             </div>
 
                             {/* Toolbar */}
-                            <div className="flex flex-wrap gap-2 p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
+                            <div className="flex flex-wrap gap-1.5 sm:gap-2 p-2 sm:p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 overflow-x-auto">
                                 <button
                                     onClick={handleBold}
-                                    className="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                                    className="px-2 sm:px-3 py-1.5 sm:py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-xs sm:text-sm shrink-0"
                                     title="Bold"
                                     type="button"
                                 >
@@ -516,16 +516,16 @@ const WriteBlog = () => {
                                 </button>
                                 <button
                                     onClick={handleItalic}
-                                    className="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                                    className="px-2 sm:px-3 py-1.5 sm:py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-xs sm:text-sm shrink-0"
                                     title="Italic"
                                     type="button"
                                 >
                                     <span className="italic">I</span>
                                 </button>
-                                <div className="border-l border-gray-300 dark:border-gray-600 mx-1"></div>
+                                <div className="border-l border-gray-300 dark:border-gray-600 mx-0.5 sm:mx-1 shrink-0"></div>
                                 <button
                                     onClick={() => handleHeading(1)}
-                                    className="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-sm font-bold"
+                                    className="px-2 sm:px-3 py-1.5 sm:py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-xs sm:text-sm font-bold shrink-0"
                                     title="Heading 1"
                                     type="button"
                                 >
@@ -533,7 +533,7 @@ const WriteBlog = () => {
                                 </button>
                                 <button
                                     onClick={() => handleHeading(2)}
-                                    className="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-sm font-bold"
+                                    className="px-2 sm:px-3 py-1.5 sm:py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-xs sm:text-sm font-bold shrink-0"
                                     title="Heading 2"
                                     type="button"
                                 >
@@ -541,41 +541,41 @@ const WriteBlog = () => {
                                 </button>
                                 <button
                                     onClick={() => handleHeading(3)}
-                                    className="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-sm font-bold"
+                                    className="px-2 sm:px-3 py-1.5 sm:py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-xs sm:text-sm font-bold shrink-0"
                                     title="Heading 3"
                                     type="button"
                                 >
                                     H3
                                 </button>
-                                <div className="border-l border-gray-300 dark:border-gray-600 mx-1"></div>
+                                <div className="border-l border-gray-300 dark:border-gray-600 mx-0.5 sm:mx-1 shrink-0"></div>
                                 <button
                                     onClick={handleInsertImage}
-                                    className="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center gap-1"
+                                    className="px-2 sm:px-3 py-1.5 sm:py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center gap-1 shrink-0"
                                     title="Insert Image"
                                     type="button"
                                 >
-                                    <span className="material-symbols-outlined text-lg">image</span>
+                                    <span className="material-symbols-outlined text-base sm:text-lg">image</span>
                                 </button>
                                 <button
                                     onClick={handleLink}
-                                    className="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center gap-1"
+                                    className="px-2 sm:px-3 py-1.5 sm:py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center gap-1 shrink-0"
                                     title="Insert Link"
                                     type="button"
                                 >
-                                    <span className="material-symbols-outlined text-lg">link</span>
+                                    <span className="material-symbols-outlined text-base sm:text-lg">link</span>
                                 </button>
                             </div>
 
                             {/* Content Editor - WYSIWYG */}
-                            <div className="sticky top-4 z-10">
-                                <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Content</label>
+                            <div className="sm:sticky sm:top-4 z-10">
+                                <label className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-gray-700 dark:text-gray-300">Content</label>
                                 <div
                                     ref={editorRef}
                                     contentEditable
                                     onInput={handleEditorInput}
                                     onPaste={handleEditorPaste}
                                     onKeyDown={handleEditorKeyDown}
-                                    className="min-h-[600px] max-h-[calc(100vh-300px)] overflow-y-auto w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                    className="min-h-[400px] sm:min-h-[500px] md:min-h-[600px] max-h-[calc(100vh-200px)] sm:max-h-[calc(100vh-300px)] overflow-y-auto w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none"
                                     style={{
                                         whiteSpace: 'pre-wrap',
                                         wordWrap: 'break-word',
@@ -585,18 +585,18 @@ const WriteBlog = () => {
                                 >
                                     <p><br /></p>
                                 </div>
-                                <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+                                <p className="mt-1.5 sm:mt-2 text-xs text-gray-500 dark:text-gray-400">
                                     Click here to start writing. Use the toolbar above to format your text.
                                 </p>
                             </div>
 
                             {/* Status */}
-                            <div>
-                                <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Status</label>
+                            <div className="relative z-10">
+                                <label className="block text-xs sm:text-sm font-semibold mb-1.5 sm:mb-2 text-gray-700 dark:text-gray-300">Status</label>
                                 <select
                                     value={status}
                                     onChange={(e) => setStatus(e.target.value)}
-                                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none relative z-[101]"
                                 >
                                     <option value="published">Published</option>
                                     <option value="draft">Draft</option>

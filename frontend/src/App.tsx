@@ -21,6 +21,10 @@ import AdminDashboard from './pages/AdminDashboard';
 import WriteBlog from './pages/doctor/WriteBlog';
 import PrescriptionEditor from './pages/doctor/PrescriptionEditor';
 import AppointmentView from './pages/patient/AppointmentView';
+import BottomNavigation from './components/BottomNavigation';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import MedicalDisclaimer from './pages/MedicalDisclaimer';
 
 const AnimatedRoutes = () => {
     const location = useLocation();
@@ -40,11 +44,14 @@ const AnimatedRoutes = () => {
                 <Route path="/doctors/:id" element={<PageTransition><DoctorDetails /></PageTransition>} />
                 <Route path="/appointment/:doctorId" element={<PageTransition><BookAppointment /></PageTransition>} />
                 <Route path="/dashboard" element={<PageTransition><Dashboard /></PageTransition>} />
-                <Route path="/admin-dashboard" element={<PageTransition><AdminDashboard /></PageTransition>} />
+                <Route path="/admin-dashboard/*" element={<AdminDashboard />} />
                 <Route path="/prescription" element={<PageTransition><Prescription /></PageTransition>} />
                 <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
                 <Route path="/login" element={<PageTransition><Login /></PageTransition>} />
                 <Route path="/register" element={<PageTransition><Register /></PageTransition>} />
+                <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
+                <Route path="/terms-of-service" element={<PageTransition><TermsOfService /></PageTransition>} />
+                <Route path="/medical-disclaimer" element={<PageTransition><MedicalDisclaimer /></PageTransition>} />
             </Routes>
         </AnimatePresence>
     );
@@ -54,6 +61,8 @@ function App() {
     return (
         <Router>
             <AnimatedRoutes />
+            {/* Global Bottom Navigation - Mobile Only */}
+            <BottomNavigation />
         </Router>
     );
 }

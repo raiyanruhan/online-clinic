@@ -11,117 +11,113 @@ const Contact = () => {
     };
 
     return (
-        <div className="flex flex-col min-h-screen font-display bg-[#FAFAFA] dark:bg-[#1a1a1a] text-[#333333] dark:text-[#e5e5e5] transition-colors duration-300">
+        <div className="flex flex-col min-h-screen font-display bg-background-light dark:bg-background-dark text-text-main dark:text-white transition-colors duration-300">
             <Header />
 
-            <main className="flex-grow flex flex-col lg:flex-row w-full max-w-[1600px] mx-auto overflow-hidden">
-                <div className="w-full lg:w-1/2 p-6 lg:p-16 flex flex-col justify-center">
-                    <div className="mb-12">
-                        <p className="text-sm font-bold tracking-widest text-[#1F8A9E] uppercase mb-2">সাহায্য প্রয়োজন?</p>
-                        <h1 className="text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight text-[#333333] dark:text-[#e5e5e5] leading-none font-display">
-                            যোগাযোগ
-                        </h1>
+            <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+                {/* Page Header */}
+                <div className="text-center mb-8 sm:mb-12">
+                    <p className="text-xs sm:text-sm font-bold tracking-widest text-secondary dark:text-teal-400 uppercase mb-2 sm:mb-3">সাহায্য প্রয়োজন?</p>
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-text-main dark:text-white leading-tight font-display mb-4 sm:mb-6">
+                        যোগাযোগ
+                    </h1>
+                    <p className="text-base sm:text-lg text-text-sub dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
+                        যেকোনো প্রশ্ন, অ্যাপয়েন্টমেন্ট বা পরামর্শের জন্য আমাদের সাথে যোগাযোগ করুন। আমরা আপনার পাশে আছি, সর্বদা।
+                    </p>
+                </div>
+
+                {/* Contact Information Cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
+                    <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+                        <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                                <span className="material-symbols-outlined text-2xl sm:text-3xl text-primary">call</span>
+                            </div>
+                            <h3 className="text-lg sm:text-xl font-bold text-text-main dark:text-white">মোবাইল</h3>
+                        </div>
+                        <p className="text-xs sm:text-sm text-text-sub dark:text-gray-400 mb-2 sm:mb-3">সরাসরি কল করুন</p>
+                        <a className="text-base sm:text-lg font-medium hover:text-primary transition-colors block break-words" href="tel:+8801993609470">
+                            +৮৮০ ১৯৯৩-৬০৯৪৭০
+                        </a>
                     </div>
-                    <div className="mb-12 max-w-md">
-                        <p className="text-lg text-[#555555] dark:text-[#a3a3a3] leading-relaxed">
-                            যেকোনো প্রশ্ন, অ্যাপয়েন্টমেন্ট বা পরামর্শের জন্য আমাদের সাথে যোগাযোগ করুন। আমরা আপনার পাশে আছি, সর্বদা।
+
+                    <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+                        <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-secondary/10 flex items-center justify-center">
+                                <span className="material-symbols-outlined text-2xl sm:text-3xl text-secondary dark:text-teal-400">mail</span>
+                            </div>
+                            <h3 className="text-lg sm:text-xl font-bold text-text-main dark:text-white">ইমেইল</h3>
+                        </div>
+                        <p className="text-xs sm:text-sm text-text-sub dark:text-gray-400 mb-2 sm:mb-3">বিস্তারিত লিখুন</p>
+                        <a className="text-sm sm:text-base font-medium hover:text-primary transition-colors block break-all" href="mailto:roudromoyee.clinic@gmail.com">
+                            roudromoyee.clinic@gmail.com
+                        </a>
+                    </div>
+
+                    <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+                        <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                                <span className="material-symbols-outlined text-2xl sm:text-3xl text-blue-600 dark:text-blue-400">groups</span>
+                            </div>
+                            <h3 className="text-lg sm:text-xl font-bold text-text-main dark:text-white">সোশ্যাল মিডিয়া</h3>
+                        </div>
+                        <p className="text-xs sm:text-sm text-text-sub dark:text-gray-400 mb-2 sm:mb-3">ফলো করুন</p>
+                        <a className="text-base sm:text-lg font-medium hover:text-primary transition-colors inline-flex items-center gap-1 group" href="https://www.facebook.com/share/1JWe4pK4T6/" target="_blank" rel="noreferrer">
+                            ফেইসবুক পেইজ <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                        </a>
+                    </div>
+
+                    <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+                        <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                                <span className="material-symbols-outlined text-2xl sm:text-3xl text-green-600 dark:text-green-400">location_on</span>
+                            </div>
+                            <h3 className="text-lg sm:text-xl font-bold text-text-main dark:text-white">ঠিকানা</h3>
+                        </div>
+                        <p className="text-xs sm:text-sm text-text-sub dark:text-gray-400 mb-2 sm:mb-3">আমাদের ক্লিনিক</p>
+                        <p className="text-sm sm:text-base font-medium leading-relaxed">
+                            বাড়ি #১২, রোড #৪, ধানমন্ডি,<br className="hidden sm:block" /> ঢাকা - ১২০৫, বাংলাদেশ
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-8 mb-16">
-                        <div className="group">
-                            <h3 className="text-xl font-bold text-[#1F8A9E] mb-2 flex items-center gap-2">
-                                <span className="material-symbols-outlined text-2xl">call</span>
-                                মোবাইল
-                            </h3>
-                            <p className="text-sm text-[#555555] dark:text-[#a3a3a3] mb-1">সরাসরি কল করুন</p>
-                            <a className="text-lg font-medium hover:text-[#C62828] transition-colors block" href="tel:+8801993609470">
-                                +৮৮০ ১৯৯৩-৬০৯৪৭০
-                            </a>
-                        </div>
-                        <div className="group">
-                            <h3 className="text-xl font-bold text-[#1F8A9E] mb-2 flex items-center gap-2">
-                                <span className="material-symbols-outlined text-2xl">mail</span>
-                                ইমেইল
-                            </h3>
-                            <p className="text-sm text-[#555555] dark:text-[#a3a3a3] mb-1">বিস্তারিত লিখুন</p>
-                            <a className="text-lg font-medium hover:text-[#C62828] transition-colors block break-words" href="mailto:roudromoyee.clinic@gmail.com">
-                                roudromoyee.clinic@gmail.com
-                            </a>
-                        </div>
-                        <div className="group">
-                            <h3 className="text-xl font-bold text-[#1F8A9E] mb-2 flex items-center gap-2">
-                                <span className="material-symbols-outlined text-2xl">public</span>
-                                সোশ্যাল মিডিয়া
-                            </h3>
-                            <p className="text-sm text-[#555555] dark:text-[#a3a3a3] mb-1">ফলো করুন</p>
-                            <a className="text-lg font-medium hover:text-[#C62828] transition-colors inline-flex items-center gap-1 group-hover:gap-2 duration-300" href="https://www.facebook.com/share/1JWe4pK4T6/" target="_blank" rel="noreferrer">
-                                ফেইসবুক পেইজ <span className="material-symbols-outlined text-sm">arrow_outward</span>
-                            </a>
-                        </div>
-                        <div className="group">
-                            <h3 className="text-xl font-bold text-[#1F8A9E] mb-2 flex items-center gap-2">
-                                <span className="material-symbols-outlined text-2xl">location_on</span>
-                                ঠিকানা
-                            </h3>
-                            <p className="text-sm text-[#555555] dark:text-[#a3a3a3] mb-1">আমাদের ক্লিনিক</p>
-                            <p className="text-lg font-medium">
-                                বাড়ি #১২, রোড #৪, ধানমন্ডি,<br />ঢাকা - ১২০৫, বাংলাদেশ
-                            </p>
-                        </div>
-                    </div>
-                    <div className="border-t border-gray-200 dark:border-gray-700 pt-10">
-                        <h2 className="text-2xl font-bold text-[#333333] dark:text-[#e5e5e5] mb-6">সচরাচর জিজ্ঞাসা (FAQ)</h2>
-                        <div className="space-y-4">
-                            <div className="group bg-[#EDEDED] dark:bg-[#2d2d2d] rounded-lg p-4 cursor-pointer" onClick={() => toggleFAQ(0)}>
-                                <div className="flex items-center justify-between font-medium text-[#333333] dark:text-[#e5e5e5]">
-                                    কিভাবে অ্যাপয়েন্টমেন্ট বুক করব?
-                                    <span className={`material-symbols-outlined transition duration-300 ${openFAQ === 0 ? '-rotate-180' : ''}`}>expand_more</span>
-                                </div>
-                                {openFAQ === 0 && (
-                                    <p className="mt-4 text-[#555555] dark:text-[#a3a3a3] leading-relaxed">
-                                        আপনি আমাদের ওয়েবসাইটের মাধ্যমে অথবা সরাসরি মোবাইল নম্বরে কল করে অ্যাপয়েন্টমেন্ট বুক করতে পারেন।
-                                    </p>
-                                )}
-                            </div>
-                            <div className="group bg-[#EDEDED] dark:bg-[#2d2d2d] rounded-lg p-4 cursor-pointer" onClick={() => toggleFAQ(1)}>
-                                <div className="flex items-center justify-between font-medium text-[#333333] dark:text-[#e5e5e5]">
-                                    আপনারা কি অনলাইন পরামর্শ দেন?
-                                    <span className={`material-symbols-outlined transition duration-300 ${openFAQ === 1 ? '-rotate-180' : ''}`}>expand_more</span>
-                                </div>
-                                {openFAQ === 1 && (
-                                    <p className="mt-4 text-[#555555] dark:text-[#a3a3a3] leading-relaxed">
-                                        হ্যাঁ, আমরা ভিডিও কলের মাধ্যমে বিশেষজ্ঞ ডাক্তারের পরামর্শ সেবা প্রদান করি।
-                                    </p>
-                                )}
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div className="w-full lg:w-1/2 relative bg-[#F4F7F6] dark:bg-[#2d2d2d] flex items-center justify-center p-10 min-h-[500px]">
-                    <div className="absolute inset-0 overflow-hidden">
-                        <div className="absolute -top-20 -right-20 w-80 h-80 bg-[#1F8A9E]/10 rounded-full blur-3xl"></div>
-                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#C62828]/5 rounded-full blur-2xl"></div>
-                    </div>
-                    <div className="relative z-10 w-full max-w-lg aspect-square">
-                        <svg className="w-full h-full drop-shadow-lg" fill="none" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="250" cy="250" fill="#EDEDED" opacity="0.5" r="220"></circle>
-                            <path d="M 180 280 C 150 280 140 250 160 220 L 190 180 C 200 165 215 160 230 170 L 250 185 C 260 192 260 205 226 228 C 237 278 255 296 309 317 C 320 265 335 265 350 279 L 365 295 C 375 305 370 325 355 335 L 310 365 C 280 400 248 376 239 345 Z" fill="white" stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"></path>
-                            <circle cx="250" cy="250" fill="none" r="180" stroke="#1F8A9E" strokeDasharray="4 6" strokeWidth="1.5"></circle>
-                            <path d="M350 150 Q400 150 400 200 Q400 230 380 240 L370 260 L350 240 Q300 240 300 200 Q300 150 350 150 Z" fill="white" opacity="0.9" stroke="#333" strokeWidth="2"></path>
-                            <circle cx="335" cy="195" fill="#1F8A9E" r="4"></circle>
-                            <circle cx="350" cy="195" fill="#1F8A9E" r="4"></circle>
-                            <circle cx="365" cy="195" fill="#1F8A9E" r="4"></circle>
-                            <circle cx="400" cy="150" fill="#C62828" r="12"></circle>
-                            <text fill="white" fontFamily="sans-serif" fontSize="14" fontWeight="bold" x="400" y="155">!</text>
 
-                        </svg>
-                        <p className="text-center mt-6 text-sm text-gray-500 font-medium tracking-wide">আপনার সুস্থতাই আমাদের অঙ্গীকার</p>
+                {/* Emergency Contact Card */}
+                <div className="bg-gradient-to-r from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-8 sm:mb-12 border border-primary/20 text-center">
+                    <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
+                        <span className="material-symbols-outlined text-3xl sm:text-4xl text-primary">emergency</span>
+                        <h2 className="text-xl sm:text-2xl font-bold text-text-main dark:text-white">জরুরী প্রয়োজনে</h2>
                     </div>
-                    <div className="hidden lg:flex absolute bottom-12 right-12 bg-white/90 dark:bg-black/80 backdrop-blur p-6 rounded-xl max-w-xs shadow-xl border border-white/20 z-20">
-                        <div>
-                            <p className="text-sm font-bold text-[#C62828] mb-1">জরুরী প্রয়োজনে</p>
-                            <p className="text-2xl font-bold text-gray-900 dark:text-white mb-2">+৮৮০ ১৯৯৩-৬০৯৪৭০</p>
-                            <p className="text-xs text-gray-500 dark:text-gray-400">২৪/৭ আমাদের হটলাইন খোলা থাকে।</p>
+                    <p className="text-2xl sm:text-3xl font-bold text-primary mb-2 sm:mb-3">
+                        <a href="tel:+8801993609470" className="hover:underline">+৮৮০ ১৯৯৩-৬০৯৪৭০</a>
+                    </p>
+                    <p className="text-xs sm:text-sm text-text-sub dark:text-gray-400">২৪/৭ আমাদের হটলাইন খোলা থাকে</p>
+                </div>
+
+                {/* FAQ Section */}
+                <div className="border-t border-gray-200 dark:border-gray-700 pt-8 sm:pt-10">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-text-main dark:text-white mb-6 sm:mb-8 text-center sm:text-left">সচরাচর জিজ্ঞাসা (FAQ)</h2>
+                    <div className="space-y-3 sm:space-y-4 max-w-3xl mx-auto sm:mx-0">
+                        <div className="bg-white dark:bg-gray-800 rounded-lg sm:rounded-xl p-4 sm:p-5 cursor-pointer shadow-sm hover:shadow-md transition-all border border-gray-100 dark:border-gray-700" onClick={() => toggleFAQ(0)}>
+                            <div className="flex items-center justify-between font-medium text-text-main dark:text-white">
+                                <span className="text-sm sm:text-base pr-4">কিভাবে অ্যাপয়েন্টমেন্ট বুক করব?</span>
+                                <span className={`material-symbols-outlined text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${openFAQ === 0 ? '-rotate-180' : ''}`}>expand_more</span>
+                            </div>
+                            {openFAQ === 0 && (
+                                <p className="mt-3 sm:mt-4 text-sm sm:text-base text-text-sub dark:text-gray-400 leading-relaxed">
+                                    আপনি আমাদের ওয়েবসাইটের মাধ্যমে অথবা সরাসরি মোবাইল নম্বরে কল করে অ্যাপয়েন্টমেন্ট বুক করতে পারেন।
+                                </p>
+                            )}
+                        </div>
+                        <div className="bg-white dark:bg-gray-800 rounded-lg sm:rounded-xl p-4 sm:p-5 cursor-pointer shadow-sm hover:shadow-md transition-all border border-gray-100 dark:border-gray-700" onClick={() => toggleFAQ(1)}>
+                            <div className="flex items-center justify-between font-medium text-text-main dark:text-white">
+                                <span className="text-sm sm:text-base pr-4">আপনারা কি অনলাইন পরামর্শ দেন?</span>
+                                <span className={`material-symbols-outlined text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${openFAQ === 1 ? '-rotate-180' : ''}`}>expand_more</span>
+                            </div>
+                            {openFAQ === 1 && (
+                                <p className="mt-3 sm:mt-4 text-sm sm:text-base text-text-sub dark:text-gray-400 leading-relaxed">
+                                    হ্যাঁ, আমরা ভিডিও কলের মাধ্যমে বিশেষজ্ঞ ডাক্তারের পরামর্শ সেবা প্রদান করি।
+                                </p>
+                            )}
                         </div>
                     </div>
                 </div>

@@ -14,11 +14,12 @@ const TimeSelector = ({ availableSlots, selectedTime, onTimeSelect, loading = fa
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        // Scroll to selected time when it changes
+        // Scroll to selected time when it changes (only within the container, not the whole page)
         if (selectedTime && containerRef.current) {
             const selectedElement = containerRef.current.querySelector(`[data-time="${selectedTime}"]`);
             if (selectedElement) {
-                selectedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Use 'nearest' to prevent page scrolling, only scroll within the container
+                selectedElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
             }
         }
     }, [selectedTime]);

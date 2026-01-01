@@ -321,49 +321,49 @@ const AvailabilitySettings = () => {
 
     if (loading) {
         return (
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-8 text-center">
-                <div className="text-gray-500">Loading availability settings...</div>
+            <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-6 sm:p-8 text-center">
+                <div className="text-sm sm:text-base text-gray-500">Loading availability settings...</div>
             </div>
         );
     }
 
     return (
-        <div className="space-y-6">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-6">
-                <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-xl font-bold text-gray-800 dark:text-white">Availability Settings</h2>
-                    <label className="flex items-center gap-3 cursor-pointer">
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Available for Booking</span>
+        <div className="space-y-4 sm:space-y-6">
+            <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-4 sm:p-6">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6">
+                    <h2 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-white">Availability Settings</h2>
+                    <label className="flex items-center gap-2 sm:gap-3 cursor-pointer">
+                        <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Available for Booking</span>
                         <input
                             type="checkbox"
                             checked={isAvailable}
                             onChange={(e) => setIsAvailable(e.target.checked)}
-                            className="w-5 h-5 text-primary rounded focus:ring-primary"
+                            className="w-4 h-4 sm:w-5 sm:h-5 text-primary rounded focus:ring-primary"
                         />
                     </label>
                 </div>
 
                 {/* Weekday Settings */}
-                <div className="space-y-4 mb-8">
-                    <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-4">Weekly Schedule</h3>
+                <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-800 dark:text-white mb-3 sm:mb-4">Weekly Schedule</h3>
                     {Object.keys(availability.weekdays).map((day) => {
                         const weekday = availability.weekdays[day] || { isAvailable: false, timeRanges: [] };
                         return (
-                        <div key={day} className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                            <div className="flex items-center justify-between mb-3">
-                                <label className="flex items-center gap-3 cursor-pointer flex-1">
+                        <div key={day} className="border border-gray-200 dark:border-gray-700 rounded-lg p-3 sm:p-4">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3 mb-2 sm:mb-3">
+                                <label className="flex items-center gap-2 sm:gap-3 cursor-pointer flex-1 w-full sm:w-auto">
                                     <input
                                         type="checkbox"
                                         checked={weekday.isAvailable}
                                         onChange={() => handleWeekdayToggle(day)}
-                                        className="w-5 h-5 text-primary rounded focus:ring-primary"
+                                        className="w-4 h-4 sm:w-5 sm:h-5 text-primary rounded focus:ring-primary shrink-0"
                                     />
-                                    <span className="font-medium text-gray-800 dark:text-white">{dayLabels[day]}</span>
+                                    <span className="font-medium text-sm sm:text-base text-gray-800 dark:text-white">{dayLabels[day]}</span>
                                 </label>
                                 {weekday.isAvailable && (
                                     <button
                                         onClick={() => addTimeRange(day)}
-                                        className="px-3 py-1 text-sm bg-primary text-white rounded-lg hover:bg-red-700 transition-colors"
+                                        className="w-full sm:w-auto px-3 py-1.5 sm:py-1 text-xs sm:text-sm bg-primary text-white rounded-lg hover:bg-red-700 transition-colors whitespace-nowrap"
                                     >
                                         Add Time Range
                                     </button>
@@ -374,21 +374,21 @@ const AvailabilitySettings = () => {
                                     {weekday.timeRanges.map((range, index) => (
                                         <div
                                             key={index}
-                                            className="flex items-center gap-2 px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg"
+                                            className="flex items-center gap-2 px-2 sm:px-3 py-1.5 sm:py-2 bg-gray-100 dark:bg-gray-700 rounded-lg"
                                         >
-                                            <span className="text-sm text-gray-800 dark:text-white font-medium">
+                                            <span className="text-xs sm:text-sm text-gray-800 dark:text-white font-medium flex-1 break-words">
                                                 {formatBDTime(range.start)} - {formatBDTime(range.end)}
                                             </span>
                                             <button
                                                 onClick={() => removeTimeRange(day, index)}
-                                                className="text-red-500 hover:text-red-700 ml-auto"
+                                                className="text-red-500 hover:text-red-700 shrink-0"
                                             >
-                                                <span className="material-symbols-outlined text-sm">close</span>
+                                                <span className="material-symbols-outlined text-base sm:text-lg">close</span>
                                             </button>
                                         </div>
                                     ))}
                                     {weekday.timeRanges.length === 0 && (
-                                        <span className="text-sm text-gray-500">No time ranges added</span>
+                                        <span className="text-xs sm:text-sm text-gray-500">No time ranges added</span>
                                     )}
                                 </div>
                             )}
@@ -398,63 +398,63 @@ const AvailabilitySettings = () => {
                 </div>
 
                 {/* Special Days */}
-                <div className="space-y-4 mb-6">
-                    <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-4">Special Days (Holidays/Custom Dates)</h3>
-                    <div className="flex gap-3 mb-4">
+                <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-800 dark:text-white mb-3 sm:mb-4">Special Days (Holidays/Custom Dates)</h3>
+                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-3 sm:mb-4">
                         <input
                             type="date"
                             value={newSpecialDate}
                             onChange={(e) => setNewSpecialDate(e.target.value)}
-                            className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"
+                            className="w-full sm:w-auto px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"
                         />
                         <input
                             type="text"
                             value={newSpecialNote}
                             onChange={(e) => setNewSpecialNote(e.target.value)}
                             placeholder="Note (optional)"
-                            className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"
+                            className="flex-1 w-full sm:w-auto px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"
                         />
                         <button
                             onClick={addSpecialDay}
-                            className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-red-700 transition-colors"
+                            className="w-full sm:w-auto px-4 py-2 text-sm sm:text-base bg-primary text-white rounded-lg hover:bg-red-700 transition-colors whitespace-nowrap"
                         >
                             Add Date
                         </button>
                     </div>
-                    <div className="space-y-3">
+                    <div className="space-y-2 sm:space-y-3">
                         {availability.specialDays.map((specialDay, index) => (
-                            <div key={index} className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                                <div className="flex items-center justify-between mb-3">
-                                    <div className="flex items-center gap-3">
+                            <div key={index} className="border border-gray-200 dark:border-gray-700 rounded-lg p-3 sm:p-4">
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3 mb-2 sm:mb-3">
+                                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 flex-1 min-w-0">
                                         <label className="flex items-center gap-2 cursor-pointer">
                                             <input
                                                 type="checkbox"
                                                 checked={specialDay.isAvailable}
                                                 onChange={() => toggleSpecialDayAvailability(index)}
-                                                className="w-4 h-4 text-primary rounded"
+                                                className="w-4 h-4 text-primary rounded shrink-0"
                                             />
-                                            <span className="font-medium text-gray-800 dark:text-white">
+                                            <span className="font-medium text-sm sm:text-base text-gray-800 dark:text-white">
                                                 {new Date(specialDay.date).toLocaleDateString()}
                                             </span>
                                         </label>
                                         {specialDay.note && (
-                                            <span className="text-sm text-gray-500">({specialDay.note})</span>
+                                            <span className="text-xs sm:text-sm text-gray-500 break-words">({specialDay.note})</span>
                                         )}
                                     </div>
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex items-center gap-2 w-full sm:w-auto">
                                         {specialDay.isAvailable && (
                                             <button
                                                 onClick={() => addSpecialDayTimeRange(index)}
-                                                className="px-2 py-1 text-xs bg-primary text-white rounded hover:bg-red-700"
+                                                className="flex-1 sm:flex-initial px-2 sm:px-3 py-1.5 sm:py-1 text-xs bg-primary text-white rounded hover:bg-red-700 whitespace-nowrap"
                                             >
                                                 Add Time Range
                                             </button>
                                         )}
                                         <button
                                             onClick={() => removeSpecialDay(index)}
-                                            className="text-red-500 hover:text-red-700"
+                                            className="px-2 py-1.5 sm:py-1 text-red-500 hover:text-red-700 shrink-0"
                                         >
-                                            <span className="material-symbols-outlined text-sm">delete</span>
+                                            <span className="material-symbols-outlined text-base sm:text-lg">delete</span>
                                         </button>
                                     </div>
                                 </div>
@@ -463,16 +463,16 @@ const AvailabilitySettings = () => {
                                         {specialDay.timeRanges.map((range, rangeIndex) => (
                                             <div
                                                 key={rangeIndex}
-                                                className="flex items-center gap-2 px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg"
+                                                className="flex items-center gap-2 px-2 sm:px-3 py-1.5 sm:py-2 bg-gray-100 dark:bg-gray-700 rounded-lg"
                                             >
-                                                <span className="text-sm text-gray-800 dark:text-white font-medium">
+                                                <span className="text-xs sm:text-sm text-gray-800 dark:text-white font-medium flex-1 break-words">
                                                     {formatBDTime(range.start)} - {formatBDTime(range.end)}
                                                 </span>
                                                 <button
                                                     onClick={() => removeSpecialDayTimeRange(index, rangeIndex)}
-                                                    className="text-red-500 hover:text-red-700 ml-auto"
+                                                    className="text-red-500 hover:text-red-700 shrink-0"
                                                 >
-                                                    <span className="material-symbols-outlined text-xs">close</span>
+                                                    <span className="material-symbols-outlined text-base sm:text-lg">close</span>
                                                 </button>
                                             </div>
                                         ))}
@@ -486,7 +486,7 @@ const AvailabilitySettings = () => {
                 <button
                     onClick={handleSave}
                     disabled={saving}
-                    className="w-full py-3 bg-primary text-white font-bold rounded-xl hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full py-2.5 sm:py-3 text-sm sm:text-base bg-primary text-white font-bold rounded-lg sm:rounded-xl hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                     {saving ? 'Saving...' : 'Save Availability Settings'}
                 </button>

@@ -18,6 +18,7 @@ app.use('/api/doctor/dashboard', require('./routes/doctorDashboardRoutes'));
 app.use('/api/patient/dashboard', require('./routes/patientDashboardRoutes'));
 app.use('/api/blogs', require('./routes/blogRoutes'));
 app.use('/api/medicines', require('./routes/medicineRoutes'));
+app.use('/api/admin', require('./routes/adminRoutes'));
 
 // Debug: Log all registered routes (only in development)
 if (process.env.NODE_ENV !== 'production') {
@@ -25,6 +26,12 @@ if (process.env.NODE_ENV !== 'production') {
     console.log('GET  /api/doctors/:doctorId/available-dates');
     console.log('GET  /api/doctors/:doctorId/available-slots');
     console.log('PUT  /api/patient/dashboard/appointments/:id/cancel');
+    console.log('GET  /api/admin/stats');
+    console.log('GET  /api/admin/appointments');
+    console.log('GET  /api/admin/appointments/:id');
+    console.log('PUT  /api/admin/appointments/:id');
+    console.log('GET  /api/admin/reports/monthly');
+    console.log('GET  /api/admin/doctors/workload');
     console.log('========================\n');
 }
 

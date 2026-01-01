@@ -339,10 +339,21 @@ const DoctorDetails = () => {
                                         <span className="text-gray-600 dark:text-gray-300 font-medium text-sm">কনসালটেশন ফি</span>
                                         <span className="text-primary font-bold text-lg">৳ {doctor.fee || 'N/A'}</span>
                                     </div>
-                                    <Link to={`/appointment/${id}`} className="w-full bg-primary hover:bg-red-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2">
-                                        <span>বুক করুন</span>
-                                        <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </Link>
+                                    {user && (user.role !== 'doctor' && user.role !== 'admin') ? (
+                                        <Link to={`/appointment/${id}`} className="w-full bg-primary hover:bg-red-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+                                            <span>বুক করুন</span>
+                                            <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                                        </Link>
+                                    ) : user && (user.role === 'doctor' || user.role === 'admin') ? (
+                                        <div className="w-full bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-400 font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 cursor-not-allowed">
+                                            <span>{user.role === 'doctor' ? 'Doctors cannot book appointments' : 'Admins cannot book appointments'}</span>
+                                        </div>
+                                    ) : (
+                                        <Link to={`/appointment/${id}`} className="w-full bg-primary hover:bg-red-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+                                            <span>বুক করুন</span>
+                                            <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                                        </Link>
+                                    )}
                                 </div>
                             </div>
 

@@ -1,9 +1,106 @@
+import { useState, useMemo } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
 
-import { Link } from 'react-router-dom';
+const SERVICES = [
+    {
+        id: 1,
+        name: 'গাইনোকোলজি',
+        category: 'গাইনোকোলজি',
+        description: 'গর্ভকালীন সেবা, প্রসব পরবর্তী যত্ন এবং নারীদের সব ধরনের জটিল রোগের বিশেষজ্ঞ চিকিৎসা।',
+        icon: 'pregnant_woman',
+        color: 'rose',
+        link: '/doctors?category=গাইনোকোলজি'
+    },
+    {
+        id: 2,
+        name: 'শিশুরোগ',
+        category: 'শিশুরোগ',
+        description: 'নবজাতক থেকে কিশোর পর্যন্ত শিশুদের সব ধরণের রোগের যত্ন ও টীকাদান কর্মসূচি।',
+        icon: 'child_care',
+        color: 'blue',
+        link: '/doctors?category=শিশুরোগ'
+    },
+    {
+        id: 3,
+        name: 'জেনারেল মেডিসিন',
+        category: 'জেনারেল মেডিসিন',
+        description: 'ঠান্ডা, জ্বর, ইনফেকশন সহ সাধারণ যে কোনো স্বাস্থ্য সমস্যার প্রাথমিক ও উন্নত চিকিৎসা।',
+        icon: 'stethoscope',
+        color: 'emerald',
+        link: '/doctors?category=জেনারেল মেডিসিন'
+    },
+    {
+        id: 4,
+        name: 'মানসিক স্বাস্থ্য',
+        category: 'মানসিক স্বাস্থ্য',
+        description: 'মানসিক চাপ, উদ্বেগ এবং হতাশা কাটিয়ে উঠতে বিশেষজ্ঞ কাউন্সেলিং এবং থেরাপি।',
+        icon: 'psychology',
+        color: 'purple',
+        link: '/doctors?category=মানসিক স্বাস্থ্য'
+    },
+    {
+        id: 5,
+        name: 'পুষ্টি ও ডায়েট',
+        category: 'পুষ্টি ও ডায়েট',
+        description: 'স্বাস্থ্যকর জীবনযাপনের জন্য ব্যক্তিগত ডায়েট চার্ট এবং পুষ্টি পরামর্শ।',
+        icon: 'nutrition',
+        color: 'orange',
+        link: '/doctors?category=পুষ্টি ও ডায়েট'
+    },
+    {
+        id: 6,
+        name: 'চর্মরোগ',
+        category: 'চর্মরোগ',
+        description: 'ত্বক, চুল এবং নখের যেকোনো সমস্যার জন্য আধুনিক ও কার্যকর চিকিৎসা ব্যবস্থা।',
+        icon: 'dermatology',
+        color: 'pink',
+        link: '/doctors?category=চর্মরোগ'
+    },
+    {
+        id: 7,
+        name: 'ডায়াবেটিস কেয়ার',
+        category: 'ডায়াবেটিস কেয়ার',
+        description: 'ডায়াবেটিস নিয়ন্ত্রণ ও জীবনযাত্রার মান উন্নয়নে বিশেষজ্ঞ পরামর্শ ও নিয়মিত চেকআপ।',
+        icon: 'blood_pressure',
+        color: 'cyan',
+        link: '/doctors?category=ডায়াবেটিস কেয়ার'
+    },
+    {
+        id: 8,
+        name: 'ভিডিও কনসালটেশন',
+        category: 'ভিডিও কনসালটেশন',
+        description: 'ঘরে বসেই অভিজ্ঞ ডাক্তারের সাথে ভিডিও কলের মাধ্যমে সরাসরি পরামর্শ নিন।',
+        icon: 'video_call',
+        color: 'indigo',
+        link: '/doctors?category=ভিডিও কনসালটেশন'
+    },
+];
 
 const Services = () => {
+    const [searchQuery, setSearchQuery] = useState('');
+    const navigate = useNavigate();
+
+    const filteredServices = useMemo(() => {
+        return SERVICES.filter(service => {
+            // Search filter
+            if (searchQuery) {
+                const query = searchQuery.toLowerCase();
+                const matchesSearch =
+                    service.name?.toLowerCase().includes(query) ||
+                    service.description?.toLowerCase().includes(query) ||
+                    service.category?.toLowerCase().includes(query);
+                if (!matchesSearch) return false;
+            }
+
+            return true;
+        });
+    }, [searchQuery]);
+
+    const handleViewDoctors = (link: string) => {
+        navigate(link);
+    };
     return (
         <div className="flex min-h-screen flex-col bg-background-light dark:bg-background-dark text-text-main dark:text-white font-body transition-colors duration-300">
             <Header />
@@ -27,11 +124,11 @@ const Services = () => {
                     </div>
                 </section>
 
-                {/* Search/Filter Bar */}
+                {/* Search Bar */}
                 <div className="sticky top-[72px] z-40 w-full bg-[#FAFAFA]/95 dark:bg-[#201212]/95 backdrop-blur-sm py-4 border-b border-gray-200/50 dark:border-gray-800/50">
                     <div className="layout-container px-4 md:px-10 lg:px-40">
-                        <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-                            <div className="relative w-full sm:max-w-md">
+                        <div className="flex justify-center">
+                            <div className="relative w-full max-w-md">
                                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                                     <span className="material-symbols-outlined text-gray-400">search</span>
                                 </div>
@@ -39,13 +136,9 @@ const Services = () => {
                                     className="block w-full rounded-lg border-0 bg-white py-2.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6 dark:bg-[#2a2a2a] dark:text-white dark:ring-gray-700"
                                     placeholder="সেবা খুঁজুন (যেমন: শিশুরোগ, ডায়াবেটিস)..."
                                     type="text"
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
                                 />
-                            </div>
-                            <div className="flex gap-2 w-full sm:w-auto overflow-x-auto pb-1 sm:pb-0 no-scrollbar">
-                                <button className="whitespace-nowrap rounded-full bg-secondary text-white px-4 py-1.5 text-sm font-medium hover:bg-secondary/90 transition-colors">সকল সেবা</button>
-                                <button className="whitespace-nowrap rounded-full bg-white border border-gray-200 text-gray-600 px-4 py-1.5 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-[#2a2a2a] dark:border-gray-700 dark:text-gray-300">নারী স্বাস্থ্য</button>
-                                <button className="whitespace-nowrap rounded-full bg-white border border-gray-200 text-gray-600 px-4 py-1.5 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-[#2a2a2a] dark:border-gray-700 dark:text-gray-300">শিশুরোগ</button>
-                                <button className="whitespace-nowrap rounded-full bg-white border border-gray-200 text-gray-600 px-4 py-1.5 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors dark:bg-[#2a2a2a] dark:border-gray-700 dark:text-gray-300">জরুরী সেবা</button>
                             </div>
                         </div>
                     </div>
@@ -54,144 +147,58 @@ const Services = () => {
                 {/* Services Grid */}
                 <section className="py-12 bg-background-light dark:bg-background-dark">
                     <div className="layout-container px-4 md:px-10 lg:px-40">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                            {/* Service Card 1: Gynecology */}
-                            <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-100 dark:bg-[#2a2a2a] dark:border-gray-700">
-                                <div>
-                                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-rose-50 text-rose-600 dark:bg-rose-900/30 dark:text-rose-400">
-                                        <span className="material-symbols-outlined text-3xl">pregnant_woman</span>
-                                    </div>
-                                    <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">গাইনোকোলজি</h3>
-                                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">
-                                        গর্ভকালীন সেবা, প্রসব পরবর্তী যত্ন এবং নারীদের সব ধরনের জটিল রোগের বিশেষজ্ঞ চিকিৎসা।
-                                    </p>
-                                </div>
-                                <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=গাইনোকোলজি">
-                                        আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </Link>
-                                </div>
+                        {filteredServices.length === 0 ? (
+                            <div className="text-center py-20 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
+                                <span className="material-symbols-outlined text-5xl text-gray-300 mb-4">search_off</span>
+                                <p className="text-gray-500 mb-4">কোন সেবা পাওয়া যায়নি।</p>
+                                <button
+                                    onClick={() => {
+                                        setSearchQuery('');
+                                    }}
+                                    className="text-primary font-bold hover:underline"
+                                >
+                                    ফিল্টার সাফ করুন
+                                </button>
                             </div>
-                            {/* Service Card 2: Pediatrics */}
-                            <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-100 dark:bg-[#2a2a2a] dark:border-gray-700">
-                                <div>
-                                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
-                                        <span className="material-symbols-outlined text-3xl">child_care</span>
-                                    </div>
-                                    <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">শিশুরোগ</h3>
-                                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">
-                                        নবজাতক থেকে কিশোর পর্যন্ত শিশুদের সব ধরণের রোগের যত্ন ও টীকাদান কর্মসূচি।
-                                    </p>
-                                </div>
-                                <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=শিশুরোগ">
-                                        আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </Link>
-                                </div>
+                        ) : (
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                                {filteredServices.map((service) => {
+                                    const colorClasses: Record<string, string> = {
+                                        rose: 'bg-rose-50 text-rose-600 dark:bg-rose-900/30 dark:text-rose-400',
+                                        blue: 'bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400',
+                                        emerald: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400',
+                                        purple: 'bg-purple-50 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400',
+                                        orange: 'bg-orange-50 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400',
+                                        pink: 'bg-pink-50 text-pink-600 dark:bg-pink-900/30 dark:text-pink-400',
+                                        cyan: 'bg-cyan-50 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400',
+                                        indigo: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400',
+                                    };
+
+                                    return (
+                                        <div
+                                            key={service.id}
+                                            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-100 dark:bg-[#2a2a2a] dark:border-gray-700 text-center"
+                                        >
+                                            <div className="flex flex-col items-center">
+                                                <div className={`mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full ${colorClasses[service.color]}`}>
+                                                    <span className="material-symbols-outlined text-3xl">{service.icon}</span>
+                                                </div>
+                                                <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">{service.name}</h3>
+                                                <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">{service.description}</p>
+                                            </div>
+                                            <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700 flex justify-center">
+                                                <button
+                                                    onClick={() => handleViewDoctors(service.link)}
+                                                    className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2"
+                                                >
+                                                    আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
                             </div>
-                            {/* Service Card 3: General Medicine */}
-                            <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-100 dark:bg-[#2a2a2a] dark:border-gray-700">
-                                <div>
-                                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400">
-                                        <span className="material-symbols-outlined text-3xl">stethoscope</span>
-                                    </div>
-                                    <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">জেনারেল মেডিসিন</h3>
-                                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">
-                                        ঠান্ডা, জ্বর, ইনফেকশন সহ সাধারণ যে কোনো স্বাস্থ্য সমস্যার প্রাথমিক ও উন্নত চিকিৎসা।
-                                    </p>
-                                </div>
-                                <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=জেনারেল মেডিসিন">
-                                        আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </Link>
-                                </div>
-                            </div>
-                            {/* Service Card 4: Mental Health */}
-                            <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-100 dark:bg-[#2a2a2a] dark:border-gray-700">
-                                <div>
-                                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-purple-50 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400">
-                                        <span className="material-symbols-outlined text-3xl">psychology</span>
-                                    </div>
-                                    <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">মানসিক স্বাস্থ্য</h3>
-                                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">
-                                        মানসিক চাপ, উদ্বেগ এবং হতাশা কাটিয়ে উঠতে বিশেষজ্ঞ কাউন্সেলিং এবং থেরাপি।
-                                    </p>
-                                </div>
-                                <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=মানসিক স্বাস্থ্য">
-                                        আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </Link>
-                                </div>
-                            </div>
-                            {/* Service Card 5: Nutrition */}
-                            <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-100 dark:bg-[#2a2a2a] dark:border-gray-700">
-                                <div>
-                                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-orange-50 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400">
-                                        <span className="material-symbols-outlined text-3xl">nutrition</span>
-                                    </div>
-                                    <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">পুষ্টি ও ডায়েট</h3>
-                                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">
-                                        স্বাস্থ্যকর জীবনযাপনের জন্য ব্যক্তিগত ডায়েট চার্ট এবং পুষ্টি পরামর্শ।
-                                    </p>
-                                </div>
-                                <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=পুষ্টি ও ডায়েট">
-                                        আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </Link>
-                                </div>
-                            </div>
-                            {/* Service Card 6: Dermatology */}
-                            <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-100 dark:bg-[#2a2a2a] dark:border-gray-700">
-                                <div>
-                                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-pink-50 text-pink-600 dark:bg-pink-900/30 dark:text-pink-400">
-                                        <span className="material-symbols-outlined text-3xl">dermatology</span>
-                                    </div>
-                                    <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">চর্মরোগ</h3>
-                                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">
-                                        ত্বক, চুল এবং নখের যেকোনো সমস্যার জন্য আধুনিক ও কার্যকর চিকিৎসা ব্যবস্থা।
-                                    </p>
-                                </div>
-                                <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=চর্মরোগ">
-                                        আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </Link>
-                                </div>
-                            </div>
-                            {/* Service Card 7: Diabetes Care */}
-                            <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-100 dark:bg-[#2a2a2a] dark:border-gray-700">
-                                <div>
-                                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-cyan-50 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400">
-                                        <span className="material-symbols-outlined text-3xl">blood_pressure</span>
-                                    </div>
-                                    <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">ডায়াবেটিস কেয়ার</h3>
-                                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">
-                                        ডায়াবেটিস নিয়ন্ত্রণ ও জীবনযাত্রার মান উন্নয়নে বিশেষজ্ঞ পরামর্শ ও নিয়মিত চেকআপ।
-                                    </p>
-                                </div>
-                                <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors?category=ডায়াবেটিস কেয়ার">
-                                        আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </Link>
-                                </div>
-                            </div>
-                            {/* Service Card 8: Telemedicine */}
-                            <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-100 dark:bg-[#2a2a2a] dark:border-gray-700">
-                                <div>
-                                    <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400">
-                                        <span className="material-symbols-outlined text-3xl">video_call</span>
-                                    </div>
-                                    <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">ভিডিও কনসালটেশন</h3>
-                                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">
-                                        ঘরে বসেই অভিজ্ঞ ডাক্তারের সাথে ভিডিও কলের মাধ্যমে সরাসরি পরামর্শ নিন।
-                                    </p>
-                                </div>
-                                <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-700">
-                                    <Link className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-primary-dark transition-colors group-hover:gap-2" to="/doctors">
-                                        আরও জানুন <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
+                        )}
                     </div>
                 </section>
 

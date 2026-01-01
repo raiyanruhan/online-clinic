@@ -24,12 +24,19 @@ const Login = () => {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('user', JSON.stringify(data.user));
 
-                if (data.user.role === 'admin') {
-                    navigate('/admin-dashboard');
-                } else if (data.user.role === 'doctor') {
-                    navigate('/dashboard');
+                // Check for redirect after login
+                const redirectPath = localStorage.getItem('redirectAfterLogin');
+                if (redirectPath) {
+                    localStorage.removeItem('redirectAfterLogin');
+                    navigate(redirectPath);
                 } else {
-                    navigate('/dashboard');
+                    if (data.user.role === 'admin') {
+                        navigate('/admin-dashboard');
+                    } else if (data.user.role === 'doctor') {
+                        navigate('/dashboard');
+                    } else {
+                        navigate('/dashboard');
+                    }
                 }
             } else {
                 showAlert({ message: data.message || 'Login failed', type: 'error' });

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import AppointmentDetail from './AppointmentDetail';
 import { formatBDDate, formatBDTime, formatBDDateTime } from '../../utils/dateUtils';
 
@@ -8,6 +8,7 @@ type SortOrder = 'asc' | 'desc';
 
 const AppointmentList = () => {
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
     const [appointments, setAppointments] = useState<any[]>([]);
     const [sortedAppointments, setSortedAppointments] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
@@ -18,6 +19,21 @@ const AppointmentList = () => {
     useEffect(() => {
         fetchAppointments();
     }, []);
+
+    // Check for appointmentId in URL params to auto-open appointment detail
+    useEffect(() => {
+        const appointmentId = searchParams.get('appointmentId');
+        if (appointmentId && appointments.length > 0 && !selectedAppointment) {
+            const appointment = appointments.find(apt => apt.appointment_id === parseInt(appointmentId));
+            if (appointment) {
+                setSelectedAppointment(appointment);
+                // Remove the query param from URL
+                const newSearchParams = new URLSearchParams(searchParams);
+                newSearchParams.delete('appointmentId');
+                navigate(`/dashboard?tab=appointments${newSearchParams.toString() ? '&' + newSearchParams.toString() : ''}`, { replace: true });
+            }
+        }
+    }, [searchParams, appointments, navigate, selectedAppointment]);
 
     useEffect(() => {
         sortAppointments(appointments, sortBy, sortOrder);
@@ -104,32 +120,32 @@ const AppointmentList = () => {
     return (
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
             {/* Sort Controls */}
-            <div className="p-4 sm:p-6 border-b border-gray-100 dark:border-gray-700">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div>
-                        <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-1">All Appointments</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">{sortedAppointments.length} appointment{sortedAppointments.length !== 1 ? 's' : ''}</p>
+            <div className="p-3 sm:p-4 md:p-6 border-b border-gray-100 dark:border-gray-700">
+                <div className="flex flex-col items-center gap-3 sm:gap-4">
+                    <div className="text-center">
+                        <h3 className="text-base sm:text-lg font-bold text-gray-800 dark:text-white mb-1">All Appointments</h3>
+                        <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Total: {sortedAppointments.length} appointment{sortedAppointments.length !== 1 ? 's' : ''}</p>
                     </div>
-                    <div className="flex flex-wrap items-center gap-2">
-                        <span className="text-sm text-gray-600 dark:text-gray-400 font-medium">Sort by:</span>
-                        <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
+                        <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-medium shrink-0">Sort by:</span>
+                        <div className="flex flex-wrap gap-2 justify-center w-full sm:w-auto">
                             {(['date', 'time', 'patient', 'status'] as SortOption[]).map((option) => (
-                                <button
+                <button
                                     key={option}
                                     onClick={() => handleSortChange(option)}
-                                    className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                                    className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
                                         sortBy === option
                                             ? 'bg-primary text-white shadow-md'
                                             : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                                     }`}
-                                >
+                >
                                     <span className="capitalize">{option}</span>
                                     {sortBy === option && (
                                         <span className="ml-1.5">
                                             {sortOrder === 'asc' ? '↑' : '↓'}
                                         </span>
                                     )}
-                                </button>
+                </button>
                             ))}
                         </div>
                     </div>
@@ -147,18 +163,18 @@ const AppointmentList = () => {
                     </div>
                 ) : (
                     sortedAppointments.map((apt) => (
-                        <div key={apt.appointment_id} className="p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
-                            <div className="flex gap-4 items-start">
-                                <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-lg shrink-0">
+                        <div key={apt.appointment_id} className="p-3 sm:p-4 md:p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 sm:gap-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                            <div className="flex gap-3 sm:gap-4 items-start flex-1 min-w-0">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-base sm:text-lg shrink-0">
                                     {apt.patient_name?.[0] || 'P'}
                                 </div>
-                                <div>
-                                    <h4 className="font-bold text-gray-800 dark:text-white text-lg">{apt.patient_name || 'Patient'}</h4>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2">
-                                        <span className="material-symbols-outlined text-base">schedule</span>
-                                        {formatBDDateTime(apt.date, apt.time)}
+                                <div className="flex-1 min-w-0">
+                                    <h4 className="font-bold text-gray-800 dark:text-white text-base sm:text-lg truncate">{apt.patient_name || 'Patient'}</h4>
+                                    <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1.5 sm:gap-2 mt-1">
+                                        <span className="material-symbols-outlined text-sm sm:text-base">schedule</span>
+                                        <span className="break-words">{formatBDDateTime(apt.date, apt.time)}</span>
                                     </p>
-                                    <div className="flex flex-wrap gap-2 mt-2">
+                                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-2">
                                         <span className={`text-xs px-2 py-0.5 rounded-full font-bold capitalize ${apt.status === 'completed' ? 'bg-green-100 text-green-700' :
                                             apt.status === 'cancelled' ? 'bg-red-100 text-red-700' :
                                                 'bg-blue-100 text-blue-700'
@@ -173,11 +189,11 @@ const AppointmentList = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col sm:flex-row gap-2">
-                                <button
-                                    onClick={() => setSelectedAppointment(apt)}
-                                    className="w-full sm:w-auto px-5 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-xl text-primary font-bold hover:bg-primary hover:text-white transition-all shadow-sm"
-                                >
+                            <div className="flex flex-col sm:flex-row gap-2 w-full md:w-auto mt-3 md:mt-0">
+                            <button
+                                onClick={() => setSelectedAppointment(apt)}
+                                className="w-full sm:w-auto px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg sm:rounded-xl text-primary font-bold hover:bg-primary hover:text-white transition-all shadow-sm flex items-center justify-center gap-1.5 sm:gap-2"
+                            >
                                     View Details
                                 </button>
                                 {(apt.status === 'ready' || apt.status === 'upcoming') && apt.meeting_link && (
@@ -185,7 +201,7 @@ const AppointmentList = () => {
                                         href={apt.meeting_link}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="w-full sm:w-auto px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
+                                        className="w-full sm:w-auto px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg sm:rounded-xl transition-all shadow-sm flex items-center justify-center gap-1.5 sm:gap-2"
                                     >
                                         <span className="material-symbols-outlined text-lg">videocam</span>
                                         Join Meeting
@@ -194,11 +210,11 @@ const AppointmentList = () => {
                                 {apt.status === 'upcoming' && (
                                     <button
                                         onClick={() => navigate(`/doctor/prescription/${apt.appointment_id}`)}
-                                        className="w-full sm:w-auto px-5 py-2.5 bg-primary hover:bg-red-700 text-white font-bold rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
+                                        className="w-full sm:w-auto px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm bg-primary hover:bg-red-700 text-white font-bold rounded-lg sm:rounded-xl transition-all shadow-sm flex items-center justify-center gap-1.5 sm:gap-2"
                                     >
                                         <span className="material-symbols-outlined text-lg">prescriptions</span>
                                         Write Prescription
-                                    </button>
+                            </button>
                                 )}
                             </div>
                         </div>

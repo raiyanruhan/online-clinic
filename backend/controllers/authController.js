@@ -22,8 +22,8 @@ const register = async (req, res) => {
             [name, email, bcryptPassword]
         );
 
-        // Generate Token
-        const token = jwt.sign({ user_id: newUser.rows[0].user_id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+        // Generate Token with longer expiration (24 hours)
+        const token = jwt.sign({ user_id: newUser.rows[0].user_id }, process.env.JWT_SECRET, { expiresIn: '24h' });
 
         res.json({ token, user: { user_id: newUser.rows[0].user_id, name: newUser.rows[0].name, email: newUser.rows[0].email } });
 
@@ -49,8 +49,8 @@ const login = async (req, res) => {
             return res.status(401).json({ message: 'Invalid Credential' });
         }
 
-        // Generate Token
-        const token = jwt.sign({ user_id: user.rows[0].user_id, role: user.rows[0].role }, process.env.JWT_SECRET, { expiresIn: '1h' });
+        // Generate Token with longer expiration (24 hours)
+        const token = jwt.sign({ user_id: user.rows[0].user_id, role: user.rows[0].role }, process.env.JWT_SECRET, { expiresIn: '24h' });
 
         res.json({ token, user: { user_id: user.rows[0].user_id, name: user.rows[0].name, email: user.rows[0].email, role: user.rows[0].role } });
 
@@ -60,4 +60,36 @@ const login = async (req, res) => {
     }
 };
 
-module.exports = { register, login };
+// Refresh token endpoint
+const refreshToken = async (req, res) => {
+    try {
+        // The authorize middleware already verified the token
+        // We just need to generate a new one
+        const userId = req.user.user_id;
+        const role = req.user.role;
+
+        // Get fresh user data from database
+        const user = await pool.query('SELECT user_id, name, email, role FROM users WHERE user_id = $1', [userId]);
+        if (user.rows.length === 0) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        // Generate new token
+        const token = jwt.sign({ user_id: userId, role: role }, process.env.JWT_SECRET, { expiresIn: '24h' });
+
+        res.json({ 
+            token, 
+            user: { 
+                user_id: user.rows[0].user_id, 
+                name: user.rows[0].name, 
+                email: user.rows[0].email, 
+                role: user.rows[0].role 
+            } 
+        });
+    } catch (err) {
+        console.error('Token refresh error:', err.message);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
+
+module.exports = { register, login, refreshToken };

@@ -31,47 +31,48 @@ const DoctorDashboard = () => {
     return (
         <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-text-main dark:text-gray-100">
             <Header />
-            <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+            <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
                 {/* Dashboard Header */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                     <div>
-                        <h1 className="text-2xl md:text-3xl font-bold font-bangla text-gray-800 dark:text-white">Doctor Dashboard</h1>
-                        <p className="text-gray-500 dark:text-gray-400">Manage your appointments and patients</p>
+                            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold font-bangla text-gray-800 dark:text-white">Doctor Dashboard</h1>
+                            <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400">Manage your appointments and patients</p>
                     </div>
-                    <div className="flex items-center gap-3">
                         <button
                             onClick={() => navigate('/write-blog')}
-                            className="px-4 py-2 bg-primary text-white font-bold rounded-lg shadow-md hover:bg-red-700 transition-colors flex items-center gap-2 whitespace-nowrap"
+                            className="w-full sm:w-auto px-4 py-2 bg-primary text-white font-bold rounded-lg shadow-md hover:bg-red-700 transition-colors flex items-center justify-center gap-2 whitespace-nowrap text-sm sm:text-base"
                         >
-                            <span className="material-symbols-outlined">edit</span>
+                            <span className="material-symbols-outlined text-lg sm:text-xl">edit</span>
                             Write Blog
                         </button>
-                    <div className="flex bg-white dark:bg-gray-800 rounded-lg p-1 shadow-sm border border-gray-200 dark:border-gray-700">
+                    </div>
+                    {/* Tab Selector - Mobile Responsive */}
+                    <div className="flex bg-white dark:bg-gray-800 rounded-lg sm:rounded-xl p-1 shadow-sm border border-gray-200 dark:border-gray-700 w-full overflow-x-auto">
                         <button
                             onClick={() => handleTabChange('overview')}
-                            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${activeTab === 'overview' ? 'bg-primary text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                            className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${activeTab === 'overview' ? 'bg-primary text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
                         >
                             Overview
                         </button>
                         <button
                             onClick={() => handleTabChange('appointments')}
-                            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${activeTab === 'appointments' ? 'bg-primary text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                            className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${activeTab === 'appointments' ? 'bg-primary text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
                         >
                             Appointments
                         </button>
                         <button
                             onClick={() => handleTabChange('availability')}
-                            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${activeTab === 'availability' ? 'bg-primary text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                            className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${activeTab === 'availability' ? 'bg-primary text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
                         >
                             Availability
                         </button>
                         <button
                             onClick={() => handleTabChange('blogs')}
-                            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${activeTab === 'blogs' ? 'bg-primary text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                            className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${activeTab === 'blogs' ? 'bg-primary text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
                         >
                             My Blogs
                         </button>
-                        </div>
                     </div>
                 </div>
 
