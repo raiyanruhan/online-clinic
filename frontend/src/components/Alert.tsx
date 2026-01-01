@@ -54,3 +54,4 @@ const Alert = ({ message, type = 'info', onClose, duration = 3000 }: AlertProps)
 export default Alert;
 
 
+
