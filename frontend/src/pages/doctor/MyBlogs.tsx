@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useModal } from '../../contexts/ModalContext';
@@ -16,7 +17,7 @@ const MyBlogs = () => {
     const fetchBlogs = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch('http://localhost:5000/api/blogs/doctor/my-blogs', {
+            const res = await fetch(`${API_BASE_URL}/api/blogs/doctor/my-blogs`, {
                 headers: { 'x-auth-token': token || '' }
             });
             if (res.ok) {
@@ -45,7 +46,7 @@ const MyBlogs = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/blogs/${blogId}`, {
+            const res = await fetch(`${API_BASE_URL}/api/blogs/${blogId}`, {
                 method: 'DELETE',
                 headers: { 'x-auth-token': token || '' }
             });

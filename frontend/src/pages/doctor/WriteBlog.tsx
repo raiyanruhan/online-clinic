@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import Header from '../../components/Header';
@@ -50,7 +51,7 @@ const WriteBlog = () => {
     const fetchBlog = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/blogs/${editId}`, {
+            const res = await fetch(`${API_BASE_URL}/api/blogs/${editId}`, {
                 headers: { 
                     'x-auth-token': token || '',
                     'Content-Type': 'application/json'
@@ -254,7 +255,7 @@ const WriteBlog = () => {
         }
     };
 
-    const execCommand = (command: string, value: string | null = null) => {
+    const execCommand = (command: string, value: string | undefined = undefined) => {
         document.execCommand(command, false, value);
         editorRef.current?.focus();
         handleEditorInput();
@@ -380,8 +381,8 @@ const WriteBlog = () => {
         try {
             const token = localStorage.getItem('token');
             const url = blogId 
-                ? `http://localhost:5000/api/blogs/${blogId}`
-                : 'http://localhost:5000/api/blogs';
+                ? `${API_BASE_URL}/api/blogs/${blogId}`
+                : `${API_BASE_URL}/api/blogs`;
             const method = blogId ? 'PUT' : 'POST';
 
             const response = await fetch(url, {

@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useEffect, useState } from 'react';
 import { useModal } from '../../contexts/ModalContext';
 import { formatBDDate } from '../../utils/dateUtils';
@@ -23,7 +24,7 @@ const Prescriptions = () => {
     const fetchHistory = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch('http://localhost:5000/api/patient/dashboard/appointments?filter=history', {
+            const res = await fetch(`${API_BASE_URL}/api/patient/dashboard/appointments?filter=history`, {
                 headers: { 'x-auth-token': token || '' }
             });
             if (res.ok) {
@@ -42,7 +43,7 @@ const Prescriptions = () => {
         setViewingId(id);
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/patient/dashboard/appointments/${id}`, {
+            const res = await fetch(`${API_BASE_URL}/api/patient/dashboard/appointments/${id}`, {
                 headers: { 'x-auth-token': token || '' }
             });
             if (res.ok) {

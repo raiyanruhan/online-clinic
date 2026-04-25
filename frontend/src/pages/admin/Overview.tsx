@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useModal } from '../../contexts/ModalContext';
@@ -15,7 +16,7 @@ const Overview = () => {
     const fetchStats = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch('http://localhost:5000/api/admin/stats', {
+            const res = await fetch(`${API_BASE_URL}/api/admin/stats`, {
                 headers: { 'x-auth-token': token || '' }
             });
             if (res.ok) {

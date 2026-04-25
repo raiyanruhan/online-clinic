@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useModal } from '../../contexts/ModalContext';
@@ -28,7 +29,7 @@ const MyAppointments = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/patient/dashboard/appointments`, {
+            const res = await fetch(`${API_BASE_URL}/api/patient/dashboard/appointments`, {
                 headers: { 'x-auth-token': token || '' }
             });
             if (res.ok) {
@@ -71,7 +72,7 @@ const MyAppointments = () => {
         setCancellingId(appointmentId);
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/patient/dashboard/appointments/${appointmentId}/cancel`, {
+            const res = await fetch(`${API_BASE_URL}/api/patient/dashboard/appointments/${appointmentId}/cancel`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
@@ -22,7 +23,7 @@ const AppointmentView = () => {
     const fetchAppointmentDetails = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/patient/dashboard/appointments/${appointmentId}`, {
+            const res = await fetch(`${API_BASE_URL}/api/patient/dashboard/appointments/${appointmentId}`, {
                 headers: { 'x-auth-token': token || '' }
             });
             if (res.ok) {

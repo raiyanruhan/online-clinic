@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../config';
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useModal } from '../contexts/ModalContext';
@@ -5,10 +6,10 @@ import { useModal } from '../contexts/ModalContext';
 const BottomNavigation = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const { showAlert } = useModal();
+    useModal();
     const [user, setUser] = useState<any>(null);
     const [closestAppointment, setClosestAppointment] = useState<any>(null);
-    const [loadingAppointment, setLoadingAppointment] = useState(false);
+    const [_loadingAppointment, setLoadingAppointment] = useState(false);
 
     useEffect(() => {
         const userStr = localStorage.getItem('user');
@@ -36,7 +37,7 @@ const BottomNavigation = () => {
 
             if (user.role === 'doctor') {
                 // Fetch doctor's upcoming appointments
-                const res = await fetch('http://localhost:5000/api/doctor/dashboard/appointments?filter=upcoming', {
+                const res = await fetch(`${API_BASE_URL}/api/doctor/dashboard/appointments?filter=upcoming`, {
                     headers: {
                         'x-auth-token': token
                     }
@@ -57,7 +58,7 @@ const BottomNavigation = () => {
                 }
             } else if (user.role === 'patient') {
                 // Fetch patient's latest appointment with meeting link
-                const res = await fetch('http://localhost:5000/api/patient/dashboard/stats', {
+                const res = await fetch(`${API_BASE_URL}/api/patient/dashboard/stats`, {
                     headers: {
                         'x-auth-token': token
                     }
@@ -95,20 +96,6 @@ const BottomNavigation = () => {
         }
     };
 
-    const handleAppointmentClick = () => {
-        if (!user) {
-            localStorage.setItem('redirectAfterLogin', '/dashboard?tab=appointments');
-            navigate('/login');
-        } else {
-            if (user.role === 'patient') {
-                navigate('/dashboard?tab=appointments');
-            } else if (user.role === 'doctor') {
-                navigate('/dashboard?tab=appointments');
-            } else {
-                navigate('/dashboard?tab=appointments');
-            }
-        }
-    };
 
     const handleJoinDoctorAppointment = () => {
         if (closestAppointment) {

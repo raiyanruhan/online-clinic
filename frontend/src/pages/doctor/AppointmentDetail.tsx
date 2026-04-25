@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useModal } from '../../contexts/ModalContext';
@@ -5,13 +6,13 @@ import { useModal } from '../../contexts/ModalContext';
 const AppointmentDetail = ({ appointment, onClose }: { appointment: any, onClose: () => void }) => {
     const { showAlert } = useModal();
     const navigate = useNavigate();
-    const [meetingLink, setMeetingLink] = useState(appointment.meeting_link || '');
+    const [meetingLink] = useState(appointment.meeting_link || '');
     const [status, setStatus] = useState(appointment.status);
 
     const handleUpdateStatus = async (newStatus: string) => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/doctor/dashboard/appointments/${appointment.appointment_id}`, {
+            const res = await fetch(`${API_BASE_URL}/api/doctor/dashboard/appointments/${appointment.appointment_id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

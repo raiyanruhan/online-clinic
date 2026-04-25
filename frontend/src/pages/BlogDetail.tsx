@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../config';
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -19,7 +20,7 @@ const BlogDetail = () => {
 
     const fetchBlog = async () => {
         try {
-            const res = await fetch(`http://localhost:5000/api/blogs/${id}`);
+            const res = await fetch(`${API_BASE_URL}/api/blogs/${id}`);
             if (res.ok) {
                 const data = await res.json();
                 setBlog(data);
@@ -33,7 +34,7 @@ const BlogDetail = () => {
 
     const fetchRelatedBlogs = async () => {
         try {
-            const res = await fetch(`http://localhost:5000/api/blogs?limit=5`);
+            const res = await fetch(`${API_BASE_URL}/api/blogs?limit=5`);
             if (res.ok) {
                 const data = await res.json();
                 // Filter out current blog and get up to 4 related blogs

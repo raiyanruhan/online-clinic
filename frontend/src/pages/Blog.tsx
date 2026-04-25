@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../config';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -31,7 +32,7 @@ const Blog = () => {
             if (selectedCategory) params.append('category', selectedCategory);
             if (searchQuery) params.append('search', searchQuery);
             
-            const res = await fetch(`http://localhost:5000/api/blogs?${params.toString()}`);
+            const res = await fetch(`${API_BASE_URL}/api/blogs?${params.toString()}`);
             if (res.ok) {
                 const data = await res.json();
                 setBlogs(data);

@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
@@ -47,7 +48,7 @@ const PrescriptionEditor = () => {
     const fetchAppointmentDetails = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/doctor/dashboard/appointments/${appointmentId}`, {
+            const res = await fetch(`${API_BASE_URL}/api/doctor/dashboard/appointments/${appointmentId}`, {
                 headers: { 'x-auth-token': token || '' }
             });
             if (res.ok) {
@@ -184,7 +185,7 @@ const PrescriptionEditor = () => {
     
     const fetchMedicineSuggestions = async (index: number, query: string, dosageFilter?: string) => {
         try {
-            let url = `http://localhost:5000/api/medicines/search?query=${encodeURIComponent(query)}`;
+            let url = `${API_BASE_URL}/api/medicines/search?query=${encodeURIComponent(query)}`;
             if (dosageFilter) {
                 url += `&dosageFilter=${encodeURIComponent(dosageFilter)}`;
             }
@@ -274,7 +275,7 @@ const PrescriptionEditor = () => {
         setIsSaving(true);
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/doctor/dashboard/appointments/${appointmentId}/prescription`, {
+            const res = await fetch(`${API_BASE_URL}/api/doctor/dashboard/appointments/${appointmentId}/prescription`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

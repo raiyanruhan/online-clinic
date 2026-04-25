@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../config';
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
@@ -75,7 +76,7 @@ const BookAppointment = () => {
         if (!token) return;
 
         try {
-            const res = await fetch('http://localhost:5000/api/patient/dashboard/appointments', {
+            const res = await fetch(`${API_BASE_URL}/api/patient/dashboard/appointments`, {
                 headers: { 'x-auth-token': token }
             });
             if (res.ok) {
@@ -108,7 +109,7 @@ const BookAppointment = () => {
             const endDateStr = endDate.toISOString().split('T')[0];
             
             // Fetch available dates in one API call
-            const res = await fetch(`http://localhost:5000/api/doctors/${doctorId}/available-dates?startDate=${startDateStr}&endDate=${endDateStr}`);
+            const res = await fetch(`${API_BASE_URL}/api/doctors/${doctorId}/available-dates?startDate=${startDateStr}&endDate=${endDateStr}`);
             if (res.ok) {
                 const data = await res.json();
                 setAvailableDates(data.availableDates || []);
@@ -129,7 +130,7 @@ const BookAppointment = () => {
 
     const fetchDoctor = async () => {
         try {
-            const res = await fetch(`http://localhost:5000/api/doctors/${doctorId}`);
+            const res = await fetch(`${API_BASE_URL}/api/doctors/${doctorId}`);
             if (res.ok) {
                 const data = await res.json();
                 setDoctor(data);
@@ -149,7 +150,7 @@ const BookAppointment = () => {
         
         setLoadingSlots(true);
         try {
-            const res = await fetch(`http://localhost:5000/api/doctors/${doctorId}/available-slots?date=${date}`);
+            const res = await fetch(`${API_BASE_URL}/api/doctors/${doctorId}/available-slots?date=${date}`);
             if (res.ok) {
                 const data = await res.json();
                 console.log('Available slots response:', data);
@@ -319,7 +320,7 @@ const BookAppointment = () => {
             // Normalize phone number (remove spaces and special characters)
             const normalizedPhone = formData.phone.replace(/\D/g, '');
 
-            const res = await fetch('http://localhost:5000/api/patient/dashboard/book', {
+            const res = await fetch(`${API_BASE_URL}/api/patient/dashboard/book`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

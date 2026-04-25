@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../config';
 import { useState, useEffect } from 'react';
 import { formatBDDate } from '../utils/dateUtils';
 
@@ -20,7 +21,7 @@ const PrescriptionView = ({ appointment, onClose }: PrescriptionViewProps) => {
                         const cleanName = med.name.replace(/^(tab\.|liq\.|cap\.|inj\.|top\.|drop|spray)\s+/i, '').trim();
                         if (cleanName) {
                             try {
-                                const res = await fetch(`http://localhost:5000/api/medicines/search?query=${encodeURIComponent(cleanName)}`);
+                                const res = await fetch(`${API_BASE_URL}/api/medicines/search?query=${encodeURIComponent(cleanName)}`);
                                 if (res.ok) {
                                     const data = await res.json();
                                     // Find exact match first, otherwise take first result

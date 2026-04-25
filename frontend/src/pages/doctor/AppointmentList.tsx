@@ -1,7 +1,8 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import AppointmentDetail from './AppointmentDetail';
-import { formatBDDate, formatBDTime, formatBDDateTime } from '../../utils/dateUtils';
+import { formatBDDateTime } from '../../utils/dateUtils';
 
 type SortOption = 'date' | 'time' | 'patient' | 'status';
 type SortOrder = 'asc' | 'desc';
@@ -43,7 +44,7 @@ const AppointmentList = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/doctor/dashboard/appointments`, {
+            const res = await fetch(`${API_BASE_URL}/api/doctor/dashboard/appointments`, {
                 headers: { 'x-auth-token': token || '' }
             });
             if (res.ok) {

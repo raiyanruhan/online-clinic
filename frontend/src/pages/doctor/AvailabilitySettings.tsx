@@ -1,6 +1,7 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useEffect, useState } from 'react';
 import { useModal } from '../../contexts/ModalContext';
-import { formatBDTime, formatBDDate } from '../../utils/dateUtils';
+import { formatBDTime } from '../../utils/dateUtils';
 
 interface TimeRange {
     start: string; // HH:MM format
@@ -63,7 +64,7 @@ const AvailabilitySettings = () => {
     const fetchAvailability = async () => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch('http://localhost:5000/api/doctor/dashboard/availability', {
+            const res = await fetch(`${API_BASE_URL}/api/doctor/dashboard/availability`, {
                 headers: { 'x-auth-token': token || '' }
             });
             if (res.ok) {
@@ -99,7 +100,7 @@ const AvailabilitySettings = () => {
                                 };
                             }
                         } else {
-                            convertedWeekdays[day] = defaultWeekdays[day];
+                            convertedWeekdays[day] = defaultWeekdays[day as keyof typeof defaultWeekdays];
                         }
                     });
 
@@ -293,7 +294,7 @@ const AvailabilitySettings = () => {
         setSaving(true);
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch('http://localhost:5000/api/doctor/dashboard/availability', {
+            const res = await fetch(`${API_BASE_URL}/api/doctor/dashboard/availability`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

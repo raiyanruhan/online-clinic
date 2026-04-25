@@ -1,11 +1,10 @@
+﻿import { API_BASE_URL } from '../config';
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-    const navigate = useNavigate();
     const [doctors, setDoctors] = useState<any[]>([]);
     const [loadingDoctors, setLoadingDoctors] = useState(true);
 
@@ -15,7 +14,7 @@ const Home = () => {
 
     const fetchDoctors = async () => {
         try {
-            const res = await fetch('http://localhost:5000/api/doctors');
+            const res = await fetch(`${API_BASE_URL}/api/doctors`);
             if (res.ok) {
                 const data = await res.json();
                 // Get top 3 doctors (or all if less than 3)

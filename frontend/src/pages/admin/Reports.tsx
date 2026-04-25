@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+﻿import { API_BASE_URL } from '../../config';
+import { useState } from 'react';
 import { useModal } from '../../contexts/ModalContext';
 import { formatBDDate } from '../../utils/dateUtils';
 
@@ -14,7 +15,7 @@ const Reports = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/admin/reports/monthly?month=${selectedMonth}&year=${selectedYear}`, {
+            const res = await fetch(`${API_BASE_URL}/api/admin/reports/monthly?month=${selectedMonth}&year=${selectedYear}`, {
                 headers: { 'x-auth-token': token || '' }
             });
             

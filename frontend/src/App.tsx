@@ -3,7 +3,6 @@ import { AnimatePresence } from 'framer-motion';
 import Home from './pages/Home';
 import DoctorDetails from './pages/DoctorDetails';
 import BookAppointment from './pages/BookAppointment';
-import PatientDashboard from './pages/PatientDashboard';
 import Dashboard from './pages/Dashboard';
 import Prescription from './pages/Prescription';
 

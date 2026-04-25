@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../config';
 import { useState, useEffect, useMemo } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -45,7 +46,7 @@ const Doctors = () => {
 
     const fetchDoctors = async () => {
         try {
-            const res = await fetch('http://localhost:5000/api/doctors');
+            const res = await fetch(`${API_BASE_URL}/api/doctors`);
             const data = await res.json();
             setDoctors(data);
             setLoading(false);

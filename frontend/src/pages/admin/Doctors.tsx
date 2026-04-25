@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useState, useEffect } from 'react';
 import { useModal } from '../../contexts/ModalContext';
 import { useSearchParams, useNavigate } from 'react-router-dom';
@@ -24,7 +25,7 @@ const DESIGNATIONS = [
 
 const Doctors = () => {
     const { showAlert, showConfirm } = useModal();
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const navigate = useNavigate();
     const [doctors, setDoctors] = useState<any[]>([]);
     const [doctorStats, setDoctorStats] = useState<any>({});
@@ -75,7 +76,7 @@ const Doctors = () => {
 
     const fetchDoctors = async () => {
         try {
-            const res = await fetch('http://localhost:5000/api/doctors');
+            const res = await fetch(`${API_BASE_URL}/api/doctors`);
             const data = await res.json();
             setDoctors(data);
         } catch (error) {
@@ -91,7 +92,7 @@ const Doctors = () => {
             
             const stats: any = {};
             for (const doctor of doctors) {
-                const res = await fetch(`http://localhost:5000/api/admin/appointments?doctorId=${doctor.doctor_id}&startDate=${today}&endDate=${today}`, {
+                const res = await fetch(`${API_BASE_URL}/api/admin/appointments?doctorId=${doctor.doctor_id}&startDate=${today}&endDate=${today}`, {
                     headers: { 'x-auth-token': token || '' }
                 });
                 if (res.ok) {
@@ -126,8 +127,8 @@ const Doctors = () => {
         setIsSubmitting(true);
         try {
             const url = isEditing
-                ? `http://localhost:5000/api/doctors/${editDoctorId}`
-                : 'http://localhost:5000/api/doctors';
+                ? `${API_BASE_URL}/api/doctors/${editDoctorId}`
+                : `${API_BASE_URL}/api/doctors`;
 
             const method = isEditing ? 'PUT' : 'POST';
 
@@ -230,7 +231,7 @@ const Doctors = () => {
         if (!confirmed) return;
         
         try {
-            const response = await fetch(`http://localhost:5000/api/doctors/${id}`, {
+            const response = await fetch(`${API_BASE_URL}/api/doctors/${id}`, {
                 method: 'DELETE'
             });
             if (response.ok) {

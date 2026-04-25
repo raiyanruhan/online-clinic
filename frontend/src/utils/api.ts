@@ -1,4 +1,4 @@
-// API utility with automatic token refresh and error handling
+import { API_BASE_URL } from '../config';
 
 interface ApiResponse<T> {
     data?: T;
@@ -10,7 +10,7 @@ class ApiClient {
     private baseURL: string;
     private refreshPromise: Promise<string> | null = null;
 
-    constructor(baseURL: string = 'http://localhost:5000') {
+    constructor(baseURL: string = API_BASE_URL) {
         this.baseURL = baseURL;
     }
 

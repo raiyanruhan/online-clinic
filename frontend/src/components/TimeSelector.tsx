@@ -10,7 +10,7 @@ interface TimeSelectorProps {
 }
 
 const TimeSelector = ({ availableSlots, selectedTime, onTimeSelect, loading = false, bookedSlots = [], selectedDate }: TimeSelectorProps) => {
-    const [scrollPosition, setScrollPosition] = useState(0);
+    const [_scrollPosition, _setScrollPosition] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {

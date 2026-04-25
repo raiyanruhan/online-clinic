@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../config';
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -51,7 +52,7 @@ const DoctorDetails = () => {
 
     const fetchDoctor = async () => {
         try {
-            const res = await fetch(`http://localhost:5000/api/doctors/${id}`);
+            const res = await fetch(`${API_BASE_URL}/api/doctors/${id}`);
             if (res.ok) {
                 const data = await res.json();
                 setDoctor(data);
@@ -77,7 +78,7 @@ const DoctorDetails = () => {
     const handleSave = async () => {
         setIsSaving(true);
         try {
-            const res = await fetch(`http://localhost:5000/api/doctors/${id}`, {
+            const res = await fetch(`${API_BASE_URL}/api/doctors/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

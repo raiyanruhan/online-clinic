@@ -1,3 +1,4 @@
+﻿import { API_BASE_URL } from '../../config';
 import { useState, useEffect } from 'react';
 import { useModal } from '../../contexts/ModalContext';
 import { formatBDDate, formatBDTime, getCurrentBDDate } from '../../utils/dateUtils';
@@ -28,7 +29,7 @@ const Appointments = () => {
 
     const fetchDoctors = async () => {
         try {
-            const res = await fetch('http://localhost:5000/api/doctors');
+            const res = await fetch(`${API_BASE_URL}/api/doctors`);
             if (res.ok) {
                 const data = await res.json();
                 setDoctors(data);
@@ -81,7 +82,7 @@ const Appointments = () => {
             queryParams.append('page', pagination.page.toString());
             queryParams.append('limit', pagination.limit.toString());
 
-            const res = await fetch(`http://localhost:5000/api/admin/appointments?${queryParams}`, {
+            const res = await fetch(`${API_BASE_URL}/api/admin/appointments?${queryParams}`, {
                 headers: { 'x-auth-token': token || '' }
             });
             
@@ -143,7 +144,7 @@ const Appointments = () => {
     const handleViewDetails = async (appointmentId: number) => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/admin/appointments/${appointmentId}`, {
+            const res = await fetch(`${API_BASE_URL}/api/admin/appointments/${appointmentId}`, {
                 headers: { 'x-auth-token': token || '' }
             });
             if (res.ok) {
@@ -164,7 +165,7 @@ const Appointments = () => {
     const handleUpdateAppointment = async (appointmentId: number, updates: any) => {
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:5000/api/admin/appointments/${appointmentId}`, {
+            const res = await fetch(`${API_BASE_URL}/api/admin/appointments/${appointmentId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
