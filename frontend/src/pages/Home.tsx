@@ -65,7 +65,7 @@ const Home = () => {
                                                     }}
                                                     className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-full h-12 sm:h-14 px-6 sm:px-8 bg-white border-2 border-gray-100 hover:border-gray-300 hover:bg-gray-50 dark:bg-transparent dark:border-gray-700 dark:hover:bg-gray-800/50 text-text-main dark:text-white text-sm sm:text-base font-bold transition-all hover:-translate-y-1 active:scale-95"
                                                 >
-                                                    <span className="truncate">অ্যাপ ডাউনলোড করুন</span>
+                                                    <span className="truncate">ডাক্তার খুজুন</span>
                                                     <span className="material-symbols-outlined ml-2 text-lg sm:text-xl">download</span>
                                                 </button>
                                             </div>
