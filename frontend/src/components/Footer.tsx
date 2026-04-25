@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className="w-full bg-white dark:bg-gray-900 text-black dark:text-white rounded-t-4xl overflow-hidden relative shadow-2xl flex flex-col transition-colors duration-300 mt-8 sm:mt-16 lg:mt-20 border-t-2 border-gray-200 dark:border-gray-700 pb-20 md:pb-0">
+            
             {/* Geometric Lines Overlay */}
             <div className="absolute inset-0 pointer-events-none opacity-10 dark:opacity-20 z-0">
                 <svg height="100%" preserveAspectRatio="none" width="100%" className="w-full h-full">
@@ -15,10 +16,14 @@ const Footer = () => {
 
             <div className="relative z-10 px-4 py-5 sm:px-6 sm:py-10 md:px-8 md:py-12 lg:px-12 lg:py-16">
                 <div className="max-w-7xl mx-auto">
-                    <div className="space-y-5 sm:space-y-0">
-                        {/* Left Section - Brand & Description */}
-                        <div className="flex flex-col items-center sm:items-start justify-start space-y-4 sm:space-y-6">
-                            <div className="space-y-3 sm:space-y-5 text-center sm:text-left">
+                    
+                    {/* Mobile + Tablet: Your Original Layout */}
+                    {/* Desktop: Better balanced layout */}
+                    <div className="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-12 lg:gap-12">
+
+                        {/* Left Section - Brand & Description (Kept exact mobile behavior) */}
+                        <div className="flex flex-col items-center sm:items-start justify-start lg:col-span-5">
+                            <div className="space-y-3 sm:space-y-5 text-center sm:text-left w-full">
                                 <Link to="/" className="flex items-center justify-center sm:justify-start gap-3 inline-block">
                                     <img src="/logo.png" alt="Roudromoyee Online Clinic" className="h-8 sm:h-10 w-auto" />
                                 </Link>
@@ -68,10 +73,11 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        {/* Navigation Sections */}
-                        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-5 sm:gap-6 md:gap-8 lg:gap-10">
+                        {/* Navigation Sections - Improved for Desktop */}
+                        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-7 gap-6 sm:gap-8 lg:gap-10 lg:col-span-7">
+                            
                             {/* Site Map */}
-                            <div className="lg:col-span-2 flex flex-col items-center sm:items-start justify-start">
+                            <div className="flex flex-col items-center sm:items-start justify-start lg:col-span-2">
                                 <h3 className="text-xs sm:text-base font-semibold mb-2.5 sm:mb-5 text-black dark:text-white font-sans">Site Map</h3>
                                 <ul className="space-y-1.5 sm:space-y-3 text-xs sm:text-sm text-gray-700 dark:text-gray-300 text-center sm:text-left">
                                     <li><Link to="/" className="hover:text-[#C62828] transition-colors inline-block">হোম</Link></li>
@@ -84,18 +90,18 @@ const Footer = () => {
                             </div>
 
                             {/* Contact */}
-                            <div className="lg:col-span-3 flex flex-col items-center sm:items-start justify-start">
+                            <div className="flex flex-col items-center sm:items-start justify-start lg:col-span-3">
                                 <h3 className="text-xs sm:text-base font-semibold mb-2.5 sm:mb-5 text-black dark:text-white font-sans">যোগাযোগ</h3>
-                                <ul className="space-y-2 sm:space-y-4 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
-                                    <li className="flex items-start justify-start gap-2 sm:gap-3">
+                                <ul className="space-y-2 sm:space-y-4 text-xs sm:text-sm text-gray-700 dark:text-gray-300 text-center sm:text-left">
+                                    <li className="flex items-start justify-center sm:justify-start gap-2 sm:gap-3">
                                         <span className="material-symbols-outlined text-base sm:text-lg flex-shrink-0 text-[#C62828] mt-0.5">location_on</span>
                                         <span className="leading-relaxed text-left">বাড়ি #১২, রোড #৪, ধানমন্ডি,<br />ঢাকা - ১২০৫, বাংলাদেশ</span>
                                     </li>
-                                    <li className="flex items-center justify-start gap-2 sm:gap-3">
+                                    <li className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                                         <span className="material-symbols-outlined text-base sm:text-lg flex-shrink-0 text-[#C62828]">call</span>
                                         <a href="tel:+8801993609470" className="hover:text-[#C62828] transition-colors">+৮৮০ ১৯৯৩-৬০৯৪৭০</a>
                                     </li>
-                                    <li className="flex items-center justify-start gap-2 sm:gap-3">
+                                    <li className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                                         <span className="material-symbols-outlined text-base sm:text-lg flex-shrink-0 text-[#C62828]">mail</span>
                                         <button
                                             type="button"
@@ -103,7 +109,7 @@ const Footer = () => {
                                             className="hover:text-[#C62828] transition-colors break-all bg-transparent border-none p-0 m-0 cursor-pointer text-left"
                                             style={{ font: 'inherit' }}
                                         >
-                                            <span className="inline-flex items-center justify-center gap-1 px-3 py-1 text-xs font-semibold bg-[#C62828] text-white rounded transition-colors hover:bg-[#b71c1c] focus:outline-none focus:ring-2 focus:ring-[#C62828] focus:ring-offset-2">
+                                            <span className="inline-flex items-center justify-center gap-1 px-3 py-1 text-xs font-semibold bg-[#C62828] text-white rounded transition-colors hover:bg-[#b71c1c]">
                                                 Mail Us
                                             </span>
                                         </button>
@@ -112,7 +118,7 @@ const Footer = () => {
                             </div>
 
                             {/* Legal */}
-                            <div className="col-span-2 sm:col-span-1 lg:col-span-2 flex flex-col items-center sm:items-start justify-start">
+                            <div className="flex flex-col items-center sm:items-start justify-start lg:col-span-2">
                                 <h3 className="text-xs sm:text-base font-semibold mb-2.5 sm:mb-5 text-black dark:text-white font-sans">Legal</h3>
                                 <ul className="space-y-1.5 sm:space-y-3 text-xs sm:text-sm text-gray-700 dark:text-gray-300 text-center sm:text-left">
                                     <li><Link to="/privacy-policy" className="hover:text-[#C62828] transition-colors inline-block">Privacy Policy</Link></li>

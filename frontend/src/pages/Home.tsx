@@ -44,10 +44,6 @@ const Home = () => {
                                     <div className="flex flex-col-reverse gap-8 px-4 lg:flex-row lg:items-center">
                                             <div className="flex flex-col gap-6 flex-[1.5] lg:pr-8 text-center lg:text-left" data-aos="fade-up" data-aos-duration="1000">
                                             <div className="flex flex-col gap-3">
-                                                <div className="inline-flex items-center gap-2 self-center lg:self-start bg-secondary/10 px-4 py-1.5 rounded-full border border-secondary/20 hover:bg-secondary/20 transition-colors cursor-default">
-                                                    <span className="material-symbols-outlined text-secondary text-sm">verified</span>
-                                                    <span className="text-secondary text-sm font-semibold">বিশ্বস্ত টেলিমেডিসিন সেবা</span>
-                                                </div>
                                                 <h1 className="text-text-main dark:text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
                                                     আপনার স্বাস্থ্য, <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">আমাদের দায়িত্ব</span>
                                                 </h1>
@@ -60,8 +56,7 @@ const Home = () => {
                                                     to="/doctors"
                                                     className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-full h-12 sm:h-14 px-6 sm:px-8 bg-primary hover:bg-red-700 hover:-translate-y-1 transition-all text-white text-sm sm:text-base font-bold shadow-lg shadow-primary/30 active:scale-95 group"
                                                 >
-                                                    <span className="truncate group-hover:mr-2 transition-all">অনলাইন কনসাল্টেশন নিন</span>
-                                                    <span className="material-symbols-outlined ml-2 text-lg sm:text-xl group-hover:scale-110 transition-transform">video_call</span>
+                                                    <span className="truncate transition-all">অনলাইন কনসাল্টেশন নিন</span>
                                                 </Link>
                                                 <button 
                                                     onClick={() => {
@@ -74,23 +69,10 @@ const Home = () => {
                                                     <span className="material-symbols-outlined ml-2 text-lg sm:text-xl">download</span>
                                                 </button>
                                             </div>
-                                            <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-4 justify-center lg:justify-start text-xs sm:text-sm text-text-sub dark:text-gray-400">
-                                                <div className="flex items-center gap-2 group cursor-default">
-                                                    <span className="material-symbols-outlined text-green-600 icon-filled text-base sm:text-lg group-hover:scale-110 transition-transform">check_circle</span>
-                                                    <span className="group-hover:text-green-600 transition-colors">৫০+ বিশেষজ্ঞ ডাক্তার</span>
-                                                </div>
-                                                <div className="flex items-center gap-2 group cursor-default">
-                                                    <span className="material-symbols-outlined text-green-600 icon-filled text-base sm:text-lg group-hover:scale-110 transition-transform">check_circle</span>
-                                                    <span className="group-hover:text-green-600 transition-colors">৫০০০+ রোগী সেবা</span>
-                                                </div>
-                                            </div>
                                         </div>
                                         <div className="flex-1 w-full flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-                                            <div className="w-full max-w-[300px] sm:max-w-[380px] h-[240px] sm:h-[280px] md:h-[320px] rounded-3xl bg-gray-100 dark:bg-gray-800 overflow-hidden relative shadow-2xl shadow-gray-200 dark:shadow-black/50 hover:shadow-primary/20 transition-shadow duration-500">
-                                                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700" style={{ backgroundImage: 'url("https://res.cloudinary.com/dzjrhl1vi/image/upload/v1766557263/uploads/1766557242708-ChatGPT%20Image%20Dec%2023%2C%202025%2C%2010_34_23%20PM.png.png")' }}></div>
-                                                {/* Decorative floating elements */}
-                                                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm p-2 sm:p-3 rounded-2xl shadow-xl flex items-center gap-3 animate-float">
-                                                </div>
+                                            <div className="w-full max-w-[300px] sm:max-w-[380px] h-[240px] sm:h-[280px] md:h-[320px] rounded-3xl overflow-hidden relative hover:shadow-primary/20 transition-shadow duration-500">
+                                                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700" style={{ backgroundImage: 'url("https://res.cloudinary.com/dzjrhl1vi/image/upload/v1777117064/uploads/1777117062488-1777116179867-678389911_842851788209550_2453765668426124062_n.jpg-removebg-preview.png.png")' }}></div>
                                             </div>
                                         </div>
                                     </div>
