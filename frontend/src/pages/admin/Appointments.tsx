@@ -199,7 +199,7 @@ const Appointments = () => {
             </div>
 
             {/* Tabs */}
-            <div className="flex gap-1 sm:gap-2 border-b border-gray-200 dark:border-gray-700 overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+            <div className="sticky top-[72px] z-40 flex gap-1 sm:gap-2 border-b border-gray-200 dark:border-gray-700 overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0 bg-white dark:bg-background-dark">
                 {(['today', 'upcoming', 'past', 'all'] as const).map((tab) => (
                     <button
                         key={tab}

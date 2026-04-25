@@ -27,22 +27,25 @@ const Doctors = () => {
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
 
-    // Initialize filters from URL params only once on mount or when URL changes externally
+    // Initialize filters from URL params
     useEffect(() => {
         const specialtyParam = searchParams.get('specialty');
         const categoryParam = searchParams.get('category');
-        
-        // Only update state if URL params exist and are different from current state
+        const searchParam = searchParams.get('search');
+
         if (specialtyParam && !selectedSpecialties.includes(specialtyParam)) {
             setSelectedSpecialties([specialtyParam]);
         } else if (!specialtyParam && selectedSpecialties.length > 0 && !categoryParam) {
-            // If no specialty param and no category param, reset specialties
             setSelectedSpecialties([]);
         }
-        
+
+        if (searchParam !== null) {
+            setSearchQuery(searchParam);
+        }
+
         fetchDoctors();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [searchParams.toString()]); // Only depend on the string representation to avoid infinite loops
+    }, [searchParams.toString()]);
 
     const fetchDoctors = async () => {
         try {
@@ -117,8 +120,18 @@ const Doctors = () => {
         setSelectedSpecialties([]);
         setSelectedExperience([]);
         setFeeRange([0, 5000]);
-        // Clear URL params
         navigate('/doctors', { replace: true });
+    };
+
+    const handleSearchChange = (value: string) => {
+        setSearchQuery(value);
+        const params = new URLSearchParams(searchParams);
+        if (value) {
+            params.set('search', value);
+        } else {
+            params.delete('search');
+        }
+        navigate(`/doctors?${params.toString()}`, { replace: true });
     };
 
     const categoryParam = searchParams.get('category');
@@ -128,7 +141,7 @@ const Doctors = () => {
         <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-text-main dark:text-gray-100">
             <Header />
 
-            <main className="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8" style={{ overflow: 'visible' }}>
+            <main className="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
                 {/* Page Header */}
                 <div className="mb-8">
                     <h1 className="text-secondary dark:text-teal-400 text-3xl md:text-4xl font-bold font-bangla mb-2">আমাদের বিশেষজ্ঞ ডাক্তারগণ</h1>
@@ -138,9 +151,9 @@ const Doctors = () => {
                 </div>
 
                 <div className="flex flex-col lg:flex-row gap-8">
-                    {/* Sidebar Filters (Sticky on Desktop) */}
-                    <aside className="w-full lg:w-72 flex-shrink-0" style={{ alignSelf: 'flex-start' }}>
-                        <div className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-5 border border-[#e4dcdc] dark:border-gray-700 space-y-5">
+                    {/* Sidebar Filters */}
+                    <aside className="w-full lg:w-72 flex-shrink-0 sticky top-[72px] z-30 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+                        <div className="bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-5 border border-[#e4dcdc] dark:border-gray-700 space-y-5">
                             <div className="flex items-center justify-between">
                                 <h3 className="font-bold text-lg text-[#171212] dark:text-white flex items-center gap-2">
                                     <span className="material-symbols-outlined text-gray-500">filter_list</span>
@@ -162,7 +175,7 @@ const Doctors = () => {
                                         className="w-full pl-10 pr-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm"
                                         placeholder="Search doctors..."
                                         value={searchQuery}
-                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                        onChange={(e) => handleSearchChange(e.target.value)}
                                     />
                                 </div>
                             </div>
