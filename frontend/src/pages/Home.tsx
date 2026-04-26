@@ -12,7 +12,7 @@ const SPECIALTIES = [
     { label: 'চর্মরোগ', icon: 'dermatology', color: 'bg-teal-50 text-teal-600', param: 'Dermatology' },
     { label: 'মানসিক', icon: 'psychology', color: 'bg-purple-50 text-purple-600', param: 'Psychiatry' },
     { label: 'স্বাস্থ্য ও পুষ্টি', icon: 'hearing', color: 'bg-indigo-50 text-indigo-600', param: 'ENT' },
-    { label: 'এমবিবিএস ডাক্তার', icon: 'hearing', color: 'bg-indigo-50 text-indigo-600', param: 'ENT' },
+    { label: 'এমবিবিএস ডাক্তার', icon: 'cardiology', color: 'bg-indigo-50 text-indigo-600', param: 'ENT' },
 ];
 
 const STATS = [
