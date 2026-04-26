@@ -1,0 +1,3839 @@
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'express'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/med.api.hylith.com/server.js:1:17)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'express'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/med.api.hylith.com/server.js:1:17)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'node:events'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/nodevenv/med.api.hylith.com/10/lib/node_modules/express/lib/express.js:16:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'node:events'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/nodevenv/med.api.hylith.com/10/lib/node_modules/express/lib/express.js:16:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'node:events'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/nodevenv/med.api.hylith.com/10/lib/node_modules/express/lib/express.js:16:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'node:events'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/nodevenv/med.api.hylith.com/10/lib/node_modules/express/lib/express.js:16:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'node:events'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/nodevenv/med.api.hylith.com/10/lib/node_modules/express/lib/express.js:16:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'node:events'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/nodevenv/med.api.hylith.com/10/lib/node_modules/express/lib/express.js:16:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'node:events'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/nodevenv/med.api.hylith.com/10/lib/node_modules/express/lib/express.js:16:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'node:events'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/nodevenv/med.api.hylith.com/10/lib/node_modules/express/lib/express.js:16:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'node:events'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/nodevenv/med.api.hylith.com/10/lib/node_modules/express/lib/express.js:16:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'node:events'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/express/lib/express.js:16:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'node:events'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/express/lib/express.js:16:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+No authorization code received
+No authorization code received
+No authorization code received
+Error in createPrescription: error: column "on_examination" of relation "prescriptions" does not exist
+    at /home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createPrescription (/home/sayewedv/med.api.hylith.com/controllers/doctorDashboardController.js:279:33) {
+  length: 140,
+  severity: 'ERROR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '90',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_target.c',
+  line: '1004',
+  routine: 'checkInsertTargets'
+}
+Error in createPrescription: error: column "on_examination" of relation "prescriptions" does not exist
+    at /home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createPrescription (/home/sayewedv/med.api.hylith.com/controllers/doctorDashboardController.js:279:33) {
+  length: 140,
+  severity: 'ERROR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '90',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_target.c',
+  line: '1004',
+  routine: 'checkInsertTargets'
+}
+Error in createPrescription: error: column "on_examination" of relation "prescriptions" does not exist
+    at /home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createPrescription (/home/sayewedv/med.api.hylith.com/controllers/doctorDashboardController.js:279:33) {
+  length: 140,
+  severity: 'ERROR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '90',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_target.c',
+  line: '1004',
+  routine: 'checkInsertTargets'
+}
+Error in createPrescription: error: column "on_examination" of relation "prescriptions" does not exist
+    at /home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createPrescription (/home/sayewedv/med.api.hylith.com/controllers/doctorDashboardController.js:279:33) {
+  length: 140,
+  severity: 'ERROR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '90',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_target.c',
+  line: '1004',
+  routine: 'checkInsertTargets'
+}
+Error in createPrescription: error: column "on_examination" of relation "prescriptions" does not exist
+    at /home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createPrescription (/home/sayewedv/med.api.hylith.com/controllers/doctorDashboardController.js:279:33) {
+  length: 140,
+  severity: 'ERROR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '90',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_target.c',
+  line: '1004',
+  routine: 'checkInsertTargets'
+}
+Error in createPrescription: error: column "on_examination" of relation "prescriptions" does not exist
+    at /home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createPrescription (/home/sayewedv/med.api.hylith.com/controllers/doctorDashboardController.js:279:33) {
+  length: 140,
+  severity: 'ERROR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '90',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_target.c',
+  line: '1004',
+  routine: 'checkInsertTargets'
+}
+Error in createPrescription: error: column "on_examination" of relation "prescriptions" does not exist
+    at /home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createPrescription (/home/sayewedv/med.api.hylith.com/controllers/doctorDashboardController.js:279:33) {
+  length: 140,
+  severity: 'ERROR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '90',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_target.c',
+  line: '1004',
+  routine: 'checkInsertTargets'
+}
+Error refreshing access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1768321120431,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Token has been expired or revoked.'
+    },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Tue, 13 Jan 2026 16:18:40 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error getting valid access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1768321120431,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Token has been expired or revoked.'
+    },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Tue, 13 Jan 2026 16:18:40 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error creating calendar event: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1768321120431,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Token has been expired or revoked.'
+    },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Tue, 13 Jan 2026 16:18:40 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error generating Meet link: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1768321120431,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Token has been expired or revoked.'
+    },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Tue, 13 Jan 2026 16:18:40 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Google Calendar API error: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1768321120431,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Token has been expired or revoked.'
+    },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Tue, 13 Jan 2026 16:18:40 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error refreshing access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1768321126056,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Token has been expired or revoked.'
+    },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Tue, 13 Jan 2026 16:18:46 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error getting valid access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1768321126056,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Token has been expired or revoked.'
+    },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Tue, 13 Jan 2026 16:18:46 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error creating calendar event: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1768321126056,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Token has been expired or revoked.'
+    },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Tue, 13 Jan 2026 16:18:46 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error generating Meet link: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1768321126056,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Token has been expired or revoked.'
+    },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Tue, 13 Jan 2026 16:18:46 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Google Calendar API error: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1768321126056,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Token has been expired or revoked.'
+    },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Tue, 13 Jan 2026 16:18:46 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+No authorization code received
+Error refreshing access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145840978,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:20 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error getting valid access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145840978,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:20 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error creating calendar event: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145840978,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:20 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error generating Meet link: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145840978,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:20 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Google Calendar API error: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145840978,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:20 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error refreshing access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145849124,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:28 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error getting valid access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145849124,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:28 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error creating calendar event: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145849124,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:28 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error generating Meet link: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145849124,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:28 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Google Calendar API error: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145849124,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:28 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error refreshing access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145851167,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:30 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error getting valid access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145851167,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:30 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error creating calendar event: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145851167,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:30 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error generating Meet link: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145851167,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:30 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Google Calendar API error: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145851167,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:30 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error refreshing access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145853080,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:32 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error getting valid access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145853080,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:32 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error creating calendar event: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145853080,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:32 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error generating Meet link: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145853080,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:32 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Google Calendar API error: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145853080,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:32 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error refreshing access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145854678,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:34 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error getting valid access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145854678,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:34 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error creating calendar event: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145854678,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:34 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error generating Meet link: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145854678,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:34 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Google Calendar API error: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145854678,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:34 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error refreshing access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145856890,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:36 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error getting valid access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145856890,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:36 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error creating calendar event: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145856890,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:36 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error generating Meet link: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145856890,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:36 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Google Calendar API error: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1771145856890,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Sun, 15 Feb 2026 08:57:36 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error refreshing access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1777051626025,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Fri, 24 Apr 2026 17:27:05 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error getting valid access token: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1777051626025,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Fri, 24 Apr 2026 17:27:05 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error creating calendar event: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1777051626025,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Fri, 24 Apr 2026 17:27:05 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Error generating Meet link: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1777051626025,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Fri, 24 Apr 2026 17:27:05 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+Google Calendar API error: GaxiosError: invalid_grant
+    at Gaxios._request (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/gaxios/build/src/gaxios.js:142:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:212:19)
+    at async OAuth2Client.refreshAccessTokenAsync (/home/sayewedv/nodevenv/med.api.hylith.com/18/lib/node_modules/google-auth-library/build/src/auth/oauth2client.js:247:19)
+    at async refreshAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:50:33)
+    at async getValidAccessToken (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:33:20)
+    at async createCalendarEvent (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:79:29)
+    at async generateMeetLink (/home/sayewedv/med.api.hylith.com/services/googleCalendarService.js:304:50)
+    at async bookAppointment (/home/sayewedv/med.api.hylith.com/controllers/patientDashboardController.js:398:54) {
+  config: {
+    retry: true,
+    retryConfig: {
+      httpMethodsToRetry: [Array],
+      currentRetryAttempt: 0,
+      retry: 3,
+      noResponseRetries: 2,
+      retryDelayMultiplier: 2,
+      timeOfFirstRequest: 1777051626025,
+      totalTimeout: 9007199254740991,
+      maxRetryDelay: 9007199254740991,
+      statusCodesToRetry: [Array]
+    },
+    method: 'POST',
+    url: 'https://oauth2.googleapis.com/token',
+    data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'google-api-nodejs-client/9.15.1',
+      'x-goog-api-client': 'gl-node/18.20.8'
+    },
+    paramsSerializer: [Function: paramsSerializer],
+    body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+    validateStatus: [Function: validateStatus],
+    responseType: 'unknown',
+    errorRedactor: [Function: defaultErrorRedactor]
+  },
+  response: {
+    config: {
+      retry: true,
+      retryConfig: [Object],
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      headers: [Object],
+      paramsSerializer: [Function: paramsSerializer],
+      body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+      validateStatus: [Function: validateStatus],
+      responseType: 'unknown',
+      errorRedactor: [Function: defaultErrorRedactor]
+    },
+    data: { error: 'invalid_grant', error_description: 'Bad Request' },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Fri, 24 Apr 2026 17:27:05 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 400,
+    statusText: 'Bad Request',
+    request: { responseURL: 'https://oauth2.googleapis.com/token' }
+  },
+  error: undefined,
+  status: 400,
+  [Symbol(gaxios-gaxios-error)]: '6.7.1'
+}
+No authorization code received
+value too long for type character varying(255)
+value too long for type character varying(255)
+value too long for type character varying(255)
+value too long for type character varying(255)
+value too long for type character varying(255)
+value too long for type character varying(255)
+value too long for type character varying(255)
+value too long for type character varying(255)
+value too long for type character varying(255)
+value too long for type character varying(255)
+value too long for type character varying(255)
+value too long for type character varying(255)

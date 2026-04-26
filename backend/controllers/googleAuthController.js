@@ -4,7 +4,7 @@ const pool = require('../config/db');
 const oauth2Client = new google.auth.OAuth2(
     process.env.GOOGLE_CLIENT_ID,
     process.env.GOOGLE_CLIENT_SECRET,
-    process.env.GOOGLE_REDIRECT_URI || 'http://localhost:5000/auth/google/callback'
+    process.env.GOOGLE_REDIRECT_URI || 'https://med.api.hylith.com/auth/google/callback'
 );
 
 // Initiate Google OAuth flow
@@ -38,7 +38,7 @@ const initiateGoogleAuth = async (req, res) => {
         });
 
         console.log('Initiating Google OAuth flow...');
-        console.log('Redirect URI:', process.env.GOOGLE_REDIRECT_URI || 'http://localhost:5000/auth/google/callback');
+        console.log('Redirect URI:', process.env.GOOGLE_REDIRECT_URI || 'https://med.api.hylith.com/auth/google/callback');
         
         res.redirect(authUrl);
     } catch (err) {
@@ -90,7 +90,7 @@ const handleGoogleCallback = async (req, res) => {
         }
 
         console.log('Received authorization code, exchanging for tokens...');
-        console.log('Redirect URI configured:', process.env.GOOGLE_REDIRECT_URI || 'http://localhost:5000/auth/google/callback');
+        console.log('Redirect URI configured:', process.env.GOOGLE_REDIRECT_URI || 'https://med.api.hylith.com/auth/google/callback');
         console.log('Client ID:', process.env.GOOGLE_CLIENT_ID ? `${process.env.GOOGLE_CLIENT_ID.substring(0, 20)}...` : 'NOT SET');
 
         // Exchange code for tokens
@@ -107,7 +107,7 @@ const handleGoogleCallback = async (req, res) => {
                         <body style="font-family: Arial, sans-serif; padding: 40px; text-align: center;">
                             <h1 style="color: #f44336;">❌ Redirect URI Mismatch</h1>
                             <p>The redirect URI in your Google Cloud Console does not match the configured URI.</p>
-                            <p><strong>Expected:</strong> ${process.env.GOOGLE_REDIRECT_URI || 'http://localhost:5000/auth/google/callback'}</p>
+                            <p><strong>Expected:</strong> ${process.env.GOOGLE_REDIRECT_URI || 'https://med.api.hylith.com/auth/google/callback'}</p>
                             <p>Please update your Google Cloud Console OAuth 2.0 Client ID settings to include this exact URI.</p>
                             <p><a href="/dashboard">Go to Dashboard</a></p>
                         </body>

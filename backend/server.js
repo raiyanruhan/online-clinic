@@ -6,8 +6,22 @@ dotenv.config();
 
 const app = express();
 
+// CORS configuration for production
+const corsOptions = {
+    origin: [
+        'https://clinic.roudromoyee.com',
+        'http://clinic.roudromoyee.com',
+        'https://med.api.hylith.com',
+        'http://med.api.hylith.com',
+        ...(process.env.NODE_ENV !== 'production' ? ['http://localhost:5173', 'http://localhost:3000'] : [])
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token']
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Routes
