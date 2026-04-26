@@ -1,36 +1,24 @@
-name: Auto Deploy Backend (cPanel)
+- name: Deploy to server
+  uses: appleboy/ssh-action@v1.0.3
+  with:
+    host: ${{ secrets.SERVER_HOST }}
+    username: ${{ secrets.SERVER_USER }}
+    key: ${{ secrets.SERVER_SSH_KEY }}
+    port: ${{ secrets.SERVER_PORT }}
+    script: |
+      echo "Starting deployment..."
 
-on:
-  push:
-    branches:
-      - main
+      cd /home/sayewedv/med.CICD
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+      echo "Pulling latest code..."
+      git pull origin main
 
-    steps:
-      - name: Deploy to server via SSH
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
+      echo "Installing backend dependencies..."
+      cd backend
+      npm install
 
-          script: |
-            echo "Starting deployment..."
+      echo "Restarting Node app..."
+      mkdir -p tmp
+      touch tmp/restart.txt
 
-            cd /home/sayewedv/med.CICD
-
-            echo "Pulling latest code..."
-            git pull origin main
-
-            echo "Installing backend dependencies..."
-            cd backend
-            npm install
-
-            echo "Restarting Node app..."
-            mkdir -p tmp
-            touch tmp/restart.txt
-
-            echo "Deployment complete!"
+      echo "Deployment complete!"
