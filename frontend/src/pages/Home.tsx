@@ -5,13 +5,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const SPECIALTIES = [
-    { label: 'জেনারেল', icon: 'stethoscope', color: 'bg-blue-50 text-blue-600', param: 'General Medicine' },
+    { label: 'মেডিসিন', icon: 'stethoscope', color: 'bg-blue-50 text-blue-600', param: 'General Medicine' },
     { label: 'গাইনি', icon: 'pregnant_woman', color: 'bg-pink-50 text-pink-600', param: 'Gynecology & Obs.' },
     { label: 'শিশু', icon: 'child_care', color: 'bg-orange-50 text-orange-600', param: 'Pediatrics' },
     { label: 'হৃদরোগ', icon: 'cardiology', color: 'bg-red-50 text-red-600', param: 'Cardiology' },
     { label: 'চর্মরোগ', icon: 'dermatology', color: 'bg-teal-50 text-teal-600', param: 'Dermatology' },
     { label: 'মানসিক', icon: 'psychology', color: 'bg-purple-50 text-purple-600', param: 'Psychiatry' },
-    { label: 'নাক-কান', icon: 'hearing', color: 'bg-indigo-50 text-indigo-600', param: 'ENT' },
+    { label: 'স্বাস্থ্য ও পুষ্টি', icon: 'hearing', color: 'bg-indigo-50 text-indigo-600', param: 'ENT' },
+    { label: 'এমবিবিএস ডাক্তার', icon: 'hearing', color: 'bg-indigo-50 text-indigo-600', param: 'ENT' },
 ];
 
 const STATS = [

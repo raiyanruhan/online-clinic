@@ -2,7 +2,11 @@ const { google } = require('googleapis');
 const pool = require('../config/db');
 const { oauth2Client } = require('../controllers/googleAuthController');
 
+<<<<<<< HEAD
 // Check if OAuth is configured
+=======
+// Check if OAuth is configured  
+>>>>>>> 58b88cb347b3e55f9f6f8b45a0c9b6aa286b1e2e
 const isOAuthConfigured = async () => {
     try {
         const tokenResult = await pool.query('SELECT id FROM google_oauth_tokens ORDER BY id DESC LIMIT 1');
