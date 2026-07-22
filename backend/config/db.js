@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-const { Pool } = require('pg');
-const dotenv = require('dotenv');
-
-dotenv.config();
-
-const pool = new Pool({
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    database: process.env.DB_NAME
-});
-
-module.exports = pool;
-=======
 const { Pool } = require('pg');
 const dotenv = require('dotenv');
 
@@ -46,4 +30,3 @@ pool.on('error', (err) => {
 });
 
 module.exports = pool;
->>>>>>> 58b88cb347b3e55f9f6f8b45a0c9b6aa286b1e2e
