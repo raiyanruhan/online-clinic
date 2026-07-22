@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { CONTACT } from '../config';
 
 const Contact = () => {
     // FAQ State
@@ -36,8 +37,8 @@ const Contact = () => {
                             <h3 className="text-lg sm:text-xl font-bold text-text-main dark:text-white">মোবাইল</h3>
                         </div>
                         <p className="text-xs sm:text-sm text-text-sub dark:text-gray-400 mb-2 sm:mb-3">সরাসরি কল করুন</p>
-                        <a className="text-base sm:text-lg font-medium hover:text-primary transition-colors block break-words" href="tel:+8801993609470">
-                            +৮৮০ ১৯৯৩-৬০৯৪৭০
+                        <a className="text-base sm:text-lg font-medium hover:text-primary transition-colors block break-words" href={`tel:${CONTACT.phone}`}>
+                            {CONTACT.phoneDisplay}
                         </a>
                     </div>
 
@@ -49,8 +50,8 @@ const Contact = () => {
                             <h3 className="text-lg sm:text-xl font-bold text-text-main dark:text-white">ইমেইল</h3>
                         </div>
                         <p className="text-xs sm:text-sm text-text-sub dark:text-gray-400 mb-2 sm:mb-3">বিস্তারিত লিখুন</p>
-                        <a className="text-sm sm:text-base font-medium hover:text-primary transition-colors block break-all" href="mailto:roudromoyee.clinic@gmail.com">
-                            roudromoyee.clinic@gmail.com
+                        <a className="text-sm sm:text-base font-medium hover:text-primary transition-colors block break-all" href={`mailto:${CONTACT.email}`}>
+                            {CONTACT.email}
                         </a>
                     </div>
 
@@ -76,7 +77,7 @@ const Contact = () => {
                         </div>
                         <p className="text-xs sm:text-sm text-text-sub dark:text-gray-400 mb-2 sm:mb-3">আমাদের ক্লিনিক</p>
                         <p className="text-sm sm:text-base font-medium leading-relaxed">
-                            বাড়ি #১২, রোড #৪, ধানমন্ডি,<br className="hidden sm:block" /> ঢাকা - ১২০৫, বাংলাদেশ
+                            {CONTACT.address}
                         </p>
                     </div>
                 </div>
@@ -88,7 +89,7 @@ const Contact = () => {
                         <h2 className="text-xl sm:text-2xl font-bold text-text-main dark:text-white">জরুরী প্রয়োজনে</h2>
                     </div>
                     <p className="text-2xl sm:text-3xl font-bold text-primary mb-2 sm:mb-3">
-                        <a href="tel:+8801993609470" className="hover:underline">+৮৮০ ১৯৯৩-৬০৯৪৭০</a>
+                        <a href={`tel:${CONTACT.phone}`} className="hover:underline">{CONTACT.phoneDisplay}</a>
                     </p>
                     <p className="text-xs sm:text-sm text-text-sub dark:text-gray-400">২৪/৭ আমাদের হটলাইন খোলা থাকে</p>
                 </div>

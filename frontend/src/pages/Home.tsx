@@ -1,4 +1,4 @@
-import { API_BASE_URL } from '../config';
+import { API_BASE_URL, CONTACT } from '../config';
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -334,7 +334,7 @@ const Home = () => {
 
             {/* WhatsApp FAB */}
             <a
-                href="https://wa.me/8801711000000"
+                href={`https://wa.me/${CONTACT.whatsapp}`}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="WhatsApp"

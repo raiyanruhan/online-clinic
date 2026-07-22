@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { CONTACT } from '../config';
 
 const Footer = () => {
     return (
@@ -51,7 +52,7 @@ const Footer = () => {
                                     </a>
                                     <a 
                                         aria-label="WhatsApp" 
-                                        href="https://wa.me/8801993609470" 
+                                        href={`https://wa.me/${CONTACT.whatsapp}`}
                                         target="_blank" 
                                         rel="noreferrer"
                                         className="text-black dark:text-white hover:text-[#C62828] transition-colors"
@@ -62,7 +63,7 @@ const Footer = () => {
                                     </a>
                                     <a 
                                         aria-label="Email" 
-                                        href="mailto:roudromoyee.clinic@gmail.com"
+                                        href={`mailto:${CONTACT.email}`}
                                         className="text-black dark:text-white hover:text-[#C62828] transition-colors"
                                     >
                                         <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -95,17 +96,17 @@ const Footer = () => {
                                 <ul className="space-y-2 sm:space-y-4 text-xs sm:text-sm text-gray-700 dark:text-gray-300 text-center sm:text-left">
                                     <li className="flex items-start justify-center sm:justify-start gap-2 sm:gap-3">
                                         <span className="material-symbols-outlined text-base sm:text-lg flex-shrink-0 text-[#C62828] mt-0.5">location_on</span>
-                                        <span className="leading-relaxed text-left">বাড়ি #১২, রোড #৪, ধানমন্ডি,<br />ঢাকা - ১২০৫, বাংলাদেশ</span>
+                                        <span className="leading-relaxed text-left">{CONTACT.address}</span>
                                     </li>
                                     <li className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                                         <span className="material-symbols-outlined text-base sm:text-lg flex-shrink-0 text-[#C62828]">call</span>
-                                        <a href="tel:+8801993609470" className="hover:text-[#C62828] transition-colors">+৮৮০ ১৯৯৩-৬০৯৪৭০</a>
+                                        <a href={`tel:${CONTACT.phone}`} className="hover:text-[#C62828] transition-colors">{CONTACT.phoneDisplay}</a>
                                     </li>
                                     <li className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                                         <span className="material-symbols-outlined text-base sm:text-lg flex-shrink-0 text-[#C62828]">mail</span>
                                         <button
                                             type="button"
-                                            onClick={() => window.location.href = 'mailto:roudromoyee.clinic@gmail.com'}
+                                            onClick={() => window.location.href = `mailto:${CONTACT.email}`}
                                             className="hover:text-[#C62828] transition-colors break-all bg-transparent border-none p-0 m-0 cursor-pointer text-left"
                                             style={{ font: 'inherit' }}
                                         >

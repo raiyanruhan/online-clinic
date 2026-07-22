@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { CONTACT } from '../config';
 
 const PrivacyPolicy = () => {
     return (
@@ -155,10 +156,10 @@ const PrivacyPolicy = () => {
                             If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
                         </p>
                         <p className="text-gray-700 dark:text-gray-300 mb-2 leading-relaxed">
-                            Email: roudromoyee.clinic@gmail.com
+                            Email: {CONTACT.email}
                         </p>
                         <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                            Address: বাড়ি #১২, রোড #৪, ধানমন্ডি, ঢাকা - ১২০৫, বাংলাদেশ
+                            Address: {CONTACT.address}
                         </p>
                     </section>
                 </div>
