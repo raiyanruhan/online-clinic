@@ -135,12 +135,7 @@ CREATE DATABASE online_clinic;
 
 2. Run the database schema:
 ```bash
-psql -U your_db_user -d online_clinic -f backend/database.sql
-```
-
-3. (Optional) Run any additional schema updates:
-```bash
-psql -U your_db_user -d online_clinic -f backend/schema_update.sql
+psql -U your_db_user -d online_clinic -f backend/schema.sql
 ```
 
 ### 4. Frontend Setup
@@ -154,14 +149,6 @@ Create a `.env` file in the `frontend` directory (if needed):
 
 ```env
 VITE_API_URL=http://localhost:5000/api
-```
-
-### 5. Run Database Seeders (Optional)
-
-```bash
-cd backend
-node seed-category.js
-node seed-appointments.js
 ```
 
 ## Running the Application

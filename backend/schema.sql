@@ -69,6 +69,8 @@ CREATE TABLE IF NOT EXISTS prescriptions (
     medicines JSONB,
     advice TEXT,
     diagnosis TEXT,
+    on_examination TEXT,
+    investigation TEXT,
     follow_up_date DATE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
